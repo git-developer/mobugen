@@ -1,0 +1,40 @@
+#!/bin/sh
+set -eu
+
+here="$(dirname "${0}")"
+module="$(basename "${0%%-gojq-generator}")"
+script=$(printf '
+  import "csv" as csv;
+  import "%s" as gen;
+  (($ARGS.named.enums | select(. != null) | csv::csvtojson) // []) as $enums
+  | csv::csvtojson | gen::config($version; $enums)
+' "${module}")
+JQ_MODULES_PATH="${JQ_MODULES_PATH:-${here}/../jq}"
+
+log() {
+  echo >&2 "${@}"
+}
+
+main() {
+
+  if [ "$#" -lt 1 ]; then
+    log "Syntax:  ${0} <version> [registers.csv] [enums.csv]"
+    log "Example: ${0} M3.13"
+    return 1
+  fi
+
+  version="${1}"
+  registers="${2:-registers.csv}"
+  enums="${3-enums.csv}"
+
+  gojq \
+    -L "${JQ_MODULES_PATH}" \
+    --arg version "${version}" \
+    ${enums:+--rawfile enums "${enums}"} \
+    --raw-input --slurp \
+    --yaml-output \
+    "${script}" \
+    "${registers}"
+}
+
+main "${@}"
