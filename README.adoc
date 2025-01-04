@@ -6,7 +6,7 @@ A generator for Modbus configuration files
 == Overview
 This project provides a generic facility to create configuration files for Modbus devices. Main purpose is the integration of Modbus devices into Smart Home platforms without dependency on a particular device, platform or protocol.
 
-[mermaid]
+[source, mermaid]
 ....
 flowchart LR
     modbus[("Modbus<br/>Definitions")] --> g(Generator)
@@ -19,7 +19,7 @@ As <<Proof of Concept, proof of concept>>, a Buderus heat pump was integrated in
 
 .Integration of a Buderus heat pump in Home Assistant
 ====
-image::doc-ha-a4.png[400,align=center]
+image::doc/ha-04.png[400,align=center]
 ====
 
 == Quick start
@@ -31,13 +31,12 @@ image::doc-ha-a4.png[400,align=center]
 Generate configuration for MQMGateway and Home Assistant, targeting a Dimplex system with version M3.13:
 
 ```sh
-$ cd somewhere
-$ ls
+$ ls data/dimplex-rtu
 enums.csv  registers.csv
 
-$ docker run --rm -v "$PWD:/opt/mobugen/data:ro" git-developer/mobugen mqm-gojq-generator M3.13 >mqmgateway/config.mqtt-devices.yaml
+$ docker run --rm -v "$PWD/data/dimplex-rtu:/opt/mobugen/data:ro" ghcr.io/git-developer/mobugen mqm-gojq-generator M3.13 >mqmgateway/config.mqtt-devices.yaml
 
-$ docker run --rm -v "$PWD:/opt/mobugen/data:ro" git-developer/mobugen ha-mqtt-gojq-generator M3.13 >home-assistant/config/packages/mqtt.yaml
+$ docker run --rm -v "$PWD/data/dimplex-rtu:/opt/mobugen/data:ro" ghcr.io/git-developer/mobugen ha-mqtt-gojq-generator M3.13 >home-assistant/config/packages/mqtt.yaml
 ```
 
 == Purpose of this project
@@ -79,7 +78,7 @@ You can then
 . Run the generator to create a configuration file.
 . Merge the configuration file with your existing configuration.
 
-[mermaid]
+[source, mermaid]
 ....
 flowchart TD
     subgraph modbus[Modbus Definitions]
@@ -221,7 +220,7 @@ Holding,Auswahl Heizkreis,,3,3.Heizkreis,
 .Excerpt from a generated MQMGateway configuration
 ====
 ```sh
-$ docker run --rm -v "$PWD:/opt/mobugen/data:ro" git-developer/mobugen mqm-gojq-generator M3.13
+$ docker run --rm -v "$PWD:/opt/mobugen/data:ro" ghcr.io/git-developer/mobugen mqm-gojq-generator M3.13
 ```
 ```yaml
 mqtt:
@@ -252,7 +251,7 @@ mqtt:
 .Excerpt from a generated Home Assistant configuration
 ====
 ```sh
-$ docker run --rm -v "$PWD:/opt/mobugen/data:ro" git-developer/mobugen ha-mqtt-gojq-generator M3.13
+$ docker run --rm -v "$PWD:/opt/mobugen/data:ro" ghcr.io/git-developer/mobugen ha-mqtt-gojq-generator M3.13
 ```
 ```yaml
 mqtt:
@@ -324,26 +323,26 @@ homeassistant:
 
 .Home Assistant: Overview
 ====
-image::doc-ha-a4.png[600,align=center]
+image::doc/ha-04.png[600,align=center]
 ====
 .Home Assistant: Status and Temperatures over time
 ====
-image::doc-ha-a3.png[600,align=center]
+image::doc/ha-03.png[600,align=center]
 ====
 .Home Assistant: Power Consumption
 ====
-image::doc-ha-a2.png[300,align=center]
+image::doc/ha-02.png[300,align=center]
 ====
 .Home Assistant: Select Control
 ====
-image::doc-ha-a1.png[300,align=center]
+image::doc/ha-01.png[300,align=center]
 ====
 
 == Proof of Concept
 
 This section describes how the heat pump _Buderus WLW286 A_ was integrated in Home Assistant via MQTT.
 
-[mermaid]
+[source, mermaid]
 ....
 flowchart LR
     wpm["Buderus<br/>WPM100"]
@@ -408,7 +407,7 @@ def config($version; $enumlist):
 ```
 
 === Runtime behavior
-[mermaid]
+[source, mermaid]
 ....
 flowchart LR
     csv[("Modbus<br/>Definitions<br/>(CSV)")]

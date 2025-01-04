@@ -1,6 +1,6 @@
 FROM alpine
 RUN apk add --no-cache gojq
-WORKDIR /opt/mobugen
-COPY bin/ ./bin/
-COPY jq/ ./jq/
+COPY bin/ /opt/mobugen/bin/
+COPY jq/ /opt/mobugen/jq/
 ENV PATH="$PATH:/opt/mobugen/bin"
+WORKDIR /opt/mobugen/data
