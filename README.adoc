@@ -220,7 +220,7 @@ Holding,Auswahl Heizkreis,,3,3.Heizkreis,
 .Excerpt from a generated MQMGateway configuration
 ====
 ```sh
-$ docker run --rm -v "$PWD:/opt/mobugen/data:ro" ghcr.io/git-developer/mobugen mqm-gojq-generator M3.13
+$ docker run --rm -v "$PWD:/opt/mobugen/data:ro" -e MQTT_TOPIC_PREFIX=heatpump ghcr.io/git-developer/mobugen mqm-gojq-generator M3.13
 ```
 ```yaml
 mqtt:
@@ -251,7 +251,7 @@ mqtt:
 .Excerpt from a generated Home Assistant configuration
 ====
 ```sh
-$ docker run --rm -v "$PWD:/opt/mobugen/data:ro" ghcr.io/git-developer/mobugen ha-mqtt-gojq-generator M3.13
+$ docker run --rm -v "$PWD:/opt/mobugen/data:ro" -e MQTT_TOPIC_PREFIX=heatpump -e HA_DEVICE_ID=wlw286 ghcr.io/git-developer/mobugen ha-mqtt-gojq-generator M3.13
 ```
 ```yaml
 mqtt:
