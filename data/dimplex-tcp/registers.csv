@@ -1,0 +1,167 @@
+type,address,name,since,access,data_type,min,max,unit,class,conversion,scale,offset,domain,device,part,variable,category_id,category,subcategory
+Holding,13,Störmeldungen,H,R,uint16,1,23,,problem,enum,,,,,,Stoerung_Wert,1.1,Systemstatus,
+Holding,14,Statusmeldungen,H,R,uint16,0,30,,operation,enum,,,,,,Anz_Status_Wert,1.1,Systemstatus,
+Holding,94,Sperrmeldungen,H,R,uint16,1,7,,lock,enum,,,,,,Sperr_Wp_Wert_Anz,1.1,Systemstatus,
+Holding,42,Störmeldungen,J,R,uint16,1,23,,problem,enum,,,,,,Stoerung_Wert,1.1,Systemstatus,
+Holding,43,Statusmeldungen,J,R,uint16,0,30,,operation,enum,,,,,,Anz_Status_Wert,1.1,Systemstatus,
+Holding,59,Sperrmeldungen,J,R,uint16,1,43,,lock,enum,,,,,,Sperr_Wp_Wert_Anz,1.1,Systemstatus,
+Holding,103,Statusmeldungen,L,R,uint16,0,30,,operation,enum,,,,,,Anz_Status_Wert,1.1,Systemstatus,
+Holding,104,Sperrmeldungen,L,R,uint16,1,35,,lock,enum,,,,,,Sperr_Wp_Wert_Anz,1.1,Systemstatus,
+Holding,105,Störmeldungen,L,R,uint16,1,32,,problem,enum,,,,,,Stoerung_Wert,1.1,Systemstatus,
+Holding,106,Sensorfehler,L,R,uint16,1,30,,problem,enum,,,,,,Fehler_Wert,1.1,Systemstatus,
+Holding,5015,Betriebsmodus,J,RW,uint16,0,5,,option,enum,,,,,,BA_aktiv,1.2,Betriebsmodus,
+Holding,5016,Anzahl Partystunden,J,RW,uint16,0,72,hour,duration,,,,,,,P_PARTY_HOUR,1.2,Betriebsmodus,
+Holding,5017,Anzahl Urlaubstage,J,RW,uint16,0,150,day,duration,,,,,,,P_URLAUB_TAGE,1.2,Betriebsmodus,
+Holding,127,Zeitwert Stoßlüften,J,RW,uint16,15,90,min,duration,,,,,,,Luft_Zeit_Stoss,1.2.1,Betriebsmodus,Lüftung
+Holding,5034,Stufen,J,RW,uint16,0,5, ,quantity,,,,,fan,,P_Luft_Stufe,1.2.2,Betriebsmodus,Lüftung
+Holding,1,Außentemperatur,J,R,int16,,,°C,,,0.1,,,,R1,E_Aussen_T,1.3,Betriebsdaten,
+Holding,2,Temperatur Rücklauf,J,R,int16,,,°C,,,0.1,,heating,,R2,E_Rueckl_T,1.3,Betriebsdaten,
+Holding,3,Temperatur Warmwasser,J,R,int16,,,°C,,,0.1,,tapwater,,R3,E_Ww_Fuehl,1.3,Betriebsdaten,
+Holding,5,Temperatur Vorlauf,J,R,int16,,,°C,,,0.1,,heating,,R9,E_Vorl_T,1.3,Betriebsdaten,
+Holding,6,Temperatur Wärmequelleneintritt,J,R,int16,,,°C,,,0.1,,,,R24,E_WqT_Ein,1.3,Betriebsdaten,
+Holding,7,Temperatur Wärmequellenaustritt,J,R,int16,,,°C,,,0.1,,,,R6,E_WqT_Aus,1.3,Betriebsdaten,
+Holding,9,Temperatur 2.Heizkreis,J,R,int16,,,°C,,,0.1,,heating,hk2,R5,E_HK2_Temp,1.3,Betriebsdaten,
+Holding,10,Temperatur 3.Heizkreis,J,R,int16,,,°C,,,0.1,,heating,hk3,R13,E_HK3_Temp,1.3,Betriebsdaten,
+Holding,11,Raumtemperatur 1 / RT-RTH Econ,J,R,int16,,,°C,,,0.1,,heating,,,E_Raum1_T,1.3,Betriebsdaten,
+Holding,12,Raumtemperatur 2,J,R,int16,,,°C,,,0.1,,heating,,,E_Raum2_T,1.3,Betriebsdaten,
+Holding,13,Raumfeuchte 1 / RT-RTH Econ,J,R,int16,,,%,,,0.1,,heating,,,E_Raum1_Feu,1.3,Betriebsdaten,
+Holding,14,Raumfeuchte 2,J,R,int16,,,%,,,0.1,,heating,,,E_Raum2_Feu,1.3,Betriebsdaten,
+Holding,53,Temperatur Rücklaufsoll,J,R,int16,,,°C,,,0.1,,heating,hk1,,HK1_Soll_Temp,1.3,Betriebsdaten,
+Holding,54,Solltemperatur 2.Heizkreis,J,R,int16,,,°C,,,0.1,,heating,hk2,,HK2_Soll_Temp,1.3,Betriebsdaten,
+Holding,55,Solltemperatur 3.Heizkreis,J,R,int16,,,°C,,,0.1,,heating,hk3,,HK3_Soll_Temp,1.3,Betriebsdaten,
+Holding,58,Temperatur Warmwassersoll,J,R,int16,,,°C,,,0.1,,tapwater,,,Ww_Soll_Temp,1.3,Betriebsdaten,
+Holding,19,Vorlauftemperatur,J,R,int16,,,°C,,,0.1,,cooling,,R11,E_KP_VlTemp,1.3.1,Betriebsdaten,Passiv Kühlen
+Holding,20,Rücklauftemperatur,J,R,int16,,,°C,,,0.1,,cooling,,R4,E_KP_RlTemp,1.3.1,Betriebsdaten,Passiv Kühlen
+Holding,21,Rücklauftemperatur gemäß Primärkreis,J,R,int16,,,°C,,,0.1,,cooling,,R24,E_Sole_Temp,1.3.2,Betriebsdaten,Passiv/Aktiv Kühlen
+Holding,23,Solarspeicher,J,R,int16,,,°C,,,0.1,,,,R22,E_Sol_Speicher,1.3.3,Betriebsdaten,Solar
+Holding,22,Kollektorfühler,,R,int16,,,°C,,,0.1,,,,R23,E_KLF,1.3.3,Betriebsdaten,Solar
+Holding,120,Außenlufttemperatur,J,R,int16,,,°C,,,0.1,,,,,Luft_Temp_Aussenluft,1.3.4,Betriebsdaten,Lüftung
+Holding,121,Zulufttemperatur,J,R,int16,,,°C,,,0.1,,,,,Luft_Temp_Zuluft,1.3.4,Betriebsdaten,Lüftung
+Holding,122,Ablufttemperatur,J,R,int16,,,°C,,,0.1,,,,,Luft_Temp_Abluft,1.3.4,Betriebsdaten,Lüftung
+Holding,123,Fortlufttemperatur,J,R,int16,,,°C,,,0.1,,,,,Luft_Temp_Fortluft,1.3.4,Betriebsdaten,Lüftung
+Holding,125,Drehzahl Zuluftventilator,J,R,int16,,,1/min,,,,,,fan,,Luft_Drehzahl_Zuluft,1.3.4,Betriebsdaten,Lüftung
+Holding,126,Drehzahl Abluftventilator,J,R,int16,,,1/min,,,,,,fan,,Luft_Drehzahl_Abluft,1.3.4,Betriebsdaten,Lüftung
+Holding,72,Verdichter 1,J,R,uint16,,,hour,duration,,,,,,,BS_Vd1,1.4,Laufzeiten,
+Holding,73,Verdichter 2,J,R,uint16,,,hour,duration,,,,,,,BS_Vd2,1.4,Laufzeiten,
+Holding,74,Primärpumpe / Ventilator,J,R,uint16,,,hour,duration,,,,,,M11,BS_PupVen,1.4,Laufzeiten,
+Holding,75,2.Wärmeerzeuger,J,R,uint16,,,hour,duration,,,,,external-heater,E10,BS_ZWE,1.4,Laufzeiten,
+Holding,76,Heizungspumpe,J,R,uint16,,,hour,duration,,,,heating,,M13,BS_HUP,1.4,Laufzeiten,
+Holding,77,Warmwasserpumpe,J,R,uint16,,,hour,duration,,,,tapwater,,M18,BS_WUP,1.4,Laufzeiten,
+Holding,78,Flanschheizung,J,R,uint16,,,hour,duration,,,,tapwater,flange,E9,BS_THK,1.4,Laufzeiten,
+Holding,79,Schwimmbadpumpe,J,R,uint16,,,hour,duration,,,,pool,,M19,BS_SUP,1.4,Laufzeiten,
+Holding,71,Zusatzumwälzpumpe,L12,R,uint16,,,hour,duration,,,,,,M16,BS_ZUP,1.4,Laufzeiten,
+Holding,5096,Wärmemenge Heizen 1-4,J,R,uint16,,,kWh,heat,,,,heating,,,WMZ_H_ST1bis4,1.5,Wärmemengen,
+Holding,5097,Wärmemenge Heizen 5-8,J,R,uint16,,,kWh,heat,,10000,,heating,,,WMZ_H_ST5bis8,1.5,Wärmemengen,
+Holding,5098,Wärmemenge Heizen 9-12,J,R,uint16,,,kWh,heat,,100000000,,heating,,,WMZ_H_ST9bis12,1.5,Wärmemengen,
+Holding,5099,Wärmemenge Warmwasser 1-4,J,R,uint16,,,kWh,heat,,,,tapwater,,,WMZ_WW_ST1bis4,1.5,Wärmemengen,
+Holding,5100,Wärmemenge Warmwasser 5-8,J,R,uint16,,,kWh,heat,,10000,,tapwater,,,WMZ_WW_ST5bis8,1.5,Wärmemengen,
+Holding,5101,Wärmemenge Warmwasser 9-12,J,R,uint16,,,kWh,heat,,100000000,,tapwater,,,WMZ_WW_ST9bis12,1.5,Wärmemengen,
+Holding,5102,Wärmemenge Schwimmbad 1-4,J,R,uint16,,,kWh,heat,,,,pool,,,WMZ_SW_ST1bis4,1.5,Wärmemengen,
+Holding,5103,Wärmemenge Schwimmbad 5-8,J,R,uint16,,,kWh,heat,,10000,,pool,,,WMZ_SW_ST5bis8,1.5,Wärmemengen,
+Holding,5104,Wärmemenge Schwimmbad 9-12,J,R,uint16,,,kWh,heat,,100000000,,pool,,,WMZ_SW_ST9bis12,1.5,Wärmemengen,
+Holding,5127,Umweltenergie 1-4,J,R,uint16,,,kWh,,,,,,,,,1.5,Wärmemengen,
+Holding,5128,Umweltenergie 5-8,J,R,uint16,,,kWh,,,10000,,,,,,1.5,Wärmemengen,
+Holding,5129,Umweltenergie 9-12,J,R,uint16,,,kWh,,,100000000,,,,,,1.5,Wärmemengen,
+Coil,3,Smart Grid 1,J,R,boolean,,,,open,,,,,valve,,E_ID1,1.6,Eingänge,
+Coil,4,Smart Grid 2,J,R,boolean,,,,open,,,,,valve,,E_ID2,1.6,Eingänge,
+Coil,5,EVU-Sperre,J,R,boolean,,,,lock,,,,,,,E_ID3,1.6,Eingänge,
+Coil,6,Sperre Extern,J,R,boolean,,,,lock,,,,,,,E_ID4,1.6,Eingänge,
+Coil,41,Verdichter 1,J,R,boolean,,,,operation,,,,,,,A_VD1,1.7,Ausgänge,
+Coil,42,Verdichter 2,J,R,boolean,,,,operation,,,,,,,A_VD2,1.7,Ausgänge,
+Coil,43,Ventilator,J,R,boolean,,,,operation,,,,,fan,M2,A_VEN,1.7,Ausgänge,
+Coil,43,Primärpumpe,J,R,boolean,,,,operation,,,,,,M11,A_PUP,1.7,Ausgänge,
+Coil,44,2.Wärmeerzeuger,J,R,boolean,,,,operation,,,,,external-heater,E10,A_ZWE,1.7,Ausgänge,
+Coil,45,Heizungspumpe,J,R,boolean,,,,operation,,,,heating,,M13,A_HUP1,1.7,Ausgänge,
+Coil,46,Warmwasserpumpe,J,R,boolean,,,,operation,,,,tapwater,,M18,A_WUP,1.7,Ausgänge,
+Coil,47,Mischer Auf,J,R,boolean,,,,open,,,,heating,hk3,M21,A_Hk3_MiA,1.7,Ausgänge,
+Coil,48,Mischer Zu,J,R,boolean,,,,open,,,,heating,hk3,M21,A_Hk3_MiZ,1.7,Ausgänge,
+Coil,49,Zusatzumwälzpumpe,J,R,boolean,,,,operation,,,,,,M16,A_ZUP,1.7,Ausgänge,
+Coil,50,Flanschheizung,J,R,boolean,,,,operation,,,,tapwater,flange,E9,A_FH,1.7,Ausgänge,
+Coil,51,Heizungspumpe,J,R,boolean,,,,operation,,,,heating,,M15,A_HUP2,1.7,Ausgänge,
+Coil,52,Mischer Auf,J,R,boolean,,,,open,,,,heating,hk2,M22,A_Hk2_MiA,1.7,Ausgänge,
+Coil,53,Mischer Zu,J,R,boolean,,,,open,,,,heating,hk2,M22,A_Hk2_MiZ,1.7,Ausgänge,
+Coil,56,Schwimmbadpumpe,J,R,boolean,,,,operation,,,,pool,,M19,A_SUP,1.7,Ausgänge,
+Coil,57,Sammelstörmeldung,J,R,boolean,,,,problem,,,,,,H5,A_STF,1.7,Ausgänge,
+Coil,59,Heizungspumpe,J,R,boolean,,,,operation,,,,heating,,M14,A_1_NO1,1.7,Ausgänge,
+Coil,60,Kühlpumpe,J,R,boolean,,,,operation,,,,cooling,,M17,A_KUP,1.7,Ausgänge,
+Coil,61,Heizungspumpe,J,R,boolean,,,,operation,,,,heating,,M20,A_HUP3,1.7,Ausgänge,
+Coil,66,Umschaltung Raumthermostate Heizen/Kühlen,J,R,boolean,,,,option,,,,,,N9,A_RAUMT,1.7,Ausgänge,
+Coil,68,Primärpumpe Kühlen,J,R,boolean,,,,operation,,,,cooling,,M12,A_PUPK,1.7,Ausgänge,
+Coil,71,Solarpumpe,J,R,boolean,,,,operation,,,,,,M23,A_Solar_Pumpe,1.7,Ausgänge,Solar
+Coil,58,Zirkulationspumpe,,R,boolean,,,,operation,,,,tapwater,,M24,A_ZWUP,1.7,Ausgänge,
+Holding,46,Raumtemperatur,J,RW,uint16,15,30,°C,,,0.1,,heating,hk1,,P_HK1_RT_SOLL,1.8,Einstellungen 1. Heiz-/Kühlkreis,
+Holding,47,Hysterese,J,RW,uint16,0.5,5,K,,,0.1,,heating,hk1,,P_HK_HYST,1.8,Einstellungen 1. Heiz-/Kühlkreis,
+Holding,5036,Parallelverschiebung,J,RW,uint16,-19,19,K,,enum,,-19,heating,hk1,,P_HK1_WK,1.8,Einstellungen 1. Heiz-/Kühlkreis,
+Holding,5037,Festwertsolltemperatur,J,RW,uint16,18,60,°C,,,,,heating,hk1,,P_HK1_FWR_SOLL,1.8,Einstellungen 1. Heiz-/Kühlkreis,
+Holding,5038,Heizkurvenendpunkt,J,RW,uint16,20,70,°C,,,,,heating,hk1,,P_HK1_END,1.8,Einstellungen 1. Heiz-/Kühlkreis,
+Holding,5043,Solltemperatur dynamische Kühlung,J,RW,uint16,10,35,°C,,,,,cooling,hk1,,P_KUEHL_DY_SOLL,1.8,Einstellungen 1. Heiz-/Kühlkreis,
+Holding,5043,Solltemperatur dynamische Kühlung bei 15°C AT,L22.9,RW,uint16,10,35,°C,,,,,cooling,hk1,,P_Kuehl_Dyn_Soll1,1.8,Einstellungen 1. Heiz-/Kühlkreis,
+Holding,5134,Solltemperatur dynamische Kühlung bei 35°C AT,L22.9,RW,uint16,10,35,°C,,,,,cooling,hk1,,P_Kuehl_Dyn_Soll2,1.8,Einstellungen 1. Heiz-/Kühlkreis,
+Holding,5082,Auswahl Heizkreis,,RW,uint16,2,3,,option,enum,,,heating,,,HK_Wert,1.9.1,Einstellungen 2./3. Heiz-/Kühlkreis,
+Holding,93,Mischerhysterese,,RW,uint16,0.5,2,K,,,0.1,,heating,,,P_HK2-3_HY,1.9.2,Einstellungen 2./3. Heiz-/Kühlkreis,
+Holding,5084,Heizkurvenendpunkt,,RW,uint16,20,70,°C,,,,,heating,,,P_HK2-3_END,1.9.2,Einstellungen 2./3. Heiz-/Kühlkreis,
+Holding,5085,Festwertemperatur,,RW,uint16,20,60,°C,,,,,heating,,,P_FWR_SOLL,1.9.2,Einstellungen 2./3. Heiz-/Kühlkreis,
+Holding,5086,Parallelverschiebung,,RW,uint16,-19,19,K,,enum,,-19,heating,,,P_WK,1.9.2,Einstellungen 2./3. Heiz-/Kühlkreis,
+Holding,5087,Mischerlaufzeit,,RW,uint16,1,6,min,duration,,,,heating,,,HK2-3_MLZ,1.9.2,Einstellungen 2./3. Heiz-/Kühlkreis,
+Holding,5088,Maximale Temperatur,,RW,uint16,30,70,°C,,,,,heating,,,P_HK2-3_Max,1.9.2,Einstellungen 2./3. Heiz-/Kühlkreis,
+Holding,5089,Kühlung Raumsolltemperatur,,RW,uint16,15,30,°C,,enum,0.5,15,cooling,,,,1.9.2,Einstellungen 2./3. Heiz-/Kühlkreis,
+Holding,5045,Hysterese,J,RW,uint16,2,15,K,,,,,tapwater,,,P_WW_HY,1.10,Einstellungen Warmwasser,
+Holding,5047,Solltemperatur,J,RW,uint16,r5145,r5048,°C,,,,,tapwater,,,P_WW_SOLL,1.10,Einstellungen Warmwasser,
+Holding,5048,Solltemperatur Maximal,J,RW,uint16,r5047,85,°C,,,,,tapwater,,,P_WW_SOLLAB,1.10,Einstellungen Warmwasser,
+Holding,5145,Solltemperatur Minimal,J,RW,uint16,10,r5047,°C,,,,,tapwater,,,P_WW_MIN_TEMP,1.10,Einstellungen Warmwasser,
+Coil,19,Freigabe Zirkulationspumpe,,RW,boolean,0,1,,operation,,,,tapwater,,,,1.10,Einstellungen Warmwasser,
+Holding,5049,Hysterese,J,RW,uint16,1,20,K,,,,,pool,,,P_SW_HY,1.11,Einstellungen Schwimmbad,
+Holding,5051,Solltemperatur,J,RW,uint16,5,60,°C,,,,,pool,,,P_SW_SOLL,1.11,Einstellungen Schwimmbad,
+Holding,48,Mischer Hysterese,J,RW,uint16,0.5,2,K,,,0.1,,,external-heater,,,1.12,Einstellungen 2. Wärmeerzeuger,
+Holding,5020,Grenztemperatur parallel,J,RW,int16,-25,35,°C,,,,,,external-heater,,,1.12,Einstellungen 2. Wärmeerzeuger,
+Holding,5021,Mischerlaufzeit,J,RW,uint16,1,6,min,duration,,,,,external-heater,,,1.12,Einstellungen 2. Wärmeerzeuger,
+Holding,112,Aussentemperatur BMS (extern),,RW,int16,-999,999,°C,,,,,,,,E_Aussen_T_Ext,2.1,Außentemperatur,
+Holding,5167,Smart Grid,M1.3,RW,uint16,0,13,,option,enum,,,,,,Smart_Grid,2.2.1,Energiemanagementsysteme,SG Ready
+Holding,5168,Zur Verfügung gestellte Wärmeleistung,M3.5,R,uint16,-32768,32767,W,heat,,10,,,,,Leist_Heiz,2.2.2,Energiemanagementsysteme,Leistungen und Überschuss
+Holding,5170,Aufgenommene elektrische Leistung,M3.5,R,uint16,-32768,32767,W,electricity,,10,,,,,Leist_Elekt,2.2.2,Energiemanagementsysteme,Leistungen und Überschuss
+Holding,5182,PV Überschuss für Smart-Grid von WR/EM,M3.5,RW,uint16,-32768,32767,W,electricity,,10,,,,,PV_Ueberschuss,2.2.2,Energiemanagementsysteme,Leistungen und Überschuss
+Holding,65,Software Version,,R,uint16,0,26,,text,enum,,64,,,,SWa_Version,2.2.3,Energiemanagementsysteme,Softwarestand
+Holding,66,Software Nummer,,R,uint16,,,,,,,,,,,SWa_Nummer,2.2.3,Energiemanagementsysteme,Softwarestand
+Holding,67,Software Index,,R,uint16,,,,,,,,,,,SWa_Index,2.2.3,Energiemanagementsysteme,Softwarestand
+Holding,62,Heartbeat Input,M3.14,W,uint16,0,65535,,,,,,,,,Heartbeat_In,2.2.4,Energiemanagementsysteme,Heartbeat
+Holding,63,Heartbeat Output,M3.14,R,uint16,0,65535,,,,,,,,,Heartbeat_Out,2.2.4,Energiemanagementsysteme,Heartbeat
+Holding,5065,Raumadressen 1./2./3.Heiz/Kühlkreis,L23.1,RW,uint16,50,79,,address,,,,heating,,,,2.3.1,Raumtemperaturregelung,
+Holding,11,Raumtemperatur 50-79 BMS,L23.1,RW,uint16,10,50,°C,,,0.1,,heating,,,E_Raum1_T,2.3.2,Raumtemperaturregelung,
+Holding,13,Raumfeuchte 50-79 BMS,L23.1,RW,uint16,20,90,%,,,0.1,,heating,,,E_Raum1_Feu,2.3.2,Raumtemperaturregelung,
+Coil,177,Zustand Stellventil,L23.1,R,boolean,0,1,,open,,,,heating,valve,,Ventil_Raum,2.3.2,Raumtemperaturregelung,
+Holding,5081,Raumsolltemperatur 50-79 BMS,L23.1,RW,uint16,10,30,°C,,,0.1,,heating,,,P_Raum_Soll,2.3.2,Raumtemperaturregelung,
+Holding,5164,Raumfreigabe 50-79 BMS,L23.1,RW,uint16,1,3,,option,enum,,,heating,,,Raum_Frei_HzK,2.3.2,Raumtemperaturregelung,
+Holding,5130,Sperre Extern,M3.8,RW,uint16,0,11,,lock,enum,,,,,,SperreExt_extern,2.4,Sperre Extern,
+Coil,102,set Stunde,J,W,boolean, ,, ,datetime,,,,,,,_set_hour,2.5,Zeitabgleich,
+Coil,103,set Minute,J,W,boolean, ,, ,datetime,,,,,,,_set_minute,2.5,Zeitabgleich,
+Coil,104,set Tag,J,W,boolean, ,, ,datetime,,,,,,,_set_day,2.5,Zeitabgleich,
+Coil,105,set Monat,J,W,boolean, ,, ,datetime,,,,,,,_set_month,2.5,Zeitabgleich,
+Coil,106,set Jahr,J,W,boolean, ,, ,datetime,,,,,,,_set_year,2.5,Zeitabgleich,
+Coil,107,set Wochentag,J,W,boolean, ,, ,datetime,,,,,,,_set_weekday,2.5,Zeitabgleich,
+Holding,5006,Stunde,J,RW,uint16,0,23,hour,datetime,,,,,,,NEW_HOUR,2.5,Zeitabgleich,
+Holding,5007,Minute,J,RW,uint16,0,59,min,datetime,,,,,,,NEW_MINUTE,2.5,Zeitabgleich,
+Holding,5008,Monat,J,RW,uint16,1,12,month,datetime,,,,,,,NEW_MONTH,2.5,Zeitabgleich,
+Holding,5009,Wochentag,J,RW,uint16,1,7,,datetime,enum,,,,,,NEW_WEEKDAY,2.5,Zeitabgleich,
+Holding,5010,Tag,J,RW,uint16,1,31,day,datetime,,,,,,,NEW_DAY,2.5,Zeitabgleich,
+Holding,5011,Jahr,J,RW,uint16,0,99,year,datetime,,,,,,,NEW_YEAR,2.5,Zeitabgleich,
+Holding,5081,Absenk- / Anhebwert,,RW,uint16,0,19,K,,,,,heating,,,P_DIFF,3.1,Zeitprogramm,1./2./3.Heizkreis
+Holding,5081,Temperatur,,RW,uint16,60,85,°C,,,,,tapwater,,,P_DIFF,3.1,Zeitprogramm,Warmwasser Thermische Desinfektion
+Holding,5081,Vorrang,,RW,uint16,1,10,hour,duration,,,,pool,,,P_DIFF,3.1,Zeitprogramm,Schwimmbad Vorrang
+Holding,5065,Zeitprogramm,,RW,uint16,,,,option,enum,,,,,,DU_ZF_Wert,3.1.1,Zeitprogramm,
+Holding,5066,Start Stunde 1,,RW,uint16,0,23,hour,datetime,,,,,,,P_ST_H1,3.1.2,Zeitprogramm,Zeitfunktion
+Holding,5067,Start Minute 1,,RW,uint16,0,59,min,datetime,,,,,,,P_ST_M1,3.1.2,Zeitprogramm,Zeitfunktion
+Holding,5068,Ende Stunde 1,,RW,uint16,0,23,hour,datetime,,,,,,,P_END_H1,3.1.2,Zeitprogramm,Zeitfunktion
+Holding,5069,Ende Minute 1,,RW,uint16,0,59,min,datetime,,,,,,,P_END_M1,3.1.2,Zeitprogramm,Zeitfunktion
+Holding,5070,Start Stunde 2,,RW,uint16,0,23,hour,datetime,,,,,,,P_ST_H2,3.1.2,Zeitprogramm,Zeitfunktion
+Holding,5071,Start Minute 2,,RW,uint16,0,59,min,datetime,,,,,,,P_ST_M2,3.1.2,Zeitprogramm,Zeitfunktion
+Holding,5072,Ende Stunde 2,,RW,uint16,0,23,hour,datetime,,,,,,,P_END_H2,3.1.2,Zeitprogramm,Zeitfunktion
+Holding,5073,Ende Minute 2,,RW,uint16,0,59,min,datetime,,,,,,,P_END_M2,3.1.2,Zeitprogramm,Zeitfunktion
+Holding,5074,Sonntag,,RW,uint16,0,3,,duration,enum:Zeitauswahl,,,,,,P_SO,3.1.2,Zeitprogramm,Zeitfunktion
+Holding,5075,Montag,,RW,uint16,0,3,,duration,enum:Zeitauswahl,,,,,,P_MO,3.1.2,Zeitprogramm,Zeitfunktion
+Holding,5076,Dienstag,,RW,uint16,0,3,,duration,enum:Zeitauswahl,,,,,,P_DI,3.1.2,Zeitprogramm,Zeitfunktion
+Holding,5077,Mittwoch,,RW,uint16,0,3,,duration,enum:Zeitauswahl,,,,,,P_MI,3.1.2,Zeitprogramm,Zeitfunktion
+Holding,5078,Donnerstag,,RW,uint16,0,3,,duration,enum:Zeitauswahl,,,,,,P_DO,3.1.2,Zeitprogramm,Zeitfunktion
+Holding,5079,Freitag,,RW,uint16,0,3,,duration,enum:Zeitauswahl,,,,,,P_FR,3.1.2,Zeitprogramm,Zeitfunktion
+Holding,5080,Samstag,,RW,uint16,0,3,,duration,enum:Zeitauswahl,,,,,,P_SA,3.1.2,Zeitprogramm,Zeitfunktion
+Coil,125,Aktiv Zeit 1,,R,boolean,0,1,,operation,,,,,,,P_Zeit1_Aktiv,3.1.3,Zeitprogramm,Zeitfunktion
+Coil,126,Aktiv Zeit 2,,R,boolean,0,1,,operation,,,,,,,P_Zeit2_Aktiv,3.1.3,Zeitprogramm,Zeitfunktion
