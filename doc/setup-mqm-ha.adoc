@@ -1,7 +1,13 @@
 == Setup Home Assistant and mqmgateway
 :toc:
 
-This is a step-by-step guide illustrating how to integrate a Modbus device into Home Assistant.
+This is a step-by-step guide illustrating how to integrate a Modbus device into Home Assistant via MQTT.
+
+These components are involved and should be setup in order:
+
+. MQTT Broker
+. mqmgateway
+. Home Assistant
 
 === MQTT Broker
 
@@ -13,14 +19,24 @@ mqmgateway requires a connection to the Modbus device, either via a serial devic
 mqmgateway may run on the same host as Home Assistant or any other host in the network.
 
 . Create container configuration.
-  Example: https://github.com/BlackZork/mqmgateway/blob/master/docker-compose.yml[Compose file]
++
+Example: https://github.com/BlackZork/mqmgateway/blob/master/docker-compose.yml[Compose file]
 . Create basic configuration `config.template.yaml` with all options except MQTT objects.
-  Example: https://github.com/BlackZork/mqmgateway/blob/master/modmqttd/config.template.yaml[Configuration]
++
+Example: https://github.com/BlackZork/mqmgateway/blob/master/modmqttd/config.template.yaml[Configuration]
 . Create MQTT objects configuration `config.mqtt-objects.yaml` using `mqm-gojq-generator`.
-  Example: https://github.com/git-developer/mobugen?tab=readme-ov-file#examples[Generator command]
-  The generator accepts configuration options via https://github.com/git-developer/mobugen?tab=readme-ov-file#generators[environment variables].
++
+Example: https://github.com/git-developer/mobugen?tab=readme-ov-file#examples[Generator command]
++
+The generator accepts configuration options via https://github.com/git-developer/mobugen?tab=readme-ov-file#generators[environment variables].
 . Merge basic configuration with MQTT objects into `config.yaml`.
-  Example: `cat config.template.yaml config.mqtt-objects.yaml >>config.yaml`
++
+Example:
++
+[source,sh]
+----
+$ cat config.template.yaml config.mqtt-objects.yaml >>config.yaml
+----
 
 ==== Poll groups
 
@@ -29,7 +45,8 @@ They are configured within the options of a modbus slave.
 
 ===== Dimplex RTU
 
-```yaml
+[source,yaml]
+----
 poll_groups:
   - { register: 1,     count: 71,  register_type: coil }
   - { register: 125,   count: 52,  register_type: coil }
@@ -37,11 +54,11 @@ poll_groups:
   - { register: 103,   count: 125, register_type: holding }
   - { register: 241,   count: 70,  register_type: holding }
   - { register: 337,   count: 52,  register_type: holding }
-```
-
+----
 ===== Dimplex TCP
 
-```yaml
+[source,yaml]
+----
 poll_groups:
   - { register: 1,     count: 71,  register_type: coil }
   - { register: 125,   count: 52,  register_type: coil }
@@ -50,7 +67,7 @@ poll_groups:
   - { register: 241,   count: 70,  register_type: holding }
   - { register: 5006,  count: 100, register_type: holding }
   - { register: 5127,  count: 60,  register_type: holding }
-```
+----
 
 === Home Assistant
 
@@ -64,6 +81,7 @@ homeassistant:
 ----
 
 . Create a configuration file `packages/heatpump_devices.yaml` for the heatpump device as container for all entities.
++
 Example for a heatpump `wlw286` in combination with a manager `wpm100`:
 +
 .packages/heatpump_devices.yaml
@@ -91,10 +109,13 @@ mqtt:
 ----
 
 . Create the entity configuration file `packages/heatpump_entities.yaml` using `ha-mqtt-gojq-generator`
-  Example: https://github.com/git-developer/mobugen?tab=readme-ov-file#examples[Generator command]
-  The generator accepts configuration options via https://github.com/git-developer/mobugen?tab=readme-ov-file#generators[environment variables].
++
+Example: https://github.com/git-developer/mobugen?tab=readme-ov-file#examples[Generator command]
++
+The generator accepts configuration options via https://github.com/git-developer/mobugen?tab=readme-ov-file#generators[environment variables].
 
 . (optional) Customize the configuration file `packages/heatpump_devices.yaml`.
++
 Example for an aggregation of entities for Dimplex devices:
 +
 .packages/heatpump_devices.yaml
