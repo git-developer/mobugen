@@ -18,6 +18,11 @@ See https://www.home-assistant.io/integrations/mqtt#setting-up-a-broker[Setting 
 https://github.com/BlackZork/mqmgateway/[mqmgateway] requires a connection to the Modbus device, either via a serial device for Modbus RTU (e.g. an USB dongle) or via a network connection for Modbus TCP.
 mqmgateway may run on the same host as Home Assistant or any other host in the network.
 
+. Find out the version of the heat pump software.
++
+The related component is called _WPM_ for Dimplex-based devices, and the version number has the format _<LETTER><NUMBER>.<NUMBER>_. The generator uses this version to omit registers that are not supported by the heat pump software.
++
+Examples: `M3.13` or `L23.1`
 . Create container configuration.
 +
 The concrete steps depend on how containers are started in the target environment. This could be editing a `compose.yml`, or a UI driven configuration in your container management tool of choice.
@@ -26,7 +31,7 @@ Example: https://github.com/BlackZork/mqmgateway/blob/master/docker-compose.yml[
 . Create basic application configuration `config.basic.yaml` with all options except MQTT objects, optionally containing <<Poll groups>>. The `exprconv.so` plugin is required in the list of `converter_plugins` to support type conversions.
 +
 Example: https://github.com/BlackZork/mqmgateway/blob/master/modmqttd/config.template.yaml[Configuration]
-. Create MQTT objects configuration `config.mqtt-objects.yaml` using `mqm-gojq-generator`. The generator accepts configuration options via https://github.com/git-developer/mobugen?tab=readme-ov-file#generators[environment variables]. Example:
+. Create MQTT objects configuration `config.mqtt-objects.yaml` using `mqm-gojq-generator`. The generator accepts configuration options via https://github.com/git-developer/mobugen?tab=readme-ov-file#generators[environment variables]. Supply the software version of the heat pump as argument. Example:
 +
 [source,sh]
 ----
@@ -73,9 +78,9 @@ Poll group configuration is optional and depends on the Modbus device and on pol
 [source,yaml]
 ----
 poll_groups:
-  - { register: 1,     count: 71,  register_type: coil }
+  - { register: 2,     count: 71,  register_type: coil }
   - { register: 125,   count: 52,  register_type: coil }
-  - { register: 1,     count: 93,  register_type: holding }
+  - { register: 2,     count: 93,  register_type: holding }
   - { register: 103,   count: 125, register_type: holding }
   - { register: 241,   count: 70,  register_type: holding }
   - { register: 337,   count: 52,  register_type: holding }
@@ -85,9 +90,9 @@ poll_groups:
 [source,yaml]
 ----
 poll_groups:
-  - { register: 1,     count: 71,  register_type: coil }
+  - { register: 2,     count: 71,  register_type: coil }
   - { register: 125,   count: 52,  register_type: coil }
-  - { register: 1,     count: 93,  register_type: holding }
+  - { register: 2,     count: 93,  register_type: holding }
   - { register: 103,   count: 125, register_type: holding }
   - { register: 241,   count: 70,  register_type: holding }
   - { register: 5006,  count: 100, register_type: holding }
@@ -122,7 +127,7 @@ mqtt:
         name: Heat Pump
 ----
 
-. Create the entity configuration file `packages/heatpump_entities.yaml` using `ha-mqtt-gojq-generator`. The generator accepts configuration options via https://github.com/git-developer/mobugen?tab=readme-ov-file#generators[environment variables]. Example:
+. Create the entity configuration file `packages/heatpump_entities.yaml` using `ha-mqtt-gojq-generator`. The generator accepts configuration options via https://github.com/git-developer/mobugen?tab=readme-ov-file#generators[environment variables]. Supply the software version of the heat pump as argument. Example:
 +
 [source,sh]
 ----
