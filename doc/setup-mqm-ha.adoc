@@ -23,7 +23,7 @@ mqmgateway may run on the same host as Home Assistant or any other host in the n
 The concrete steps depend on how containers are started in the target environment. This could be editing a `compose.yml`, or a UI driven configuration in your container management tool of choice.
 +
 Example: https://github.com/BlackZork/mqmgateway/blob/master/docker-compose.yml[Compose file]
-. Create basic application configuration `config.basic.yaml` with all options except MQTT objects, optionally containing <<Poll groups>>.
+. Create basic application configuration `config.basic.yaml` with all options except MQTT objects, optionally containing <<Poll groups>>. The `exprconv.so` plugin is required in the list of `converter_plugins` to support type conversions.
 +
 Example: https://github.com/BlackZork/mqmgateway/blob/master/modmqttd/config.template.yaml[Configuration]
 . Create MQTT objects configuration `config.mqtt-objects.yaml` using `mqm-gojq-generator`. The generator accepts configuration options via https://github.com/git-developer/mobugen?tab=readme-ov-file#generators[environment variables]. Example:
