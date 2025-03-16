@@ -17,7 +17,7 @@ There are no restrictions on the format or content of the configuration files, s
 
 As <<Proof of Concept, proof of concept>>, a Buderus heat pump was integrated into Home Assistant.
 
-See <<doc/setup-mqm-ha.adoc,Setup Home Assistant & mqmgateway>> for step-by-step instructions on integration of a Modbus device into Home Assistant via MQTT.
+See <<doc/setup-mqm-ha.adoc#,Setup Home Assistant & mqmgateway>> for step-by-step instructions on integration of a Modbus device into Home Assistant via MQTT.
 
 .Integration of a Buderus heat pump in Home Assistant
 ====
