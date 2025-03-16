@@ -162,3 +162,5 @@ template:
 ----
 . Start or restart Home Assistant to load the configurations. Verify that entities exist and are updated from Modbus data.
 . Create dashboards at will.
++
+Example: link:../examples/ha-dashboard.yaml[Demo dashboard] (for use with raw configuration editor)
