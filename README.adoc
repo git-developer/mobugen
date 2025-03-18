@@ -449,5 +449,4 @@ When the generator is run:
 - https://jqlang.github.io/jq/manual/[jq]
 - https://www.home-assistant.io/[Home Assistant]
 - https://github.com/BlackZork/mqmgateway[mqmgateway]
-- https://github.com/john30/ebusd[ebusd]
 - https://github.com/emsesp/EMS-ESP32/discussions/1710[EMS-ESP32: Buderus WPM100]
