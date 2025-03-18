@@ -1,0 +1,20 @@
+modmqttd:
+  converter_search_path:
+    - /usr/lib/modmqttd
+  converter_plugins:
+    - stdconv.so
+    - exprconv.so
+modbus:
+  networks:
+    - name: network
+      address: 192.168.0.10
+      port: 502
+      slaves:
+        - address: 1
+mqtt:
+  client_id: mqmgateway
+  refresh: 10s
+  broker:
+    host: 192.168.0.20
+    username: mqmgateway-user
+    password: very-secret

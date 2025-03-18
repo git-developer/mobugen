@@ -1,0 +1,9 @@
+---
+services:
+  mqmgateway:
+    image: ghcr.io/blackzork/mqmgateway
+    container_name: mqmgateway
+    init: true
+    restart: unless-stopped
+    volumes:
+      - "/volume1/docker-data/mqmgateway/config.yaml:/etc/modmqttd/config.yaml:ro"

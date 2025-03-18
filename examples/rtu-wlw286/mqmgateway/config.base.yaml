@@ -1,0 +1,25 @@
+modmqttd:
+  converter_search_path: [ /usr/lib/modmqttd ]
+  converter_plugins: [ stdconv.so, exprconv.so ]
+
+modbus:
+  networks:
+    - name: network
+      address: "192.168.0.10"
+      port: 502
+      slaves:
+        - address: 1
+          name: waermepumpe
+          poll_groups:
+            - { register: 1,     count: 71,  register_type: coil }
+            - { register: 125,   count: 52,  register_type: coil }
+            - { register: 1,     count: 93,  register_type: holding }
+            - { register: 103,   count: 125, register_type: holding }
+            - { register: 241,   count: 70,  register_type: holding }
+            - { register: 337,   count: 52,  register_type: holding }
+
+mqtt:
+  client_id: mqmgateway
+  refresh: 10s
+  broker:
+    host: broker

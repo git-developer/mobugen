@@ -1,0 +1,1027 @@
+mqtt:
+  objects:
+    - state:
+        name: state
+        register: network.1.45
+        register_type: coil
+      topic: heatpump/ausgaenge/external-heater/e10/2-waermeerzeuger
+    - state:
+        name: state
+        register: network.1.126
+        register_type: coil
+      topic: heatpump/zeitprogramm/zeitfunktion/aktiv-zeit-1
+    - state:
+        name: state
+        register: network.1.127
+        register_type: coil
+      topic: heatpump/zeitprogramm/zeitfunktion/aktiv-zeit-2
+    - state:
+        name: state
+        register: network.1.6
+        register_type: coil
+      topic: heatpump/eingaenge/evu-sperre
+    - state:
+        name: state
+        register: network.1.51
+        register_type: coil
+      topic: heatpump/ausgaenge/tapwater/flange/e9/flanschheizung
+    - command:
+        name: set
+        register: network.1.20
+        register_type: coil
+      state:
+        name: state
+        register: network.1.20
+        register_type: coil
+      topic: heatpump/einstellungen-warmwasser/tapwater/freigabe-zirkulationspumpe
+    - state:
+        name: state
+        register: network.1.46
+        register_type: coil
+      topic: heatpump/ausgaenge/heating/m13/heizungspumpe
+    - state:
+        name: state
+        register: network.1.60
+        register_type: coil
+      topic: heatpump/ausgaenge/heating/m14/heizungspumpe
+    - state:
+        name: state
+        register: network.1.52
+        register_type: coil
+      topic: heatpump/ausgaenge/heating/m15/heizungspumpe
+    - state:
+        name: state
+        register: network.1.62
+        register_type: coil
+      topic: heatpump/ausgaenge/heating/m20/heizungspumpe
+    - state:
+        name: state
+        register: network.1.61
+        register_type: coil
+      topic: heatpump/ausgaenge/cooling/m17/kuehlpumpe
+    - state:
+        name: state
+        register: network.1.53
+        register_type: coil
+      topic: heatpump/ausgaenge/heating/hk2/m22/mischer-auf
+    - state:
+        name: state
+        register: network.1.48
+        register_type: coil
+      topic: heatpump/ausgaenge/heating/hk3/m21/mischer-auf
+    - state:
+        name: state
+        register: network.1.54
+        register_type: coil
+      topic: heatpump/ausgaenge/heating/hk2/m22/mischer-zu
+    - state:
+        name: state
+        register: network.1.49
+        register_type: coil
+      topic: heatpump/ausgaenge/heating/hk3/m21/mischer-zu
+    - state:
+        name: state
+        register: network.1.44
+        register_type: coil
+      topic: heatpump/ausgaenge/m11/primaerpumpe
+    - state:
+        name: state
+        register: network.1.69
+        register_type: coil
+      topic: heatpump/ausgaenge/cooling/m12/primaerpumpe-kuehlen
+    - state:
+        name: state
+        register: network.1.58
+        register_type: coil
+      topic: heatpump/ausgaenge/h5/sammelstoermeldung
+    - state:
+        name: state
+        register: network.1.57
+        register_type: coil
+      topic: heatpump/ausgaenge/pool/m19/schwimmbadpumpe
+    - state:
+        name: state
+        register: network.1.4
+        register_type: coil
+      topic: heatpump/eingaenge/valve/smart-grid-1
+    - state:
+        name: state
+        register: network.1.5
+        register_type: coil
+      topic: heatpump/eingaenge/valve/smart-grid-2
+    - state:
+        name: state
+        register: network.1.72
+        register_type: coil
+      topic: heatpump/ausgaenge/solar/m23/solarpumpe
+    - state:
+        name: state
+        register: network.1.7
+        register_type: coil
+      topic: heatpump/eingaenge/sperre-extern
+    - state:
+        name: state
+        register: network.1.67
+        register_type: coil
+      topic: heatpump/ausgaenge/n9/umschaltung-raumthermostate-heizen-kuehlen
+    - state:
+        name: state
+        register: network.1.44
+        register_type: coil
+      topic: heatpump/ausgaenge/fan/m2/ventilator
+    - state:
+        name: state
+        register: network.1.42
+        register_type: coil
+      topic: heatpump/ausgaenge/verdichter-1
+    - state:
+        name: state
+        register: network.1.43
+        register_type: coil
+      topic: heatpump/ausgaenge/verdichter-2
+    - state:
+        name: state
+        register: network.1.47
+        register_type: coil
+      topic: heatpump/ausgaenge/tapwater/m18/warmwasserpumpe
+    - state:
+        name: state
+        register: network.1.59
+        register_type: coil
+      topic: heatpump/ausgaenge/tapwater/m24/zirkulationspumpe
+    - state:
+        name: state
+        register: network.1.50
+        register_type: coil
+      topic: heatpump/ausgaenge/m16/zusatzumwaelzpumpe
+    - state:
+        name: state
+        register: network.1.178
+        register_type: coil
+      topic: heatpump/raumtemperaturregelung/heating/valve/zustand-stellventil
+    - command:
+        name: set
+        register: network.1.107
+        register_type: coil
+      topic: heatpump/zeitabgleich/set-jahr
+    - command:
+        name: set
+        register: network.1.104
+        register_type: coil
+      topic: heatpump/zeitabgleich/set-minute
+    - command:
+        name: set
+        register: network.1.106
+        register_type: coil
+      topic: heatpump/zeitabgleich/set-monat
+    - command:
+        name: set
+        register: network.1.103
+        register_type: coil
+      topic: heatpump/zeitabgleich/set-stunde
+    - command:
+        name: set
+        register: network.1.105
+        register_type: coil
+      topic: heatpump/zeitabgleich/set-tag
+    - command:
+        name: set
+        register: network.1.108
+        register_type: coil
+      topic: heatpump/zeitabgleich/set-wochentag
+    - state:
+        name: state
+        register: network.1.76
+      topic: heatpump/laufzeiten/external-heater/e10/2-waermeerzeuger
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.123
+      topic: heatpump/betriebsdaten/lueftung/ablufttemperatur
+    - command:
+        name: set
+        register: network.1.5082
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5082
+      topic: heatpump/zeitprogramm/1-2-3-heizkreis/heating/absenk-anhebwert
+    - command:
+        name: set
+        register: network.1.5017
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5017
+      topic: heatpump/betriebsmodus/anzahl-partystunden
+    - command:
+        name: set
+        register: network.1.5018
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5018
+      topic: heatpump/betriebsmodus/anzahl-urlaubstage
+    - state:
+        converter: expr.evaluate("R0 * 10", 1)
+        name: state
+        register: network.1.5171
+      topic: heatpump/energiemanagementsysteme/leistungen-und-ueberschuss/aufgenommene-elektrische-leistung
+    - command:
+        converter: std.int16()
+        name: set
+        register: network.1.113
+        register_type: holding
+      state:
+        converter: std.int16()
+        name: state
+        register: network.1.113
+      topic: heatpump/aussentemperatur/aussentemperatur-bms-extern
+    - command:
+        converter: std.map('0:"Kein Heizkreis",2:"2.Heizkreis",3:"3.Heizkreis"')
+        name: set
+        register: network.1.5083
+        register_type: holding
+      state:
+        converter: std.map('0:"Kein Heizkreis",2:"2.Heizkreis",3:"3.Heizkreis"')
+        name: state
+        register: network.1.5083
+      topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/auswahl-heizkreis
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.121
+      topic: heatpump/betriebsdaten/lueftung/aussenlufttemperatur
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.2
+      topic: heatpump/betriebsdaten/r1/aussentemperatur
+    - command:
+        converter: std.map('0:"Sommer",1:"Winter",2:"Urlaub",3:"Party",4:"2.Wärmeerzeuger",5:"Kühlen"')
+        name: set
+        register: network.1.5016
+        register_type: holding
+      state:
+        converter: std.map('0:"Sommer",1:"Winter",2:"Urlaub",3:"Party",4:"2.Wärmeerzeuger",5:"Kühlen"')
+        name: state
+        register: network.1.5016
+      topic: heatpump/betriebsmodus/betriebsmodus
+    - command:
+        converter: std.map('0:"Ja",1:"Nein",2:"Zeit 1",3:"Zeit 2"')
+        name: set
+        register: network.1.5077
+        register_type: holding
+      state:
+        converter: std.map('0:"Ja",1:"Nein",2:"Zeit 1",3:"Zeit 2"')
+        name: state
+        register: network.1.5077
+      topic: heatpump/zeitprogramm/zeitfunktion/dienstag
+    - command:
+        converter: std.map('0:"Ja",1:"Nein",2:"Zeit 1",3:"Zeit 2"')
+        name: set
+        register: network.1.5079
+        register_type: holding
+      state:
+        converter: std.map('0:"Ja",1:"Nein",2:"Zeit 1",3:"Zeit 2"')
+        name: state
+        register: network.1.5079
+      topic: heatpump/zeitprogramm/zeitfunktion/donnerstag
+    - state:
+        converter: std.int16()
+        name: state
+        register: network.1.127
+      topic: heatpump/betriebsdaten/lueftung/fan/drehzahl-abluftventilator
+    - state:
+        converter: std.int16()
+        name: state
+        register: network.1.126
+      topic: heatpump/betriebsdaten/lueftung/fan/drehzahl-zuluftventilator
+    - command:
+        name: set
+        register: network.1.5070
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5070
+      topic: heatpump/zeitprogramm/zeitfunktion/ende-minute-1
+    - command:
+        name: set
+        register: network.1.5074
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5074
+      topic: heatpump/zeitprogramm/zeitfunktion/ende-minute-2
+    - command:
+        name: set
+        register: network.1.5069
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5069
+      topic: heatpump/zeitprogramm/zeitfunktion/ende-stunde-1
+    - command:
+        name: set
+        register: network.1.5073
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5073
+      topic: heatpump/zeitprogramm/zeitfunktion/ende-stunde-2
+    - command:
+        name: set
+        register: network.1.5086
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5086
+      topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/festwertemperatur
+    - command:
+        name: set
+        register: network.1.5038
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5038
+      topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/festwertsolltemperatur
+    - state:
+        name: state
+        register: network.1.79
+      topic: heatpump/laufzeiten/tapwater/flange/e9/flanschheizung
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.124
+      topic: heatpump/betriebsdaten/lueftung/fortlufttemperatur
+    - command:
+        converter: std.map('0:"Ja",1:"Nein",2:"Zeit 1",3:"Zeit 2"')
+        name: set
+        register: network.1.5080
+        register_type: holding
+      state:
+        converter: std.map('0:"Ja",1:"Nein",2:"Zeit 1",3:"Zeit 2"')
+        name: state
+        register: network.1.5080
+      topic: heatpump/zeitprogramm/zeitfunktion/freitag
+    - command:
+        converter: std.int16()
+        name: set
+        register: network.1.5021
+        register_type: holding
+      state:
+        converter: std.int16()
+        name: state
+        register: network.1.5021
+      topic: heatpump/einstellungen-2-waermeerzeuger/external-heater/grenztemperatur-parallel
+    - command:
+        name: set
+        register: network.1.5085
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5085
+      topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/heizkurvenendpunkt
+    - command:
+        name: set
+        register: network.1.5039
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5039
+      topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/heizkurvenendpunkt
+    - state:
+        name: state
+        register: network.1.77
+      topic: heatpump/laufzeiten/heating/m13/heizungspumpe
+    - command:
+        converter: std.divide(0.1)
+        name: set
+        register: network.1.48
+        register_type: holding
+      state:
+        converter: expr.evaluate("R0 * 0.1", 1)
+        name: state
+        register: network.1.48
+      topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/hysterese
+    - command:
+        name: set
+        register: network.1.5050
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5050
+      topic: heatpump/einstellungen-schwimmbad/pool/hysterese
+    - command:
+        name: set
+        register: network.1.5046
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5046
+      topic: heatpump/einstellungen-warmwasser/tapwater/hysterese
+    - command:
+        name: set
+        register: network.1.5012
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5012
+      topic: heatpump/zeitabgleich/jahr
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.23
+      topic: heatpump/betriebsdaten/solar/r23/kollektorfuehler
+    - command:
+        converter: std.map('0:"15",1:"15.5",2:"16",3:"16.5",4:"17",5:"17.5",6:"18",7:"18.5",8:"19",9:"19.5",10:"20",11:"20.5",12:"21",13:"21.5",14:"22",15:"22.5",16:"23",17:"23.5",18:"24",19:"24.5",20:"25",21:"25.5",22:"26",23:"26.5",24:"27",25:"27.5",26:"28",27:"28.5",28:"29",29:"29.5",30:"30"')
+        name: set
+        register: network.1.5090
+        register_type: holding
+      state:
+        converter: std.map('0:"15",1:"15.5",2:"16",3:"16.5",4:"17",5:"17.5",6:"18",7:"18.5",8:"19",9:"19.5",10:"20",11:"20.5",12:"21",13:"21.5",14:"22",15:"22.5",16:"23",17:"23.5",18:"24",19:"24.5",20:"25",21:"25.5",22:"26",23:"26.5",24:"27",25:"27.5",26:"28",27:"28.5",28:"29",29:"29.5",30:"30"')
+        name: state
+        register: network.1.5090
+      topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/cooling/kuehlung-raumsolltemperatur
+    - command:
+        name: set
+        register: network.1.5089
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5089
+      topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/maximale-temperatur
+    - command:
+        name: set
+        register: network.1.5008
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5008
+      topic: heatpump/zeitabgleich/minute
+    - command:
+        converter: std.divide(0.1)
+        name: set
+        register: network.1.49
+        register_type: holding
+      state:
+        converter: expr.evaluate("R0 * 0.1", 1)
+        name: state
+        register: network.1.49
+      topic: heatpump/einstellungen-2-waermeerzeuger/external-heater/mischer-hysterese
+    - command:
+        converter: std.divide(0.1)
+        name: set
+        register: network.1.94
+        register_type: holding
+      state:
+        converter: expr.evaluate("R0 * 0.1", 1)
+        name: state
+        register: network.1.94
+      topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/mischerhysterese
+    - command:
+        name: set
+        register: network.1.5022
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5022
+      topic: heatpump/einstellungen-2-waermeerzeuger/external-heater/mischerlaufzeit
+    - command:
+        name: set
+        register: network.1.5088
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5088
+      topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/mischerlaufzeit
+    - command:
+        converter: std.map('0:"Ja",1:"Nein",2:"Zeit 1",3:"Zeit 2"')
+        name: set
+        register: network.1.5078
+        register_type: holding
+      state:
+        converter: std.map('0:"Ja",1:"Nein",2:"Zeit 1",3:"Zeit 2"')
+        name: state
+        register: network.1.5078
+      topic: heatpump/zeitprogramm/zeitfunktion/mittwoch
+    - command:
+        name: set
+        register: network.1.5009
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5009
+      topic: heatpump/zeitabgleich/monat
+    - command:
+        converter: std.map('0:"Ja",1:"Nein",2:"Zeit 1",3:"Zeit 2"')
+        name: set
+        register: network.1.5076
+        register_type: holding
+      state:
+        converter: std.map('0:"Ja",1:"Nein",2:"Zeit 1",3:"Zeit 2"')
+        name: state
+        register: network.1.5076
+      topic: heatpump/zeitprogramm/zeitfunktion/montag
+    - command:
+        converter: std.divide(10)
+        name: set
+        register: network.1.5183
+        register_type: holding
+      state:
+        converter: expr.evaluate("R0 * 10", 1)
+        name: state
+        register: network.1.5183
+      topic: heatpump/energiemanagementsysteme/leistungen-und-ueberschuss/pv-ueberschuss-fuer-smart-grid-von-wr-em
+    - command:
+        converter: std.map('0:"-19",1:"-18",2:"-17",3:"-16",4:"-15",5:"-14",6:"-13",7:"-12",8:"-11",9:"-10",10:"-9",11:"-8",12:"-7",13:"-6",14:"-5",15:"-4",16:"-3",17:"-2",18:"-1",19:"0",20:"1",21:"2",22:"3",23:"4",24:"5",25:"6",26:"7",27:"8",28:"9",29:"10",30:"11",31:"12",32:"13",33:"14",34:"15",35:"16",36:"17",37:"18",38:"19"')
+        name: set
+        register: network.1.5087
+        register_type: holding
+      state:
+        converter: std.map('0:"-19",1:"-18",2:"-17",3:"-16",4:"-15",5:"-14",6:"-13",7:"-12",8:"-11",9:"-10",10:"-9",11:"-8",12:"-7",13:"-6",14:"-5",15:"-4",16:"-3",17:"-2",18:"-1",19:"0",20:"1",21:"2",22:"3",23:"4",24:"5",25:"6",26:"7",27:"8",28:"9",29:"10",30:"11",31:"12",32:"13",33:"14",34:"15",35:"16",36:"17",37:"18",38:"19"')
+        name: state
+        register: network.1.5087
+      topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/parallelverschiebung
+    - command:
+        converter: std.map('0:"-19",1:"-18",2:"-17",3:"-16",4:"-15",5:"-14",6:"-13",7:"-12",8:"-11",9:"-10",10:"-9",11:"-8",12:"-7",13:"-6",14:"-5",15:"-4",16:"-3",17:"-2",18:"-1",19:"0",20:"1",21:"2",22:"3",23:"4",24:"5",25:"6",26:"7",27:"8",28:"9",29:"10",30:"11",31:"12",32:"13",33:"14",34:"15",35:"16",36:"17",37:"18",38:"19"')
+        name: set
+        register: network.1.5037
+        register_type: holding
+      state:
+        converter: std.map('0:"-19",1:"-18",2:"-17",3:"-16",4:"-15",5:"-14",6:"-13",7:"-12",8:"-11",9:"-10",10:"-9",11:"-8",12:"-7",13:"-6",14:"-5",15:"-4",16:"-3",17:"-2",18:"-1",19:"0",20:"1",21:"2",22:"3",23:"4",24:"5",25:"6",26:"7",27:"8",28:"9",29:"10",30:"11",31:"12",32:"13",33:"14",34:"15",35:"16",36:"17",37:"18",38:"19"')
+        name: state
+        register: network.1.5037
+      topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/parallelverschiebung
+    - state:
+        name: state
+        register: network.1.75
+      topic: heatpump/laufzeiten/m11/primaerpumpe-ventilator
+    - command:
+        name: set
+        register: network.1.5066
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5066
+      topic: heatpump/raumtemperaturregelung/heating/raumadressen-1-2-3-heiz-kuehlkreis
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.14
+      topic: heatpump/betriebsdaten/heating/raumfeuchte-1-rt-rth-econ
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.15
+      topic: heatpump/betriebsdaten/heating/raumfeuchte-2
+    - command:
+        converter: std.divide(0.1)
+        name: set
+        register: network.1.14
+        register_type: holding
+      state:
+        converter: expr.evaluate("R0 * 0.1", 1)
+        name: state
+        register: network.1.14
+      topic: heatpump/raumtemperaturregelung/heating/raumfeuchte-50-79-bms
+    - command:
+        converter: std.map('0:"Keine Raumfreigabe",1:"Heizen (Kühlen gesperrt)",3:"Heizen und Kühlen"')
+        name: set
+        register: network.1.5165
+        register_type: holding
+      state:
+        converter: std.map('0:"Keine Raumfreigabe",1:"Heizen (Kühlen gesperrt)",3:"Heizen und Kühlen"')
+        name: state
+        register: network.1.5165
+      topic: heatpump/raumtemperaturregelung/heating/raumfreigabe-50-79-bms
+    - command:
+        converter: std.divide(0.1)
+        name: set
+        register: network.1.5082
+        register_type: holding
+      state:
+        converter: expr.evaluate("R0 * 0.1", 1)
+        name: state
+        register: network.1.5082
+      topic: heatpump/raumtemperaturregelung/heating/raumsolltemperatur-50-79-bms
+    - command:
+        converter: std.divide(0.1)
+        name: set
+        register: network.1.47
+        register_type: holding
+      state:
+        converter: expr.evaluate("R0 * 0.1", 1)
+        name: state
+        register: network.1.47
+      topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/raumtemperatur
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.12
+      topic: heatpump/betriebsdaten/heating/raumtemperatur-1-rt-rth-econ
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.13
+      topic: heatpump/betriebsdaten/heating/raumtemperatur-2
+    - command:
+        converter: std.divide(0.1)
+        name: set
+        register: network.1.12
+        register_type: holding
+      state:
+        converter: expr.evaluate("R0 * 0.1", 1)
+        name: state
+        register: network.1.12
+      topic: heatpump/raumtemperaturregelung/heating/raumtemperatur-50-79-bms
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.21
+      topic: heatpump/betriebsdaten/passiv-kuehlen/cooling/r4/ruecklauftemperatur
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.22
+      topic: heatpump/betriebsdaten/passiv-aktiv-kuehlen/cooling/r24/ruecklauftemperatur-gemaess-primaerkreis
+    - command:
+        converter: std.map('0:"Ja",1:"Nein",2:"Zeit 1",3:"Zeit 2"')
+        name: set
+        register: network.1.5081
+        register_type: holding
+      state:
+        converter: std.map('0:"Ja",1:"Nein",2:"Zeit 1",3:"Zeit 2"')
+        name: state
+        register: network.1.5081
+      topic: heatpump/zeitprogramm/zeitfunktion/samstag
+    - state:
+        name: state
+        register: network.1.80
+      topic: heatpump/laufzeiten/pool/m19/schwimmbadpumpe
+    - state:
+        converter: std.map('0:"Kein Fehler",1:"Außenfühler R1",2:"Rücklauffühler R2",3:"Warmwasserfühler R3",4:"Codierung R7",5:"Vorlauffühler R9",6:"2.Heizkreisfühler R5",7:"3.Heizkreisfühler R13",8:"Regenerativfühler R13",9:"Raumfühler 1",10:"Raumfühler 2",11:"Fühler Wärmequellenaustritt R6",12:"Fühler Wärmequelleneintritt R24",14:"Kollektorfühler R23",15:"Niederdrucksensor R25",16:"Hochdrucksensor R26",17:"Raumfeuchte 1",18:"Raumfeuchte 2",19:"Fühler Frostschutz-Kälte",20:"Heißgas",21:"Rücklauffühler R2.1",22:"Schwimmbadfühler R20",23:"Vorlauffühler Kühlen Passiv R11",24:"Rücklauffühler Kühlen Passiv R4",26:"Fühler Solarspeicher R22",28:"Anforderungsfühler Heizen R2.2",29:"RTM Econ",30:"Anforderungsfühler Kühlen R39"')
+        name: state
+        register: network.1.107
+      topic: heatpump/systemstatus/sensorfehler
+    - command:
+        converter: std.map('0:"Hardwareeingang",10:"Zustand gelb",11:"Zustand grün",12:"Zustand rot",13:"Zustand dunkelgrün"')
+        name: set
+        register: network.1.5168
+        register_type: holding
+      state:
+        converter: std.map('0:"Hardwareeingang",10:"Zustand gelb",11:"Zustand grün",12:"Zustand rot",13:"Zustand dunkelgrün"')
+        name: state
+        register: network.1.5168
+      topic: heatpump/energiemanagementsysteme/sg-ready/smart-grid
+    - state:
+        name: state
+        register: network.1.68
+      topic: heatpump/energiemanagementsysteme/softwarestand/software-index
+    - state:
+        name: state
+        register: network.1.67
+      topic: heatpump/energiemanagementsysteme/softwarestand/software-nummer
+    - state:
+        converter: std.map('0:"-",1:"A",2:"B",3:"C",4:"D",5:"E",6:"F",7:"G",8:"H",9:"I",10:"J",11:"K",12:"L",13:"M",14:"N",15:"O",16:"P",17:"Q",18:"R",19:"S",20:"T",21:"U",22:"V",23:"W",24:"X",25:"Y",26:"Z"')
+        name: state
+        register: network.1.66
+      topic: heatpump/energiemanagementsysteme/softwarestand/software-version
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.24
+      topic: heatpump/betriebsdaten/solar/r22/solarspeicher
+    - command:
+        name: set
+        register: network.1.5052
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5052
+      topic: heatpump/einstellungen-schwimmbad/pool/solltemperatur
+    - command:
+        name: set
+        register: network.1.5048
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5048
+      topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.55
+      topic: heatpump/betriebsdaten/heating/hk2/solltemperatur-2-heizkreis
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.56
+      topic: heatpump/betriebsdaten/heating/hk3/solltemperatur-3-heizkreis
+    - command:
+        name: set
+        register: network.1.5049
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5049
+      topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur-maximal
+    - command:
+        name: set
+        register: network.1.5146
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5146
+      topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur-minimal
+    - command:
+        name: set
+        register: network.1.5044
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5044
+      topic: heatpump/einstellungen-1-heiz-kuehlkreis/cooling/hk1/solltemperatur-dynamische-kuehlung
+    - command:
+        name: set
+        register: network.1.5044
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5044
+      topic: heatpump/einstellungen-1-heiz-kuehlkreis/cooling/hk1/solltemperatur-dynamische-kuehlung-bei-15-c-at
+    - command:
+        name: set
+        register: network.1.5135
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5135
+      topic: heatpump/einstellungen-1-heiz-kuehlkreis/cooling/hk1/solltemperatur-dynamische-kuehlung-bei-35-c-at
+    - command:
+        converter: std.map('0:"Ja",1:"Nein",2:"Zeit 1",3:"Zeit 2"')
+        name: set
+        register: network.1.5075
+        register_type: holding
+      state:
+        converter: std.map('0:"Ja",1:"Nein",2:"Zeit 1",3:"Zeit 2"')
+        name: state
+        register: network.1.5075
+      topic: heatpump/zeitprogramm/zeitfunktion/sonntag
+    - command:
+        converter: std.map('0:"Hardwareeingang",10:"Sperre nicht aktiv",11:"Sperre aktiv"')
+        name: set
+        register: network.1.5131
+        register_type: holding
+      state:
+        converter: std.map('0:"Hardwareeingang",10:"Sperre nicht aktiv",11:"Sperre aktiv"')
+        name: state
+        register: network.1.5131
+      topic: heatpump/sperre-extern/sperre-extern
+    - state:
+        converter: std.map('0:"Keine Sperre",2:"Volumenstrom",5:"Funktionskontrolle",6:"Einsatzgrenze HT",7:"Systemkontrolle",8:"Verzögerung Umschaltung Kühlen",9:"Pumpenvorlauf",10:"Mindeststandzeit",11:"Netzbelastung",12:"Schaltspielsperre",13:"Warmwasser Nacherwärmung",14:"Regenerativ",15:"EVU-Sperre",16:"Sanftanlasser",17:"Durchfluss",18:"Einsatzgrenze Wärmepumpe",19:"Hochdruck",20:"Niederdruck",21:"Einsatzgrenze Wärmequelle",23:"System Grenze",24:"Last Primärkreis",25:"Sperre Extern",29:"Inverter",31:"Aufwärmen",33:"EvD Initialisierung",34:"2.Wärmeerzeuger freigegeben",35:"Störung (siehe Wert für Störmeldungen)"')
+        name: state
+        register: network.1.105
+      topic: heatpump/systemstatus/sperrmeldungen
+    - command:
+        name: set
+        register: network.1.5068
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5068
+      topic: heatpump/zeitprogramm/zeitfunktion/start-minute-1
+    - command:
+        name: set
+        register: network.1.5072
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5072
+      topic: heatpump/zeitprogramm/zeitfunktion/start-minute-2
+    - command:
+        name: set
+        register: network.1.5067
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5067
+      topic: heatpump/zeitprogramm/zeitfunktion/start-stunde-1
+    - command:
+        name: set
+        register: network.1.5071
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5071
+      topic: heatpump/zeitprogramm/zeitfunktion/start-stunde-2
+    - state:
+        converter: std.map('0:"Kein Status",1:"Aus",2:"Heizen",3:"Schwimmbad",4:"Warmwasser",5:"Kühlen",10:"Abtauen",11:"Durchflussüberwachung",24:"Verzögerung Betriebsmodusumschaltung",30:"Sperre"')
+        name: state
+        register: network.1.104
+      topic: heatpump/systemstatus/statusmeldungen
+    - command:
+        name: set
+        register: network.1.5035
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5035
+      topic: heatpump/betriebsmodus/lueftung/fan/stufen
+    - command:
+        name: set
+        register: network.1.5007
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5007
+      topic: heatpump/zeitabgleich/stunde
+    - state:
+        converter: std.map('0:"kein Fehler",1:"Fehler N17.1 N17.1",2:"Fehler N17.2 N17.2",3:"Fehler N17.3 N17.3",4:"Fehler N17.4 N17.4",6:"Elektronisches Ex.Ventil",10:"WPIO",12:"Inverter",13:"WQIF",15:"Sensorfehler",16:"Niederdruck Sole",19:"!Primärkreis",20:"!Abtauen",21:"!Niederdruck Sole",22:"!Warmwasser",23:"!Last Verdichter",24:"!Codierung",25:"!Niederdruck",26:"!Frostschutz",28:"!Hochdruck",29:"!Temperatur Differenz",30:"!Heissgasthermostat",31:"!Durchfluss",32:"!Aufwärmen"')
+        name: state
+        register: network.1.106
+      topic: heatpump/systemstatus/stoermeldungen
+    - command:
+        name: set
+        register: network.1.5011
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5011
+      topic: heatpump/zeitabgleich/tag
+    - command:
+        name: set
+        register: network.1.5082
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5082
+      topic: heatpump/zeitprogramm/warmwasser-thermische-desinfektion/tapwater/temperatur
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.10
+      topic: heatpump/betriebsdaten/heating/hk2/r5/temperatur-2-heizkreis
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.11
+      topic: heatpump/betriebsdaten/heating/hk3/r13/temperatur-3-heizkreis
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.3
+      topic: heatpump/betriebsdaten/heating/r2/temperatur-ruecklauf
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.54
+      topic: heatpump/betriebsdaten/heating/hk1/temperatur-ruecklaufsoll
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.6
+      topic: heatpump/betriebsdaten/heating/r9/temperatur-vorlauf
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.4
+      topic: heatpump/betriebsdaten/tapwater/r3/temperatur-warmwasser
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.59
+      topic: heatpump/betriebsdaten/tapwater/temperatur-warmwassersoll
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.8
+      topic: heatpump/betriebsdaten/r6/temperatur-waermequellenaustritt
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.7
+      topic: heatpump/betriebsdaten/r24/temperatur-waermequelleneintritt
+    - state:
+        name: state
+        register: network.1.5128
+      topic: heatpump/waermemengen/umweltenergie-1-4
+    - state:
+        converter: expr.evaluate("R0 * 10000", 1)
+        name: state
+        register: network.1.5129
+      topic: heatpump/waermemengen/umweltenergie-5-8
+    - state:
+        converter: expr.evaluate("R0 * 100000000", 1)
+        name: state
+        register: network.1.5130
+      topic: heatpump/waermemengen/umweltenergie-9-12
+    - state:
+        name: state
+        register: network.1.73
+      topic: heatpump/laufzeiten/verdichter-1
+    - state:
+        name: state
+        register: network.1.74
+      topic: heatpump/laufzeiten/verdichter-2
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.20
+      topic: heatpump/betriebsdaten/passiv-kuehlen/cooling/r11/vorlauftemperatur
+    - command:
+        name: set
+        register: network.1.5082
+        register_type: holding
+      state:
+        name: state
+        register: network.1.5082
+      topic: heatpump/zeitprogramm/schwimmbad-vorrang/pool/vorrang
+    - state:
+        name: state
+        register: network.1.78
+      topic: heatpump/laufzeiten/tapwater/m18/warmwasserpumpe
+    - command:
+        converter: std.map('1:"Montag",2:"Dienstag",3:"Mittwoch",4:"Donnerstag",5:"Freitag",6:"Samstag",7:"Sonntag"')
+        name: set
+        register: network.1.5010
+        register_type: holding
+      state:
+        converter: std.map('1:"Montag",2:"Dienstag",3:"Mittwoch",4:"Donnerstag",5:"Freitag",6:"Samstag",7:"Sonntag"')
+        name: state
+        register: network.1.5010
+      topic: heatpump/zeitabgleich/wochentag
+    - state:
+        name: state
+        register: network.1.5097
+      topic: heatpump/waermemengen/heating/waermemenge-heizen-1-4
+    - state:
+        converter: expr.evaluate("R0 * 10000", 1)
+        name: state
+        register: network.1.5098
+      topic: heatpump/waermemengen/heating/waermemenge-heizen-5-8
+    - state:
+        converter: expr.evaluate("R0 * 100000000", 1)
+        name: state
+        register: network.1.5099
+      topic: heatpump/waermemengen/heating/waermemenge-heizen-9-12
+    - state:
+        name: state
+        register: network.1.5103
+      topic: heatpump/waermemengen/pool/waermemenge-schwimmbad-1-4
+    - state:
+        converter: expr.evaluate("R0 * 10000", 1)
+        name: state
+        register: network.1.5104
+      topic: heatpump/waermemengen/pool/waermemenge-schwimmbad-5-8
+    - state:
+        converter: expr.evaluate("R0 * 100000000", 1)
+        name: state
+        register: network.1.5105
+      topic: heatpump/waermemengen/pool/waermemenge-schwimmbad-9-12
+    - state:
+        name: state
+        register: network.1.5100
+      topic: heatpump/waermemengen/tapwater/waermemenge-warmwasser-1-4
+    - state:
+        converter: expr.evaluate("R0 * 10000", 1)
+        name: state
+        register: network.1.5101
+      topic: heatpump/waermemengen/tapwater/waermemenge-warmwasser-5-8
+    - state:
+        converter: expr.evaluate("R0 * 100000000", 1)
+        name: state
+        register: network.1.5102
+      topic: heatpump/waermemengen/tapwater/waermemenge-warmwasser-9-12
+    - command:
+        converter: std.map('0:"Kein Zeitprogramm",1:"1.Heizkreis Absenkung",2:"1.Heizkreis Anhebung",3:"2.Heizkreis Absenkung",4:"2.Heizkreis Anhebung",5:"3.Heizkreis Absenkung",6:"3.Heizkreis Anhebung",7:"Warmwasser Sperre",8:"Thermische Desinfektion",9:"Schwimmbad Sperre",10:"Schwimmbad Vorrang",12:"Zirkulationspumpe"')
+        name: set
+        register: network.1.5066
+        register_type: holding
+      state:
+        converter: std.map('0:"Kein Zeitprogramm",1:"1.Heizkreis Absenkung",2:"1.Heizkreis Anhebung",3:"2.Heizkreis Absenkung",4:"2.Heizkreis Anhebung",5:"3.Heizkreis Absenkung",6:"3.Heizkreis Anhebung",7:"Warmwasser Sperre",8:"Thermische Desinfektion",9:"Schwimmbad Sperre",10:"Schwimmbad Vorrang",12:"Zirkulationspumpe"')
+        name: state
+        register: network.1.5066
+      topic: heatpump/zeitprogramm/zeitprogramm
+    - command:
+        name: set
+        register: network.1.128
+        register_type: holding
+      state:
+        name: state
+        register: network.1.128
+      topic: heatpump/betriebsmodus/lueftung/zeitwert-stosslueften
+    - state:
+        converter: expr.evaluate("int16(R0) * 0.1", 1)
+        name: state
+        register: network.1.122
+      topic: heatpump/betriebsdaten/lueftung/zulufttemperatur
+    - state:
+        converter: expr.evaluate("R0 * 10", 1)
+        name: state
+        register: network.1.5169
+      topic: heatpump/energiemanagementsysteme/leistungen-und-ueberschuss/zur-verfuegung-gestellte-waermeleistung
+    - state:
+        name: state
+        register: network.1.72
+      topic: heatpump/laufzeiten/m16/zusatzumwaelzpumpe

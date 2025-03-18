@@ -1,0 +1,171 @@
+== Setup Home Assistant & mqmgateway
+:toc:
+
+This is a step-by-step guide illustrating how to integrate a Modbus device into Home Assistant via MQTT.
+
+These components are involved and should be setup in order:
+
+. MQTT Broker
+. mqmgateway
+. Home Assistant
+
+=== MQTT Broker
+
+See https://www.home-assistant.io/integrations/mqtt#setting-up-a-broker[Setting up a broker].
+
+=== mqmgateway
+
+https://github.com/BlackZork/mqmgateway/[mqmgateway] requires a connection to the Modbus device, either via a serial device for Modbus RTU (e.g. an USB dongle) or via a network connection for Modbus TCP.
+mqmgateway may run on the same host as Home Assistant or any other host in the network.
+
+. Find out the version of the heat pump software.
++
+The related component is called _WPM_ for Dimplex-based devices, and the version number has the format _<LETTER><NUMBER>.<NUMBER>_. The generator uses this version to omit registers that are not supported by the heat pump software.
++
+Examples: `M3.13` or `L23.1`
+. Create container configuration.
++
+The concrete steps depend on how containers are started in the target environment. This could be editing a `compose.yml`, or a UI driven configuration in your container management tool of choice.
++
+Example: https://github.com/BlackZork/mqmgateway/blob/master/docker-compose.yml[Compose file]
+. Create basic application configuration `config.basic.yaml` with all options except MQTT objects, optionally containing <<Poll groups>>. The `exprconv.so` plugin is required in the list of `converter_plugins` to support type conversions.
++
+Example: https://github.com/BlackZork/mqmgateway/blob/master/modmqttd/config.template.yaml[Configuration]
+. Create MQTT objects configuration `config.mqtt-objects.yaml` using `mqm-gojq-generator`. The generator accepts configuration options via https://github.com/git-developer/mobugen?tab=readme-ov-file#generators[environment variables]. Supply the software version of the heat pump as argument. Example:
++
+[source,sh]
+----
+$ docker run --rm -v "/home/me/data/dimplex-tcp:/opt/mobugen/data:ro" -e MQTT_TOPIC_PREFIX=heatpump -e MQM_ADDRESS_OFFSET=1 ghcr.io/git-developer/mobugen mqm-gojq-generator M3.13 >config.mqtt-objects.yaml
+----
+. Merge basic configuration with MQTT objects into `config.yaml` and verify its content. Example:
++
+[source,sh]
+----
+$ cat config.basic.yaml config.mqtt-objects.yaml >config.yaml
+----
+. Start mqmgateway and verify that Modbus values are published via MQTT. Example:
++
+[source,sh]
+----
+$ docker compose up -d
+$ docker compose logs
+[INFO ] modmqttd is starting
+[INFO ] Added converter plugin std
+[INFO ] Connecting to 192.168.0.100:502
+[INFO ] Response timeout set to 500ms
+[INFO ] modbus: connecting
+[INFO ] modbus: connected
+[INFO ] Waiting for mqtt network to become online
+[INFO ] Connecting to broker:1883
+[INFO ] Connection established
+[INFO ] Mqtt connected, sending subscriptions…
+[INFO ] Mqtt ready to process messages
+
+$ mosquitto_sub -v -L mqtt://broker/heatpump/#
+heatpump/systemstatus/sensorfehler Kein Fehler
+heatpump/betriebsdaten/tapwater/r3/temperatur-warmwasser/state 53.2
+...
+----
+
+==== Poll groups
+
+Poll groups allow reading data for multiple MQTT objects using a single Modbus read call. They are configured within the options of a modbus slave.
+
+Poll group configuration is optional and depends on the Modbus device and on polling requirements. This section contains examples for Dimplex heat pump devices.
+
+===== Dimplex RTU
+
+[source,yaml]
+----
+poll_groups:
+  - { register: 2,     count: 71,  register_type: coil }
+  - { register: 125,   count: 52,  register_type: coil }
+  - { register: 2,     count: 93,  register_type: holding }
+  - { register: 103,   count: 125, register_type: holding }
+  - { register: 241,   count: 70,  register_type: holding }
+  - { register: 337,   count: 52,  register_type: holding }
+----
+===== Dimplex TCP
+
+[source,yaml]
+----
+poll_groups:
+  - { register: 2,     count: 71,  register_type: coil }
+  - { register: 125,   count: 52,  register_type: coil }
+  - { register: 2,     count: 93,  register_type: holding }
+  - { register: 103,   count: 125, register_type: holding }
+  - { register: 241,   count: 70,  register_type: holding }
+  - { register: 5006,  count: 100, register_type: holding }
+  - { register: 5127,  count: 60,  register_type: holding }
+----
+
+=== Home Assistant
+
+. Enable loading configuration files from the packages directory. Example:
++
+.configuration.yaml
+[source,yaml]
+----
+homeassistant:
+  packages: !include_dir_named packages
+----
+
+. (optional) Create a configuration file `packages/heatpump_devices.yaml` with a container device for generated entities. This step is not strictly required but recommended, for the sake of clarity. Example for a heat pump using `wlw286` as ID:
++
+.packages/heatpump_devices.yaml
+[source,yaml]
+----
+mqtt:
+  - sensor:
+      state_topic: "heatpump/device/wlw286/state"
+      value_template: ""
+      object_id: heatpump_device_wlw286
+      unique_id: heatpump_device_wlw286
+      device:
+        identifiers:
+          - wlw286
+        name: Heat Pump
+----
+
+. Create the entity configuration file `packages/heatpump_entities.yaml` using `ha-mqtt-gojq-generator`. The generator accepts configuration options via https://github.com/git-developer/mobugen?tab=readme-ov-file#generators[environment variables]. Supply the software version of the heat pump as argument. Example:
++
+[source,sh]
+----
+$ docker run --rm -v "/home/me/data/dimplex-tcp:/opt/mobugen/data:ro" -e MQTT_TOPIC_PREFIX=heatpump -e HA_DEVICE_ID=wlw286 ghcr.io/git-developer/mobugen ha-mqtt-gojq-generator M3.13 >heatpump_entities.yaml
+----
+. (optional) Customize `packages/heatpump_devices.yaml`.
++
+Example for an aggregation of entities for Dimplex devices:
++
+.packages/heatpump_devices.yaml
+[source,yaml]
+----
+template:
+  - sensor:
+      - name: Wärmemenge Heizen
+        unique_id: heatpump_waermemengen_heating_waermemenge_heizen
+        device_class: energy
+        state_class: total_increasing
+        unit_of_measurement: kWh
+        state: >
+          {{
+             (states('sensor.heatpump_waermemengen_heating_waermemenge_heizen_1_4')  | float)
+           + (states('sensor.heatpump_waermemengen_heating_waermemenge_heizen_5_8')  | float)
+           + (states('sensor.heatpump_waermemengen_heating_waermemenge_heizen_9_12') | float)
+          }}
+      - name: Wärmemenge Warmwasser
+        unique_id: heatpump_waermemengen_tapwater_waermemenge_warmwasser
+        device_class: energy
+        state_class: total_increasing
+        unit_of_measurement: kWh
+        state: >
+          {{
+             (states('sensor.heatpump_waermemengen_tapwater_waermemenge_warmwasser_1_4')  | float)
+           + (states('sensor.heatpump_waermemengen_tapwater_waermemenge_warmwasser_5_8')  | float)
+           + (states('sensor.heatpump_waermemengen_tapwater_waermemenge_warmwasser_9_12') | float)
+          }}
+----
+. Start or restart Home Assistant to load the configurations. Verify that entities exist and are updated from Modbus data.
+. Create dashboards at will.
++
+Example: link:../examples/ha-dashboard.yaml[Demo dashboard] (for use with raw configuration editor)

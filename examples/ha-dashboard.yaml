@@ -1,0 +1,356 @@
+views:
+  - path: default_view
+    title: Überwachung
+    cards:
+      - type: history-graph
+        entities:
+          - entity: sensor.heatpump_betriebsdaten_heating_r2_temperatur_ruecklauf
+          - entity: sensor.heatpump_betriebsdaten_tapwater_r3_temperatur_warmwasser
+          - entity: sensor.heatpump_betriebsdaten_heating_r9_temperatur_vorlauf
+          - entity: sensor.heatpump_betriebsdaten_r1_aussentemperatur
+        title: Temperaturen
+        hours_to_show: 8
+      - type: entities
+        entities:
+          - entity: binary_sensor.heatpump_ausgaenge_heating_m13_heizungspumpe
+          - entity: binary_sensor.heatpump_ausgaenge_heating_m14_heizungspumpe
+          - entity: binary_sensor.heatpump_ausgaenge_tapwater_flange_e9_flanschheizung
+        title: Pumpen
+      - type: entities
+        entities:
+          - entity: sensor.heatpump_betriebsdaten_heating_r9_temperatur_vorlauf
+          - entity: sensor.heatpump_betriebsdaten_heating_r2_temperatur_ruecklauf
+          - entity: sensor.heatpump_betriebsdaten_heating_hk1_temperatur_ruecklaufsoll
+          - entity: sensor.heatpump_betriebsdaten_tapwater_r3_temperatur_warmwasser
+          - entity: sensor.heatpump_betriebsdaten_tapwater_temperatur_warmwassersoll
+          - entity: sensor.heatpump_betriebsdaten_r1_aussentemperatur
+        title: Temperaturen
+      - type: entities
+        entities:
+          - entity: sensor.heatpump_laufzeiten_heating_m13_heizungspumpe
+          - entity: sensor.heatpump_laufzeiten_m11_primaerpumpe_ventilator
+          - entity: sensor.heatpump_laufzeiten_m16_zusatzumwaelzpumpe
+          - entity: sensor.heatpump_laufzeiten_tapwater_m18_warmwasserpumpe
+          - entity: sensor.heatpump_laufzeiten_verdichter_1
+          - entity: sensor.heatpump_laufzeiten_verdichter_2
+          - entity: sensor.heatpump_laufzeiten_tapwater_flange_e9_flanschheizung
+          - entity: sensor.heatpump_laufzeiten_external_heater_e10_2_waermeerzeuger
+        title: Laufzeiten
+      - type: entities
+        entities:
+          - entity: sensor.warmemenge_heizen
+            icon: mdi:heat-wave
+          - entity: sensor.warmemenge_warmwasser
+            icon: mdi:heat-wave
+        title: Wärmemengen
+      - type: history-graph
+        entities:
+          - entity: sensor.heatpump_systemstatus_statusmeldungen
+          - entity: sensor.heatpump_systemstatus_sperrmeldungen
+          - entity: sensor.heatpump_systemstatus_stoermeldungen
+          - entity: binary_sensor.heatpump_ausgaenge_h5_sammelstoermeldung
+        title: Statusverlauf
+        hours_to_show: 4
+      - title: Verlauf
+        type: history-graph
+        hours_to_show: 32
+        entities:
+          - entity: binary_sensor.heatpump_ausgaenge_verdichter_1
+          - entity: binary_sensor.heatpump_ausgaenge_verdichter_2
+          - entity: >-
+              binary_sensor.heatpump_ausgaenge_external_heater_e10_2_waermeerzeuger
+          - entity: binary_sensor.heatpump_ausgaenge_tapwater_flange_e9_flanschheizung
+      - chart_type: line
+        period: hour
+        type: statistics-graph
+        entities:
+          - >-
+            sensor.heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_aufgenommene_elektrische_leistung
+          - >-
+            sensor.heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_zur_verfuegung_gestellte_waermeleistung
+        stat_types:
+          - mean
+          - min
+          - max
+      - chart_type: bar
+        period: month
+        type: statistics-graph
+        entities:
+          - sensor.warmemenge_heizen
+          - sensor.warmemenge_warmwasser
+        stat_types:
+          - change
+        days_to_show: 95
+      - chart_type: bar
+        period: month
+        type: statistics-graph
+        entities:
+          - >-
+            sensor.heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_aufgenommene_elektrische_leistung
+          - >-
+            sensor.heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_zur_verfuegung_gestellte_waermeleistung
+        stat_types:
+          - mean
+        logarithmic_scale: false
+        days_to_show: 95
+    badges:
+      - type: entity
+        show_name: false
+        show_state: true
+        show_icon: true
+        entity: sensor.heatpump_systemstatus_statusmeldungen
+        color: ''
+      - type: entity
+        show_name: false
+        show_state: true
+        show_icon: true
+        entity: sensor.heatpump_systemstatus_sperrmeldungen
+        color: ''
+      - type: entity
+        show_name: false
+        show_state: true
+        show_icon: true
+        entity: sensor.heatpump_systemstatus_stoermeldungen
+        color: ''
+    icon: mdi:eye
+  - title: Steuerung
+    path: steuerung
+    icon: mdi:cog
+    cards:
+      - type: entities
+        entities:
+          - entity: >-
+              number.heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_raumtemperatur
+          - entity: >-
+              number.heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_hysterese
+          - entity: >-
+              number.heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_parallelverschiebung
+          - entity: >-
+              number.heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_heizkurvenendpunkt
+        title: Heizkreis 1
+      - type: entities
+        entities:
+          - entity: >-
+              number.heatpump_einstellungen_2_waermeerzeuger_external_heater_grenztemperatur_parallel
+          - entity: >-
+              number.heatpump_einstellungen_2_waermeerzeuger_external_heater_mischer_hysterese
+          - entity: >-
+              number.heatpump_einstellungen_2_waermeerzeuger_external_heater_mischerlaufzeit
+        title: 2. Wärmeerzeuger
+      - type: entities
+        entities:
+          - entity: number.heatpump_einstellungen_warmwasser_tapwater_solltemperatur
+          - entity: number.heatpump_einstellungen_warmwasser_tapwater_hysterese
+        title: Warmwasser
+    badges:
+      - type: entity
+        show_name: false
+        show_state: true
+        show_icon: true
+        entity: select.heatpump_betriebsmodus_betriebsmodus
+        color: ''
+  - title: Details
+    path: details
+    icon: mdi:expand-all
+    cards:
+      - type: entities
+        entities:
+          - >-
+            number.heatpump_zeitprogramm_1_2_3_heizkreis_heating_absenk_anhebwert
+          - number.heatpump_betriebsmodus_anzahl_partystunden
+          - number.heatpump_betriebsmodus_anzahl_urlaubstage
+          - number.heatpump_aussentemperatur_aussentemperatur_bms_extern
+          - >-
+            select.heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_auswahl_heizkreis
+          - select.heatpump_betriebsmodus_betriebsmodus
+          - select.heatpump_zeitprogramm_zeitfunktion_dienstag
+          - select.heatpump_zeitprogramm_zeitfunktion_donnerstag
+          - number.heatpump_zeitprogramm_zeitfunktion_ende_minute_1
+          - number.heatpump_zeitprogramm_zeitfunktion_ende_minute_2
+          - number.heatpump_zeitprogramm_zeitfunktion_ende_stunde_1
+          - number.heatpump_zeitprogramm_zeitfunktion_ende_stunde_2
+          - >-
+            number.heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_festwertemperatur
+          - >-
+            number.heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_festwertsolltemperatur
+          - select.heatpump_zeitprogramm_zeitfunktion_freitag
+          - >-
+            number.heatpump_einstellungen_2_waermeerzeuger_external_heater_grenztemperatur_parallel
+          - >-
+            number.heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_heizkurvenendpunkt
+          - >-
+            number.heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_heizkurvenendpunkt
+          - >-
+            number.heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_hysterese
+          - number.heatpump_einstellungen_schwimmbad_pool_hysterese
+          - number.heatpump_einstellungen_warmwasser_tapwater_hysterese
+          - number.heatpump_zeitabgleich_jahr
+          - >-
+            number.heatpump_einstellungen_2_3_heiz_kuehlkreis_cooling_kuehlung_raumsolltemperatur
+          - >-
+            number.heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_maximale_temperatur
+          - number.heatpump_zeitabgleich_minute
+          - >-
+            number.heatpump_einstellungen_2_waermeerzeuger_external_heater_mischer_hysterese
+          - >-
+            number.heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_mischerhysterese
+          - >-
+            number.heatpump_einstellungen_2_waermeerzeuger_external_heater_mischerlaufzeit
+          - >-
+            number.heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_mischerlaufzeit
+          - select.heatpump_zeitprogramm_zeitfunktion_mittwoch
+          - number.heatpump_zeitabgleich_monat
+          - select.heatpump_zeitprogramm_zeitfunktion_montag
+          - >-
+            number.heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_parallelverschiebung
+          - >-
+            number.heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_parallelverschiebung
+          - >-
+            number.heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_pv_ueberschuss_fuer_smart_grid_von_wr_em
+          - >-
+            number.heatpump_raumtemperaturregelung_heating_raumadressen_1_2_3_heiz_kuehlkreis
+          - number.heatpump_raumtemperaturregelung_heating_raumfeuchte_50_79_bms
+          - >-
+            select.heatpump_raumtemperaturregelung_heating_raumfreigabe_50_79_bms
+          - >-
+            number.heatpump_raumtemperaturregelung_heating_raumsolltemperatur_50_79_bms
+          - >-
+            number.heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_raumtemperatur
+          - >-
+            number.heatpump_raumtemperaturregelung_heating_raumtemperatur_50_79_bms
+          - select.heatpump_zeitprogramm_zeitfunktion_samstag
+          - button.heatpump_zeitabgleich_set_jahr
+          - button.heatpump_zeitabgleich_set_minute
+          - button.heatpump_zeitabgleich_set_monat
+          - button.heatpump_zeitabgleich_set_stunde
+          - button.heatpump_zeitabgleich_set_tag
+          - button.heatpump_zeitabgleich_set_wochentag
+          - select.heatpump_energiemanagementsysteme_sg_ready_smart_grid
+          - number.heatpump_einstellungen_schwimmbad_pool_solltemperatur
+          - number.heatpump_einstellungen_warmwasser_tapwater_solltemperatur
+          - >-
+            number.heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung
+          - >-
+            number.heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung_bei_15_c_at
+          - >-
+            number.heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung_bei_35_c_at
+          - number.heatpump_einstellungen_schwimmbad_pool_solltemperatur_maximal
+          - >-
+            number.heatpump_einstellungen_warmwasser_tapwater_solltemperatur_maximal
+          - number.heatpump_einstellungen_schwimmbad_pool_solltemperatur_minimal
+          - >-
+            number.heatpump_einstellungen_warmwasser_tapwater_solltemperatur_minimal
+          - select.heatpump_zeitprogramm_zeitfunktion_sonntag
+          - select.heatpump_sperre_extern_sperre_extern
+          - number.heatpump_zeitprogramm_zeitfunktion_start_minute_1
+          - number.heatpump_zeitprogramm_zeitfunktion_start_minute_2
+          - number.heatpump_zeitprogramm_zeitfunktion_start_stunde_1
+          - number.heatpump_zeitprogramm_zeitfunktion_start_stunde_2
+          - number.heatpump_betriebsmodus_lueftung_fan_stufen
+          - number.heatpump_zeitabgleich_stunde
+          - number.heatpump_zeitabgleich_tag
+          - >-
+            number.heatpump_zeitprogramm_warmwasser_thermische_desinfektion_tapwater_temperatur
+          - number.heatpump_zeitprogramm_schwimmbad_vorrang_pool_vorrang
+          - select.heatpump_zeitabgleich_wochentag
+          - select.heatpump_zeitprogramm_zeitprogramm
+          - number.heatpump_betriebsmodus_lueftung_zeitwert_stosslueften
+        title: Wärmepumpe
+      - type: entities
+        entities:
+          - >-
+            binary_sensor.heatpump_ausgaenge_external_heater_e10_2_waermeerzeuger
+          - sensor.heatpump_laufzeiten_external_heater_e10_2_waermeerzeuger
+          - sensor.heatpump_betriebsdaten_lueftung_ablufttemperatur
+          - binary_sensor.heatpump_zeitprogramm_zeitfunktion_aktiv_zeit_1
+          - binary_sensor.heatpump_zeitprogramm_zeitfunktion_aktiv_zeit_2
+          - >-
+            sensor.heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_aufgenommene_elektrische_leistung
+          - sensor.heatpump_betriebsdaten_lueftung_aussenlufttemperatur
+          - sensor.heatpump_betriebsdaten_r1_aussentemperatur
+          - sensor.heatpump_betriebsdaten_lueftung_fan_drehzahl_abluftventilator
+          - sensor.heatpump_betriebsdaten_lueftung_fan_drehzahl_zuluftventilator
+          - binary_sensor.heatpump_eingaenge_evu_sperre
+          - binary_sensor.heatpump_ausgaenge_tapwater_flange_e9_flanschheizung
+          - sensor.heatpump_laufzeiten_tapwater_flange_e9_flanschheizung
+          - sensor.heatpump_betriebsdaten_lueftung_fortlufttemperatur
+          - binary_sensor.heatpump_ausgaenge_heating_m13_heizungspumpe
+          - binary_sensor.heatpump_ausgaenge_heating_m14_heizungspumpe
+          - binary_sensor.heatpump_ausgaenge_heating_m15_heizungspumpe
+          - binary_sensor.heatpump_ausgaenge_heating_m20_heizungspumpe
+          - sensor.heatpump_laufzeiten_heating_m13_heizungspumpe
+          - sensor.heatpump_betriebsdaten_solar_r23_kollektorfuehler
+          - binary_sensor.heatpump_ausgaenge_cooling_m17_kuehlpumpe
+          - binary_sensor.heatpump_ausgaenge_heating_hk2_m22_mischer_auf
+          - binary_sensor.heatpump_ausgaenge_heating_hk3_m21_mischer_auf
+          - binary_sensor.heatpump_ausgaenge_heating_hk2_m22_mischer_zu
+          - binary_sensor.heatpump_ausgaenge_heating_hk3_m21_mischer_zu
+          - binary_sensor.heatpump_ausgaenge_m11_primaerpumpe
+          - sensor.heatpump_laufzeiten_m11_primaerpumpe_ventilator
+          - binary_sensor.heatpump_ausgaenge_cooling_m12_primaerpumpe_kuehlen
+          - sensor.heatpump_betriebsdaten_heating_raumfeuchte_1_rt_rth_econ
+          - sensor.heatpump_betriebsdaten_heating_raumfeuchte_2
+          - sensor.heatpump_betriebsdaten_heating_raumtemperatur_1_rt_rth_econ
+          - sensor.heatpump_betriebsdaten_heating_raumtemperatur_2
+          - >-
+            sensor.heatpump_betriebsdaten_passiv_kuehlen_cooling_r4_ruecklauftemperatur
+          - >-
+            sensor.heatpump_betriebsdaten_passiv_aktiv_kuehlen_cooling_r24_ruecklauftemperatur_gemaess_primaerkreis
+          - binary_sensor.heatpump_ausgaenge_h5_sammelstoermeldung
+          - binary_sensor.heatpump_ausgaenge_pool_m19_schwimmbadpumpe
+          - sensor.heatpump_laufzeiten_pool_m19_schwimmbadpumpe
+          - binary_sensor.heatpump_eingaenge_pool_valve_schwimmbadthermostat
+          - sensor.heatpump_systemstatus_sensorfehler
+          - >-
+            sensor.heatpump_energiemanagementsysteme_softwarestand_software_index
+          - >-
+            sensor.heatpump_energiemanagementsysteme_softwarestand_software_nummer
+          - >-
+            sensor.heatpump_energiemanagementsysteme_softwarestand_software_version
+          - binary_sensor.heatpump_ausgaenge_solar_m23_solarpumpe
+          - sensor.heatpump_betriebsdaten_solar_r22_solarspeicher
+          - sensor.heatpump_betriebsdaten_heating_hk2_solltemperatur_2_heizkreis
+          - sensor.heatpump_betriebsdaten_heating_hk3_solltemperatur_3_heizkreis
+          - binary_sensor.heatpump_eingaenge_sperre_extern
+          - sensor.heatpump_systemstatus_sperrmeldungen
+          - sensor.heatpump_systemstatus_statusmeldungen
+          - sensor.heatpump_systemstatus_stoermeldungen
+          - sensor.heatpump_betriebsdaten_heating_hk2_r5_temperatur_2_heizkreis
+          - sensor.heatpump_betriebsdaten_heating_hk3_r13_temperatur_3_heizkreis
+          - sensor.heatpump_betriebsdaten_heating_r2_temperatur_ruecklauf
+          - sensor.heatpump_betriebsdaten_heating_hk1_temperatur_ruecklaufsoll
+          - sensor.heatpump_betriebsdaten_heating_r9_temperatur_vorlauf
+          - sensor.heatpump_betriebsdaten_r6_temperatur_waermequellenaustritt
+          - sensor.heatpump_betriebsdaten_r24_temperatur_waermequelleneintritt
+          - sensor.heatpump_betriebsdaten_tapwater_r3_temperatur_warmwasser
+          - sensor.heatpump_betriebsdaten_tapwater_temperatur_warmwassersoll
+          - >-
+            binary_sensor.heatpump_ausgaenge_n9_umschaltung_raumthermostate_heizen_kuehlen
+          - binary_sensor.heatpump_ausgaenge_fan_m2_ventilator
+          - binary_sensor.heatpump_ausgaenge_verdichter_1
+          - sensor.heatpump_laufzeiten_verdichter_1
+          - binary_sensor.heatpump_ausgaenge_verdichter_2
+          - sensor.heatpump_laufzeiten_verdichter_2
+          - >-
+            sensor.heatpump_betriebsdaten_passiv_kuehlen_cooling_r11_vorlauftemperatur
+          - sensor.heatpump_waermemengen_heating_waermemenge_heizen_1_4
+          - sensor.heatpump_waermemengen_heating_waermemenge_heizen_5_8
+          - sensor.heatpump_waermemengen_heating_waermemenge_heizen_9_12
+          - sensor.heatpump_waermemengen_pool_waermemenge_schwimmbad_1_4
+          - sensor.heatpump_waermemengen_pool_waermemenge_schwimmbad_5_8
+          - sensor.heatpump_waermemengen_pool_waermemenge_schwimmbad_9_12
+          - sensor.heatpump_waermemengen_tapwater_waermemenge_warmwasser_1_4
+          - sensor.heatpump_waermemengen_tapwater_waermemenge_warmwasser_5_8
+          - sensor.heatpump_waermemengen_tapwater_waermemenge_warmwasser_9_12
+          - binary_sensor.heatpump_ausgaenge_tapwater_m18_warmwasserpumpe
+          - sensor.heatpump_laufzeiten_tapwater_m18_warmwasserpumpe
+          - binary_sensor.heatpump_eingaenge_tapwater_valve_warmwasserthermostat
+          - binary_sensor.heatpump_ausgaenge_tapwater_m24_zirkulationspumpe
+          - sensor.heatpump_betriebsdaten_lueftung_zulufttemperatur
+          - >-
+            sensor.heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_zur_verfuegung_gestellte_waermeleistung
+          - binary_sensor.heatpump_ausgaenge_m16_zusatzumwaelzpumpe
+          - sensor.heatpump_laufzeiten_m16_zusatzumwaelzpumpe
+          - >-
+            binary_sensor.heatpump_raumtemperaturregelung_heating_valve_zustand_stellventil
+        title: Wärmepumpe

@@ -1,0 +1,3234 @@
+homeassistant:
+  customize:
+    binary_sensor.heatpump_ausgaenge_cooling_m12_primaerpumpe_kuehlen:
+      category: Ausgänge
+      domain: cooling
+      friendly_name: Primärpumpe Kühlen
+      part: M12
+    binary_sensor.heatpump_ausgaenge_cooling_m17_kuehlpumpe:
+      category: Ausgänge
+      domain: cooling
+      friendly_name: Kühlpumpe
+      part: M17
+    binary_sensor.heatpump_ausgaenge_external_heater_e10_2_waermeerzeuger:
+      category: Ausgänge
+      device: external-heater
+      friendly_name: 2.Wärmeerzeuger
+      part: E10
+    binary_sensor.heatpump_ausgaenge_fan_m2_ventilator:
+      category: Ausgänge
+      device: fan
+      friendly_name: Ventilator
+      part: M2
+    binary_sensor.heatpump_ausgaenge_h5_sammelstoermeldung:
+      category: Ausgänge
+      friendly_name: Sammelstörmeldung
+      part: H5
+    binary_sensor.heatpump_ausgaenge_heating_hk2_m22_mischer_auf:
+      category: Ausgänge
+      device: hk2
+      domain: heating
+      friendly_name: Mischer Auf
+      part: M22
+    binary_sensor.heatpump_ausgaenge_heating_hk2_m22_mischer_zu:
+      category: Ausgänge
+      device: hk2
+      domain: heating
+      friendly_name: Mischer Zu
+      part: M22
+    binary_sensor.heatpump_ausgaenge_heating_hk3_m21_mischer_auf:
+      category: Ausgänge
+      device: hk3
+      domain: heating
+      friendly_name: Mischer Auf
+      part: M21
+    binary_sensor.heatpump_ausgaenge_heating_hk3_m21_mischer_zu:
+      category: Ausgänge
+      device: hk3
+      domain: heating
+      friendly_name: Mischer Zu
+      part: M21
+    binary_sensor.heatpump_ausgaenge_heating_m13_heizungspumpe:
+      category: Ausgänge
+      domain: heating
+      friendly_name: Heizungspumpe
+      part: M13
+    binary_sensor.heatpump_ausgaenge_heating_m14_heizungspumpe:
+      category: Ausgänge
+      domain: heating
+      friendly_name: Heizungspumpe
+      part: M14
+    binary_sensor.heatpump_ausgaenge_heating_m15_heizungspumpe:
+      category: Ausgänge
+      domain: heating
+      friendly_name: Heizungspumpe
+      part: M15
+    binary_sensor.heatpump_ausgaenge_heating_m20_heizungspumpe:
+      category: Ausgänge
+      domain: heating
+      friendly_name: Heizungspumpe
+      part: M20
+    binary_sensor.heatpump_ausgaenge_m11_primaerpumpe:
+      category: Ausgänge
+      friendly_name: Primärpumpe
+      part: M11
+    binary_sensor.heatpump_ausgaenge_m16_zusatzumwaelzpumpe:
+      category: Ausgänge
+      friendly_name: Zusatzumwälzpumpe
+      part: M16
+    binary_sensor.heatpump_ausgaenge_n9_umschaltung_raumthermostate_heizen_kuehlen:
+      category: Ausgänge
+      friendly_name: Umschaltung Raumthermostate Heizen/Kühlen
+      part: N9
+    binary_sensor.heatpump_ausgaenge_pool_m19_schwimmbadpumpe:
+      category: Ausgänge
+      domain: pool
+      friendly_name: Schwimmbadpumpe
+      part: M19
+    binary_sensor.heatpump_ausgaenge_solar_m23_solarpumpe:
+      category: Ausgänge
+      friendly_name: Solarpumpe
+      part: M23
+      subcategory: Solar
+    binary_sensor.heatpump_ausgaenge_tapwater_flange_e9_flanschheizung:
+      category: Ausgänge
+      device: flange
+      domain: tapwater
+      friendly_name: Flanschheizung
+      part: E9
+    binary_sensor.heatpump_ausgaenge_tapwater_m18_warmwasserpumpe:
+      category: Ausgänge
+      domain: tapwater
+      friendly_name: Warmwasserpumpe
+      part: M18
+    binary_sensor.heatpump_ausgaenge_tapwater_m24_zirkulationspumpe:
+      category: Ausgänge
+      domain: tapwater
+      friendly_name: Zirkulationspumpe
+      part: M24
+    binary_sensor.heatpump_ausgaenge_verdichter_1:
+      category: Ausgänge
+      friendly_name: Verdichter 1
+    binary_sensor.heatpump_ausgaenge_verdichter_2:
+      category: Ausgänge
+      friendly_name: Verdichter 2
+    binary_sensor.heatpump_eingaenge_evu_sperre:
+      category: Eingänge
+      friendly_name: EVU-Sperre
+    binary_sensor.heatpump_eingaenge_sperre_extern:
+      category: Eingänge
+      friendly_name: Sperre Extern
+    binary_sensor.heatpump_eingaenge_valve_smart_grid_1:
+      category: Eingänge
+      device: valve
+      friendly_name: Smart Grid 1
+    binary_sensor.heatpump_eingaenge_valve_smart_grid_2:
+      category: Eingänge
+      device: valve
+      friendly_name: Smart Grid 2
+    binary_sensor.heatpump_raumtemperaturregelung_heating_valve_zustand_stellventil:
+      category: Raumtemperaturregelung
+      device: valve
+      domain: heating
+      friendly_name: Zustand Stellventil
+    binary_sensor.heatpump_zeitprogramm_zeitfunktion_aktiv_zeit_1:
+      category: Zeitprogramm
+      friendly_name: Aktiv Zeit 1
+      subcategory: Zeitfunktion
+    binary_sensor.heatpump_zeitprogramm_zeitfunktion_aktiv_zeit_2:
+      category: Zeitprogramm
+      friendly_name: Aktiv Zeit 2
+      subcategory: Zeitfunktion
+    button.heatpump_zeitabgleich_set_jahr:
+      category: Zeitabgleich
+      friendly_name: set Jahr
+    button.heatpump_zeitabgleich_set_minute:
+      category: Zeitabgleich
+      friendly_name: set Minute
+    button.heatpump_zeitabgleich_set_monat:
+      category: Zeitabgleich
+      friendly_name: set Monat
+    button.heatpump_zeitabgleich_set_stunde:
+      category: Zeitabgleich
+      friendly_name: set Stunde
+    button.heatpump_zeitabgleich_set_tag:
+      category: Zeitabgleich
+      friendly_name: set Tag
+    button.heatpump_zeitabgleich_set_wochentag:
+      category: Zeitabgleich
+      friendly_name: set Wochentag
+    number.heatpump_aussentemperatur_aussentemperatur_bms_extern:
+      category: Außentemperatur
+      friendly_name: Aussentemperatur BMS (extern)
+    number.heatpump_betriebsmodus_anzahl_partystunden:
+      category: Betriebsmodus
+      friendly_name: Anzahl Partystunden
+    number.heatpump_betriebsmodus_anzahl_urlaubstage:
+      category: Betriebsmodus
+      friendly_name: Anzahl Urlaubstage
+    number.heatpump_betriebsmodus_lueftung_fan_stufen:
+      category: Betriebsmodus
+      device: fan
+      friendly_name: Stufen
+      subcategory: Lüftung
+    number.heatpump_betriebsmodus_lueftung_zeitwert_stosslueften:
+      category: Betriebsmodus
+      friendly_name: Zeitwert Stoßlüften
+      subcategory: Lüftung
+    number.heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung:
+      category: Einstellungen 1. Heiz-/Kühlkreis
+      device: hk1
+      domain: cooling
+      friendly_name: Solltemperatur dynamische Kühlung
+    number.heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung_bei_15_c_at:
+      category: Einstellungen 1. Heiz-/Kühlkreis
+      device: hk1
+      domain: cooling
+      friendly_name: Solltemperatur dynamische Kühlung bei 15°C AT
+    number.heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung_bei_35_c_at:
+      category: Einstellungen 1. Heiz-/Kühlkreis
+      device: hk1
+      domain: cooling
+      friendly_name: Solltemperatur dynamische Kühlung bei 35°C AT
+    number.heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_festwertsolltemperatur:
+      category: Einstellungen 1. Heiz-/Kühlkreis
+      device: hk1
+      domain: heating
+      friendly_name: Festwertsolltemperatur
+    number.heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_heizkurvenendpunkt:
+      category: Einstellungen 1. Heiz-/Kühlkreis
+      device: hk1
+      domain: heating
+      friendly_name: Heizkurvenendpunkt
+    number.heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_hysterese:
+      category: Einstellungen 1. Heiz-/Kühlkreis
+      device: hk1
+      domain: heating
+      friendly_name: Hysterese
+    number.heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_parallelverschiebung:
+      category: Einstellungen 1. Heiz-/Kühlkreis
+      device: hk1
+      domain: heating
+      friendly_name: Parallelverschiebung
+    number.heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_raumtemperatur:
+      category: Einstellungen 1. Heiz-/Kühlkreis
+      device: hk1
+      domain: heating
+      friendly_name: Raumtemperatur
+    number.heatpump_einstellungen_2_3_heiz_kuehlkreis_cooling_kuehlung_raumsolltemperatur:
+      category: Einstellungen 2./3. Heiz-/Kühlkreis
+      domain: cooling
+      friendly_name: Kühlung Raumsolltemperatur
+    number.heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_festwertemperatur:
+      category: Einstellungen 2./3. Heiz-/Kühlkreis
+      domain: heating
+      friendly_name: Festwertemperatur
+    number.heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_heizkurvenendpunkt:
+      category: Einstellungen 2./3. Heiz-/Kühlkreis
+      domain: heating
+      friendly_name: Heizkurvenendpunkt
+    number.heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_maximale_temperatur:
+      category: Einstellungen 2./3. Heiz-/Kühlkreis
+      domain: heating
+      friendly_name: Maximale Temperatur
+    number.heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_mischerhysterese:
+      category: Einstellungen 2./3. Heiz-/Kühlkreis
+      domain: heating
+      friendly_name: Mischerhysterese
+    number.heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_mischerlaufzeit:
+      category: Einstellungen 2./3. Heiz-/Kühlkreis
+      domain: heating
+      friendly_name: Mischerlaufzeit
+    number.heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_parallelverschiebung:
+      category: Einstellungen 2./3. Heiz-/Kühlkreis
+      domain: heating
+      friendly_name: Parallelverschiebung
+    number.heatpump_einstellungen_2_waermeerzeuger_external_heater_grenztemperatur_parallel:
+      category: Einstellungen 2. Wärmeerzeuger
+      device: external-heater
+      friendly_name: Grenztemperatur parallel
+    number.heatpump_einstellungen_2_waermeerzeuger_external_heater_mischer_hysterese:
+      category: Einstellungen 2. Wärmeerzeuger
+      device: external-heater
+      friendly_name: Mischer Hysterese
+    number.heatpump_einstellungen_2_waermeerzeuger_external_heater_mischerlaufzeit:
+      category: Einstellungen 2. Wärmeerzeuger
+      device: external-heater
+      friendly_name: Mischerlaufzeit
+    number.heatpump_einstellungen_schwimmbad_pool_hysterese:
+      category: Einstellungen Schwimmbad
+      domain: pool
+      friendly_name: Hysterese
+    number.heatpump_einstellungen_schwimmbad_pool_solltemperatur:
+      category: Einstellungen Schwimmbad
+      domain: pool
+      friendly_name: Solltemperatur
+    number.heatpump_einstellungen_warmwasser_tapwater_hysterese:
+      category: Einstellungen Warmwasser
+      domain: tapwater
+      friendly_name: Hysterese
+    number.heatpump_einstellungen_warmwasser_tapwater_solltemperatur:
+      category: Einstellungen Warmwasser
+      domain: tapwater
+      friendly_name: Solltemperatur
+    number.heatpump_einstellungen_warmwasser_tapwater_solltemperatur_maximal:
+      category: Einstellungen Warmwasser
+      domain: tapwater
+      friendly_name: Solltemperatur Maximal
+    number.heatpump_einstellungen_warmwasser_tapwater_solltemperatur_minimal:
+      category: Einstellungen Warmwasser
+      domain: tapwater
+      friendly_name: Solltemperatur Minimal
+    number.heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_pv_ueberschuss_fuer_smart_grid_von_wr_em:
+      category: Energiemanagementsysteme
+      friendly_name: PV Überschuss für Smart-Grid von WR/EM
+      subcategory: Leistungen und Überschuss
+    number.heatpump_raumtemperaturregelung_heating_raumadressen_1_2_3_heiz_kuehlkreis:
+      category: Raumtemperaturregelung
+      domain: heating
+      friendly_name: Raumadressen 1./2./3.Heiz/Kühlkreis
+    number.heatpump_raumtemperaturregelung_heating_raumfeuchte_50_79_bms:
+      category: Raumtemperaturregelung
+      domain: heating
+      friendly_name: Raumfeuchte 50-79 BMS
+    number.heatpump_raumtemperaturregelung_heating_raumsolltemperatur_50_79_bms:
+      category: Raumtemperaturregelung
+      domain: heating
+      friendly_name: Raumsolltemperatur 50-79 BMS
+    number.heatpump_raumtemperaturregelung_heating_raumtemperatur_50_79_bms:
+      category: Raumtemperaturregelung
+      domain: heating
+      friendly_name: Raumtemperatur 50-79 BMS
+    number.heatpump_zeitabgleich_jahr:
+      category: Zeitabgleich
+      friendly_name: Jahr
+    number.heatpump_zeitabgleich_minute:
+      category: Zeitabgleich
+      friendly_name: Minute
+    number.heatpump_zeitabgleich_monat:
+      category: Zeitabgleich
+      friendly_name: Monat
+    number.heatpump_zeitabgleich_stunde:
+      category: Zeitabgleich
+      friendly_name: Stunde
+    number.heatpump_zeitabgleich_tag:
+      category: Zeitabgleich
+      friendly_name: Tag
+    number.heatpump_zeitprogramm_1_2_3_heizkreis_heating_absenk_anhebwert:
+      category: Zeitprogramm
+      domain: heating
+      friendly_name: Absenk- / Anhebwert
+      subcategory: 1./2./3.Heizkreis
+    number.heatpump_zeitprogramm_schwimmbad_vorrang_pool_vorrang:
+      category: Zeitprogramm
+      domain: pool
+      friendly_name: Vorrang
+      subcategory: Schwimmbad Vorrang
+    number.heatpump_zeitprogramm_warmwasser_thermische_desinfektion_tapwater_temperatur:
+      category: Zeitprogramm
+      domain: tapwater
+      friendly_name: Temperatur
+      subcategory: Warmwasser Thermische Desinfektion
+    number.heatpump_zeitprogramm_zeitfunktion_ende_minute_1:
+      category: Zeitprogramm
+      friendly_name: Ende Minute 1
+      subcategory: Zeitfunktion
+    number.heatpump_zeitprogramm_zeitfunktion_ende_minute_2:
+      category: Zeitprogramm
+      friendly_name: Ende Minute 2
+      subcategory: Zeitfunktion
+    number.heatpump_zeitprogramm_zeitfunktion_ende_stunde_1:
+      category: Zeitprogramm
+      friendly_name: Ende Stunde 1
+      subcategory: Zeitfunktion
+    number.heatpump_zeitprogramm_zeitfunktion_ende_stunde_2:
+      category: Zeitprogramm
+      friendly_name: Ende Stunde 2
+      subcategory: Zeitfunktion
+    number.heatpump_zeitprogramm_zeitfunktion_start_minute_1:
+      category: Zeitprogramm
+      friendly_name: Start Minute 1
+      subcategory: Zeitfunktion
+    number.heatpump_zeitprogramm_zeitfunktion_start_minute_2:
+      category: Zeitprogramm
+      friendly_name: Start Minute 2
+      subcategory: Zeitfunktion
+    number.heatpump_zeitprogramm_zeitfunktion_start_stunde_1:
+      category: Zeitprogramm
+      friendly_name: Start Stunde 1
+      subcategory: Zeitfunktion
+    number.heatpump_zeitprogramm_zeitfunktion_start_stunde_2:
+      category: Zeitprogramm
+      friendly_name: Start Stunde 2
+      subcategory: Zeitfunktion
+    select.heatpump_betriebsmodus_betriebsmodus:
+      category: Betriebsmodus
+      friendly_name: Betriebsmodus
+    select.heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_auswahl_heizkreis:
+      category: Einstellungen 2./3. Heiz-/Kühlkreis
+      domain: heating
+      friendly_name: Auswahl Heizkreis
+    select.heatpump_energiemanagementsysteme_sg_ready_smart_grid:
+      category: Energiemanagementsysteme
+      friendly_name: Smart Grid
+      subcategory: SG Ready
+    select.heatpump_raumtemperaturregelung_heating_raumfreigabe_50_79_bms:
+      category: Raumtemperaturregelung
+      domain: heating
+      friendly_name: Raumfreigabe 50-79 BMS
+    select.heatpump_sperre_extern_sperre_extern:
+      category: Sperre Extern
+      friendly_name: Sperre Extern
+    select.heatpump_zeitabgleich_wochentag:
+      category: Zeitabgleich
+      friendly_name: Wochentag
+    select.heatpump_zeitprogramm_zeitfunktion_dienstag:
+      category: Zeitprogramm
+      friendly_name: Dienstag
+      subcategory: Zeitfunktion
+    select.heatpump_zeitprogramm_zeitfunktion_donnerstag:
+      category: Zeitprogramm
+      friendly_name: Donnerstag
+      subcategory: Zeitfunktion
+    select.heatpump_zeitprogramm_zeitfunktion_freitag:
+      category: Zeitprogramm
+      friendly_name: Freitag
+      subcategory: Zeitfunktion
+    select.heatpump_zeitprogramm_zeitfunktion_mittwoch:
+      category: Zeitprogramm
+      friendly_name: Mittwoch
+      subcategory: Zeitfunktion
+    select.heatpump_zeitprogramm_zeitfunktion_montag:
+      category: Zeitprogramm
+      friendly_name: Montag
+      subcategory: Zeitfunktion
+    select.heatpump_zeitprogramm_zeitfunktion_samstag:
+      category: Zeitprogramm
+      friendly_name: Samstag
+      subcategory: Zeitfunktion
+    select.heatpump_zeitprogramm_zeitfunktion_sonntag:
+      category: Zeitprogramm
+      friendly_name: Sonntag
+      subcategory: Zeitfunktion
+    select.heatpump_zeitprogramm_zeitprogramm:
+      category: Zeitprogramm
+      friendly_name: Zeitprogramm
+    sensor.heatpump_betriebsdaten_heating_hk1_temperatur_ruecklaufsoll:
+      category: Betriebsdaten
+      device: hk1
+      domain: heating
+      friendly_name: Temperatur Rücklaufsoll
+    sensor.heatpump_betriebsdaten_heating_hk2_r5_temperatur_2_heizkreis:
+      category: Betriebsdaten
+      device: hk2
+      domain: heating
+      friendly_name: Temperatur 2.Heizkreis
+      part: R5
+    sensor.heatpump_betriebsdaten_heating_hk2_solltemperatur_2_heizkreis:
+      category: Betriebsdaten
+      device: hk2
+      domain: heating
+      friendly_name: Solltemperatur 2.Heizkreis
+    sensor.heatpump_betriebsdaten_heating_hk3_r13_temperatur_3_heizkreis:
+      category: Betriebsdaten
+      device: hk3
+      domain: heating
+      friendly_name: Temperatur 3.Heizkreis
+      part: R13
+    sensor.heatpump_betriebsdaten_heating_hk3_solltemperatur_3_heizkreis:
+      category: Betriebsdaten
+      device: hk3
+      domain: heating
+      friendly_name: Solltemperatur 3.Heizkreis
+    sensor.heatpump_betriebsdaten_heating_r2_temperatur_ruecklauf:
+      category: Betriebsdaten
+      domain: heating
+      friendly_name: Temperatur Rücklauf
+      part: R2
+    sensor.heatpump_betriebsdaten_heating_r9_temperatur_vorlauf:
+      category: Betriebsdaten
+      domain: heating
+      friendly_name: Temperatur Vorlauf
+      part: R9
+    sensor.heatpump_betriebsdaten_heating_raumfeuchte_1_rt_rth_econ:
+      category: Betriebsdaten
+      domain: heating
+      friendly_name: Raumfeuchte 1 / RT-RTH Econ
+    sensor.heatpump_betriebsdaten_heating_raumfeuchte_2:
+      category: Betriebsdaten
+      domain: heating
+      friendly_name: Raumfeuchte 2
+    sensor.heatpump_betriebsdaten_heating_raumtemperatur_1_rt_rth_econ:
+      category: Betriebsdaten
+      domain: heating
+      friendly_name: Raumtemperatur 1 / RT-RTH Econ
+    sensor.heatpump_betriebsdaten_heating_raumtemperatur_2:
+      category: Betriebsdaten
+      domain: heating
+      friendly_name: Raumtemperatur 2
+    sensor.heatpump_betriebsdaten_lueftung_ablufttemperatur:
+      category: Betriebsdaten
+      friendly_name: Ablufttemperatur
+      subcategory: Lüftung
+    sensor.heatpump_betriebsdaten_lueftung_aussenlufttemperatur:
+      category: Betriebsdaten
+      friendly_name: Außenlufttemperatur
+      subcategory: Lüftung
+    sensor.heatpump_betriebsdaten_lueftung_fan_drehzahl_abluftventilator:
+      category: Betriebsdaten
+      device: fan
+      friendly_name: Drehzahl Abluftventilator
+      subcategory: Lüftung
+    sensor.heatpump_betriebsdaten_lueftung_fan_drehzahl_zuluftventilator:
+      category: Betriebsdaten
+      device: fan
+      friendly_name: Drehzahl Zuluftventilator
+      subcategory: Lüftung
+    sensor.heatpump_betriebsdaten_lueftung_fortlufttemperatur:
+      category: Betriebsdaten
+      friendly_name: Fortlufttemperatur
+      subcategory: Lüftung
+    sensor.heatpump_betriebsdaten_lueftung_zulufttemperatur:
+      category: Betriebsdaten
+      friendly_name: Zulufttemperatur
+      subcategory: Lüftung
+    sensor.heatpump_betriebsdaten_passiv_aktiv_kuehlen_cooling_r24_ruecklauftemperatur_gemaess_primaerkreis:
+      category: Betriebsdaten
+      domain: cooling
+      friendly_name: Rücklauftemperatur gemäß Primärkreis
+      part: R24
+      subcategory: Passiv/Aktiv Kühlen
+    sensor.heatpump_betriebsdaten_passiv_kuehlen_cooling_r4_ruecklauftemperatur:
+      category: Betriebsdaten
+      domain: cooling
+      friendly_name: Rücklauftemperatur
+      part: R4
+      subcategory: Passiv Kühlen
+    sensor.heatpump_betriebsdaten_passiv_kuehlen_cooling_r11_vorlauftemperatur:
+      category: Betriebsdaten
+      domain: cooling
+      friendly_name: Vorlauftemperatur
+      part: R11
+      subcategory: Passiv Kühlen
+    sensor.heatpump_betriebsdaten_r1_aussentemperatur:
+      category: Betriebsdaten
+      friendly_name: Außentemperatur
+      part: R1
+    sensor.heatpump_betriebsdaten_r6_temperatur_waermequellenaustritt:
+      category: Betriebsdaten
+      friendly_name: Temperatur Wärmequellenaustritt
+      part: R6
+    sensor.heatpump_betriebsdaten_r24_temperatur_waermequelleneintritt:
+      category: Betriebsdaten
+      friendly_name: Temperatur Wärmequelleneintritt
+      part: R24
+    sensor.heatpump_betriebsdaten_solar_r22_solarspeicher:
+      category: Betriebsdaten
+      friendly_name: Solarspeicher
+      part: R22
+      subcategory: Solar
+    sensor.heatpump_betriebsdaten_solar_r23_kollektorfuehler:
+      category: Betriebsdaten
+      friendly_name: Kollektorfühler
+      part: R23
+      subcategory: Solar
+    sensor.heatpump_betriebsdaten_tapwater_r3_temperatur_warmwasser:
+      category: Betriebsdaten
+      domain: tapwater
+      friendly_name: Temperatur Warmwasser
+      part: R3
+    sensor.heatpump_betriebsdaten_tapwater_temperatur_warmwassersoll:
+      category: Betriebsdaten
+      domain: tapwater
+      friendly_name: Temperatur Warmwassersoll
+    sensor.heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_aufgenommene_elektrische_leistung:
+      category: Energiemanagementsysteme
+      friendly_name: Aufgenommene elektrische Leistung
+      subcategory: Leistungen und Überschuss
+    sensor.heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_zur_verfuegung_gestellte_waermeleistung:
+      category: Energiemanagementsysteme
+      friendly_name: Zur Verfügung gestellte Wärmeleistung
+      subcategory: Leistungen und Überschuss
+    sensor.heatpump_energiemanagementsysteme_softwarestand_software_index:
+      category: Energiemanagementsysteme
+      friendly_name: Software Index
+      subcategory: Softwarestand
+    sensor.heatpump_energiemanagementsysteme_softwarestand_software_nummer:
+      category: Energiemanagementsysteme
+      friendly_name: Software Nummer
+      subcategory: Softwarestand
+    sensor.heatpump_energiemanagementsysteme_softwarestand_software_version:
+      category: Energiemanagementsysteme
+      friendly_name: Software Version
+      subcategory: Softwarestand
+    sensor.heatpump_laufzeiten_external_heater_e10_2_waermeerzeuger:
+      category: Laufzeiten
+      device: external-heater
+      friendly_name: 2.Wärmeerzeuger
+      part: E10
+    sensor.heatpump_laufzeiten_heating_m13_heizungspumpe:
+      category: Laufzeiten
+      domain: heating
+      friendly_name: Heizungspumpe
+      part: M13
+    sensor.heatpump_laufzeiten_m11_primaerpumpe_ventilator:
+      category: Laufzeiten
+      friendly_name: Primärpumpe / Ventilator
+      part: M11
+    sensor.heatpump_laufzeiten_m16_zusatzumwaelzpumpe:
+      category: Laufzeiten
+      friendly_name: Zusatzumwälzpumpe
+      part: M16
+    sensor.heatpump_laufzeiten_pool_m19_schwimmbadpumpe:
+      category: Laufzeiten
+      domain: pool
+      friendly_name: Schwimmbadpumpe
+      part: M19
+    sensor.heatpump_laufzeiten_tapwater_flange_e9_flanschheizung:
+      category: Laufzeiten
+      device: flange
+      domain: tapwater
+      friendly_name: Flanschheizung
+      part: E9
+    sensor.heatpump_laufzeiten_tapwater_m18_warmwasserpumpe:
+      category: Laufzeiten
+      domain: tapwater
+      friendly_name: Warmwasserpumpe
+      part: M18
+    sensor.heatpump_laufzeiten_verdichter_1:
+      category: Laufzeiten
+      friendly_name: Verdichter 1
+    sensor.heatpump_laufzeiten_verdichter_2:
+      category: Laufzeiten
+      friendly_name: Verdichter 2
+    sensor.heatpump_systemstatus_sensorfehler:
+      category: Systemstatus
+      friendly_name: Sensorfehler
+    sensor.heatpump_systemstatus_sperrmeldungen:
+      category: Systemstatus
+      friendly_name: Sperrmeldungen
+    sensor.heatpump_systemstatus_statusmeldungen:
+      category: Systemstatus
+      friendly_name: Statusmeldungen
+    sensor.heatpump_systemstatus_stoermeldungen:
+      category: Systemstatus
+      friendly_name: Störmeldungen
+    sensor.heatpump_waermemengen_heating_waermemenge_heizen_1_4:
+      category: Wärmemengen
+      domain: heating
+      friendly_name: Wärmemenge Heizen 1-4
+    sensor.heatpump_waermemengen_heating_waermemenge_heizen_5_8:
+      category: Wärmemengen
+      domain: heating
+      friendly_name: Wärmemenge Heizen 5-8
+    sensor.heatpump_waermemengen_heating_waermemenge_heizen_9_12:
+      category: Wärmemengen
+      domain: heating
+      friendly_name: Wärmemenge Heizen 9-12
+    sensor.heatpump_waermemengen_pool_waermemenge_schwimmbad_1_4:
+      category: Wärmemengen
+      domain: pool
+      friendly_name: Wärmemenge Schwimmbad 1-4
+    sensor.heatpump_waermemengen_pool_waermemenge_schwimmbad_5_8:
+      category: Wärmemengen
+      domain: pool
+      friendly_name: Wärmemenge Schwimmbad 5-8
+    sensor.heatpump_waermemengen_pool_waermemenge_schwimmbad_9_12:
+      category: Wärmemengen
+      domain: pool
+      friendly_name: Wärmemenge Schwimmbad 9-12
+    sensor.heatpump_waermemengen_tapwater_waermemenge_warmwasser_1_4:
+      category: Wärmemengen
+      domain: tapwater
+      friendly_name: Wärmemenge Warmwasser 1-4
+    sensor.heatpump_waermemengen_tapwater_waermemenge_warmwasser_5_8:
+      category: Wärmemengen
+      domain: tapwater
+      friendly_name: Wärmemenge Warmwasser 5-8
+    sensor.heatpump_waermemengen_tapwater_waermemenge_warmwasser_9_12:
+      category: Wärmemengen
+      domain: tapwater
+      friendly_name: Wärmemenge Warmwasser 9-12
+    sensor.heatpump_waermemengen_umweltenergie_1_4:
+      category: Wärmemengen
+      friendly_name: Umweltenergie 1-4
+    sensor.heatpump_waermemengen_umweltenergie_5_8:
+      category: Wärmemengen
+      friendly_name: Umweltenergie 5-8
+    sensor.heatpump_waermemengen_umweltenergie_9_12:
+      category: Wärmemengen
+      friendly_name: Umweltenergie 9-12
+    switch.heatpump_einstellungen_warmwasser_tapwater_freigabe_zirkulationspumpe:
+      category: Einstellungen Warmwasser
+      domain: tapwater
+      friendly_name: Freigabe Zirkulationspumpe
+mqtt:
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"external-heater","part":"E10"}'
+      json_attributes_topic: heatpump/ausgaenge/external-heater/e10/2-waermeerzeuger
+      name: 2.Wärmeerzeuger
+      object_id: heatpump_ausgaenge_external_heater_e10_2_waermeerzeuger
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/external-heater/e10/2-waermeerzeuger/state
+      unique_id: heatpump_ausgaenge_external_heater_e10_2_waermeerzeuger
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/aktiv-zeit-1
+      name: Aktiv Zeit 1
+      object_id: heatpump_zeitprogramm_zeitfunktion_aktiv_zeit_1
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/zeitprogramm/zeitfunktion/aktiv-zeit-1/state
+      unique_id: heatpump_zeitprogramm_zeitfunktion_aktiv_zeit_1
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/aktiv-zeit-2
+      name: Aktiv Zeit 2
+      object_id: heatpump_zeitprogramm_zeitfunktion_aktiv_zeit_2
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/zeitprogramm/zeitfunktion/aktiv-zeit-2/state
+      unique_id: heatpump_zeitprogramm_zeitfunktion_aktiv_zeit_2
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: lock
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/eingaenge/evu-sperre
+      name: EVU-Sperre
+      object_id: heatpump_eingaenge_evu_sperre
+      payload_off: 1
+      payload_on: 0
+      state_topic: heatpump/eingaenge/evu-sperre/state
+      unique_id: heatpump_eingaenge_evu_sperre
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"flange","domain":"tapwater","part":"E9"}'
+      json_attributes_topic: heatpump/ausgaenge/tapwater/flange/e9/flanschheizung
+      name: Flanschheizung
+      object_id: heatpump_ausgaenge_tapwater_flange_e9_flanschheizung
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/tapwater/flange/e9/flanschheizung/state
+      unique_id: heatpump_ausgaenge_tapwater_flange_e9_flanschheizung
+      value_template: '{{ value_json.state }}'
+  - switch:
+      command_topic: heatpump/einstellungen-warmwasser/tapwater/freigabe-zirkulationspumpe/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{"domain":"tapwater"}'
+      json_attributes_topic: heatpump/einstellungen-warmwasser/tapwater/freigabe-zirkulationspumpe
+      name: Freigabe Zirkulationspumpe
+      object_id: heatpump_einstellungen_warmwasser_tapwater_freigabe_zirkulationspumpe
+      payload_off: 0
+      payload_on: 1
+      state_off: 0
+      state_on: 1
+      state_topic: heatpump/einstellungen-warmwasser/tapwater/freigabe-zirkulationspumpe/state
+      unique_id: heatpump_einstellungen_warmwasser_tapwater_freigabe_zirkulationspumpe
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"heating","part":"M13"}'
+      json_attributes_topic: heatpump/ausgaenge/heating/m13/heizungspumpe
+      name: Heizungspumpe
+      object_id: heatpump_ausgaenge_heating_m13_heizungspumpe
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/heating/m13/heizungspumpe/state
+      unique_id: heatpump_ausgaenge_heating_m13_heizungspumpe
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"heating","part":"M14"}'
+      json_attributes_topic: heatpump/ausgaenge/heating/m14/heizungspumpe
+      name: Heizungspumpe
+      object_id: heatpump_ausgaenge_heating_m14_heizungspumpe
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/heating/m14/heizungspumpe/state
+      unique_id: heatpump_ausgaenge_heating_m14_heizungspumpe
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"heating","part":"M15"}'
+      json_attributes_topic: heatpump/ausgaenge/heating/m15/heizungspumpe
+      name: Heizungspumpe
+      object_id: heatpump_ausgaenge_heating_m15_heizungspumpe
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/heating/m15/heizungspumpe/state
+      unique_id: heatpump_ausgaenge_heating_m15_heizungspumpe
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"heating","part":"M20"}'
+      json_attributes_topic: heatpump/ausgaenge/heating/m20/heizungspumpe
+      name: Heizungspumpe
+      object_id: heatpump_ausgaenge_heating_m20_heizungspumpe
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/heating/m20/heizungspumpe/state
+      unique_id: heatpump_ausgaenge_heating_m20_heizungspumpe
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"cooling","part":"M17"}'
+      json_attributes_topic: heatpump/ausgaenge/cooling/m17/kuehlpumpe
+      name: Kühlpumpe
+      object_id: heatpump_ausgaenge_cooling_m17_kuehlpumpe
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/cooling/m17/kuehlpumpe/state
+      unique_id: heatpump_ausgaenge_cooling_m17_kuehlpumpe
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: opening
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"hk2","domain":"heating","part":"M22"}'
+      json_attributes_topic: heatpump/ausgaenge/heating/hk2/m22/mischer-auf
+      name: Mischer Auf
+      object_id: heatpump_ausgaenge_heating_hk2_m22_mischer_auf
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/heating/hk2/m22/mischer-auf/state
+      unique_id: heatpump_ausgaenge_heating_hk2_m22_mischer_auf
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: opening
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"hk3","domain":"heating","part":"M21"}'
+      json_attributes_topic: heatpump/ausgaenge/heating/hk3/m21/mischer-auf
+      name: Mischer Auf
+      object_id: heatpump_ausgaenge_heating_hk3_m21_mischer_auf
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/heating/hk3/m21/mischer-auf/state
+      unique_id: heatpump_ausgaenge_heating_hk3_m21_mischer_auf
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: opening
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"hk2","domain":"heating","part":"M22"}'
+      json_attributes_topic: heatpump/ausgaenge/heating/hk2/m22/mischer-zu
+      name: Mischer Zu
+      object_id: heatpump_ausgaenge_heating_hk2_m22_mischer_zu
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/heating/hk2/m22/mischer-zu/state
+      unique_id: heatpump_ausgaenge_heating_hk2_m22_mischer_zu
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: opening
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"hk3","domain":"heating","part":"M21"}'
+      json_attributes_topic: heatpump/ausgaenge/heating/hk3/m21/mischer-zu
+      name: Mischer Zu
+      object_id: heatpump_ausgaenge_heating_hk3_m21_mischer_zu
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/heating/hk3/m21/mischer-zu/state
+      unique_id: heatpump_ausgaenge_heating_hk3_m21_mischer_zu
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{"part":"M11"}'
+      json_attributes_topic: heatpump/ausgaenge/m11/primaerpumpe
+      name: Primärpumpe
+      object_id: heatpump_ausgaenge_m11_primaerpumpe
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/m11/primaerpumpe/state
+      unique_id: heatpump_ausgaenge_m11_primaerpumpe
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"cooling","part":"M12"}'
+      json_attributes_topic: heatpump/ausgaenge/cooling/m12/primaerpumpe-kuehlen
+      name: Primärpumpe Kühlen
+      object_id: heatpump_ausgaenge_cooling_m12_primaerpumpe_kuehlen
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/cooling/m12/primaerpumpe-kuehlen/state
+      unique_id: heatpump_ausgaenge_cooling_m12_primaerpumpe_kuehlen
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: problem
+      entity_category: diagnostic
+      json_attributes_template: '{"part":"H5"}'
+      json_attributes_topic: heatpump/ausgaenge/h5/sammelstoermeldung
+      name: Sammelstörmeldung
+      object_id: heatpump_ausgaenge_h5_sammelstoermeldung
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/h5/sammelstoermeldung/state
+      unique_id: heatpump_ausgaenge_h5_sammelstoermeldung
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"pool","part":"M19"}'
+      json_attributes_topic: heatpump/ausgaenge/pool/m19/schwimmbadpumpe
+      name: Schwimmbadpumpe
+      object_id: heatpump_ausgaenge_pool_m19_schwimmbadpumpe
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/pool/m19/schwimmbadpumpe/state
+      unique_id: heatpump_ausgaenge_pool_m19_schwimmbadpumpe
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: opening
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"valve"}'
+      json_attributes_topic: heatpump/eingaenge/valve/smart-grid-1
+      name: Smart Grid 1
+      object_id: heatpump_eingaenge_valve_smart_grid_1
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/eingaenge/valve/smart-grid-1/state
+      unique_id: heatpump_eingaenge_valve_smart_grid_1
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: opening
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"valve"}'
+      json_attributes_topic: heatpump/eingaenge/valve/smart-grid-2
+      name: Smart Grid 2
+      object_id: heatpump_eingaenge_valve_smart_grid_2
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/eingaenge/valve/smart-grid-2/state
+      unique_id: heatpump_eingaenge_valve_smart_grid_2
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{"part":"M23"}'
+      json_attributes_topic: heatpump/ausgaenge/solar/m23/solarpumpe
+      name: Solarpumpe
+      object_id: heatpump_ausgaenge_solar_m23_solarpumpe
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/solar/m23/solarpumpe/state
+      unique_id: heatpump_ausgaenge_solar_m23_solarpumpe
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: lock
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/eingaenge/sperre-extern
+      name: Sperre Extern
+      object_id: heatpump_eingaenge_sperre_extern
+      payload_off: 1
+      payload_on: 0
+      state_topic: heatpump/eingaenge/sperre-extern/state
+      unique_id: heatpump_eingaenge_sperre_extern
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      entity_category: diagnostic
+      json_attributes_template: '{"part":"N9"}'
+      json_attributes_topic: heatpump/ausgaenge/n9/umschaltung-raumthermostate-heizen-kuehlen
+      name: Umschaltung Raumthermostate Heizen/Kühlen
+      object_id: heatpump_ausgaenge_n9_umschaltung_raumthermostate_heizen_kuehlen
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/n9/umschaltung-raumthermostate-heizen-kuehlen/state
+      unique_id: heatpump_ausgaenge_n9_umschaltung_raumthermostate_heizen_kuehlen
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"fan","part":"M2"}'
+      json_attributes_topic: heatpump/ausgaenge/fan/m2/ventilator
+      name: Ventilator
+      object_id: heatpump_ausgaenge_fan_m2_ventilator
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/fan/m2/ventilator/state
+      unique_id: heatpump_ausgaenge_fan_m2_ventilator
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/ausgaenge/verdichter-1
+      name: Verdichter 1
+      object_id: heatpump_ausgaenge_verdichter_1
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/verdichter-1/state
+      unique_id: heatpump_ausgaenge_verdichter_1
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/ausgaenge/verdichter-2
+      name: Verdichter 2
+      object_id: heatpump_ausgaenge_verdichter_2
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/verdichter-2/state
+      unique_id: heatpump_ausgaenge_verdichter_2
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"tapwater","part":"M18"}'
+      json_attributes_topic: heatpump/ausgaenge/tapwater/m18/warmwasserpumpe
+      name: Warmwasserpumpe
+      object_id: heatpump_ausgaenge_tapwater_m18_warmwasserpumpe
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/tapwater/m18/warmwasserpumpe/state
+      unique_id: heatpump_ausgaenge_tapwater_m18_warmwasserpumpe
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"tapwater","part":"M24"}'
+      json_attributes_topic: heatpump/ausgaenge/tapwater/m24/zirkulationspumpe
+      name: Zirkulationspumpe
+      object_id: heatpump_ausgaenge_tapwater_m24_zirkulationspumpe
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/tapwater/m24/zirkulationspumpe/state
+      unique_id: heatpump_ausgaenge_tapwater_m24_zirkulationspumpe
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: running
+      entity_category: diagnostic
+      json_attributes_template: '{"part":"M16"}'
+      json_attributes_topic: heatpump/ausgaenge/m16/zusatzumwaelzpumpe
+      name: Zusatzumwälzpumpe
+      object_id: heatpump_ausgaenge_m16_zusatzumwaelzpumpe
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/ausgaenge/m16/zusatzumwaelzpumpe/state
+      unique_id: heatpump_ausgaenge_m16_zusatzumwaelzpumpe
+      value_template: '{{ value_json.state }}'
+  - binary_sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: opening
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"valve","domain":"heating"}'
+      json_attributes_topic: heatpump/raumtemperaturregelung/heating/valve/zustand-stellventil
+      name: Zustand Stellventil
+      object_id: heatpump_raumtemperaturregelung_heating_valve_zustand_stellventil
+      payload_off: 0
+      payload_on: 1
+      state_topic: heatpump/raumtemperaturregelung/heating/valve/zustand-stellventil/state
+      unique_id: heatpump_raumtemperaturregelung_heating_valve_zustand_stellventil
+      value_template: '{{ value_json.state }}'
+  - button:
+      command_topic: heatpump/zeitabgleich/set-jahr/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitabgleich/set-jahr
+      name: set Jahr
+      object_id: heatpump_zeitabgleich_set_jahr
+      payload_press: 1
+      unique_id: heatpump_zeitabgleich_set_jahr
+  - button:
+      command_topic: heatpump/zeitabgleich/set-minute/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitabgleich/set-minute
+      name: set Minute
+      object_id: heatpump_zeitabgleich_set_minute
+      payload_press: 1
+      unique_id: heatpump_zeitabgleich_set_minute
+  - button:
+      command_topic: heatpump/zeitabgleich/set-monat/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitabgleich/set-monat
+      name: set Monat
+      object_id: heatpump_zeitabgleich_set_monat
+      payload_press: 1
+      unique_id: heatpump_zeitabgleich_set_monat
+  - button:
+      command_topic: heatpump/zeitabgleich/set-stunde/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitabgleich/set-stunde
+      name: set Stunde
+      object_id: heatpump_zeitabgleich_set_stunde
+      payload_press: 1
+      unique_id: heatpump_zeitabgleich_set_stunde
+  - button:
+      command_topic: heatpump/zeitabgleich/set-tag/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitabgleich/set-tag
+      name: set Tag
+      object_id: heatpump_zeitabgleich_set_tag
+      payload_press: 1
+      unique_id: heatpump_zeitabgleich_set_tag
+  - button:
+      command_topic: heatpump/zeitabgleich/set-wochentag/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitabgleich/set-wochentag
+      name: set Wochentag
+      object_id: heatpump_zeitabgleich_set_wochentag
+      payload_press: 1
+      unique_id: heatpump_zeitabgleich_set_wochentag
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: duration
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"external-heater","part":"E10"}'
+      json_attributes_topic: heatpump/laufzeiten/external-heater/e10/2-waermeerzeuger
+      name: 2.Wärmeerzeuger
+      object_id: heatpump_laufzeiten_external_heater_e10_2_waermeerzeuger
+      state_class: total_increasing
+      state_topic: heatpump/laufzeiten/external-heater/e10/2-waermeerzeuger/state
+      unique_id: heatpump_laufzeiten_external_heater_e10_2_waermeerzeuger
+      unit_of_measurement: h
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/betriebsdaten/lueftung/ablufttemperatur
+      name: Ablufttemperatur
+      object_id: heatpump_betriebsdaten_lueftung_ablufttemperatur
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/lueftung/ablufttemperatur/state
+      unique_id: heatpump_betriebsdaten_lueftung_ablufttemperatur
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/zeitprogramm/1-2-3-heizkreis/heating/absenk-anhebwert/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/zeitprogramm/1-2-3-heizkreis/heating/absenk-anhebwert
+      max: 19
+      min: 0
+      name: Absenk- / Anhebwert
+      object_id: heatpump_zeitprogramm_1_2_3_heizkreis_heating_absenk_anhebwert
+      state_topic: heatpump/zeitprogramm/1-2-3-heizkreis/heating/absenk-anhebwert/state
+      unique_id: heatpump_zeitprogramm_1_2_3_heizkreis_heating_absenk_anhebwert
+      unit_of_measurement: K
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/betriebsmodus/anzahl-partystunden/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: duration
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/betriebsmodus/anzahl-partystunden
+      max: 72
+      min: 0
+      name: Anzahl Partystunden
+      object_id: heatpump_betriebsmodus_anzahl_partystunden
+      state_topic: heatpump/betriebsmodus/anzahl-partystunden/state
+      unique_id: heatpump_betriebsmodus_anzahl_partystunden
+      unit_of_measurement: h
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/betriebsmodus/anzahl-urlaubstage/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: duration
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/betriebsmodus/anzahl-urlaubstage
+      max: 150
+      min: 0
+      name: Anzahl Urlaubstage
+      object_id: heatpump_betriebsmodus_anzahl_urlaubstage
+      state_topic: heatpump/betriebsmodus/anzahl-urlaubstage/state
+      unique_id: heatpump_betriebsmodus_anzahl_urlaubstage
+      unit_of_measurement: day
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: power
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/energiemanagementsysteme/leistungen-und-ueberschuss/aufgenommene-elektrische-leistung
+      name: Aufgenommene elektrische Leistung
+      object_id: heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_aufgenommene_elektrische_leistung
+      state_class: measurement
+      state_topic: heatpump/energiemanagementsysteme/leistungen-und-ueberschuss/aufgenommene-elektrische-leistung/state
+      unique_id: heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_aufgenommene_elektrische_leistung
+      unit_of_measurement: W
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/aussentemperatur/aussentemperatur-bms-extern/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/aussentemperatur/aussentemperatur-bms-extern
+      max: 999
+      min: -999
+      name: Aussentemperatur BMS (extern)
+      object_id: heatpump_aussentemperatur_aussentemperatur_bms_extern
+      state_topic: heatpump/aussentemperatur/aussentemperatur-bms-extern/state
+      unique_id: heatpump_aussentemperatur_aussentemperatur_bms_extern
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - select:
+      command_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/auswahl-heizkreis/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/auswahl-heizkreis
+      name: Auswahl Heizkreis
+      object_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_auswahl_heizkreis
+      options:
+        - 2.Heizkreis
+        - 3.Heizkreis
+        - Kein Heizkreis
+      state_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/auswahl-heizkreis/state
+      unique_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_auswahl_heizkreis
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/betriebsdaten/lueftung/aussenlufttemperatur
+      name: Außenlufttemperatur
+      object_id: heatpump_betriebsdaten_lueftung_aussenlufttemperatur
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/lueftung/aussenlufttemperatur/state
+      unique_id: heatpump_betriebsdaten_lueftung_aussenlufttemperatur
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"part":"R1"}'
+      json_attributes_topic: heatpump/betriebsdaten/r1/aussentemperatur
+      name: Außentemperatur
+      object_id: heatpump_betriebsdaten_r1_aussentemperatur
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/r1/aussentemperatur/state
+      unique_id: heatpump_betriebsdaten_r1_aussentemperatur
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - select:
+      command_topic: heatpump/betriebsmodus/betriebsmodus/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/betriebsmodus/betriebsmodus
+      name: Betriebsmodus
+      object_id: heatpump_betriebsmodus_betriebsmodus
+      options:
+        - 2.Wärmeerzeuger
+        - Kühlen
+        - Party
+        - Sommer
+        - Urlaub
+        - Winter
+      state_topic: heatpump/betriebsmodus/betriebsmodus/state
+      unique_id: heatpump_betriebsmodus_betriebsmodus
+      value_template: '{{ value_json.state }}'
+  - select:
+      command_topic: heatpump/zeitprogramm/zeitfunktion/dienstag/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/dienstag
+      name: Dienstag
+      object_id: heatpump_zeitprogramm_zeitfunktion_dienstag
+      options:
+        - Ja
+        - Nein
+        - Zeit 1
+        - Zeit 2
+      state_topic: heatpump/zeitprogramm/zeitfunktion/dienstag/state
+      unique_id: heatpump_zeitprogramm_zeitfunktion_dienstag
+      value_template: '{{ value_json.state }}'
+  - select:
+      command_topic: heatpump/zeitprogramm/zeitfunktion/donnerstag/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/donnerstag
+      name: Donnerstag
+      object_id: heatpump_zeitprogramm_zeitfunktion_donnerstag
+      options:
+        - Ja
+        - Nein
+        - Zeit 1
+        - Zeit 2
+      state_topic: heatpump/zeitprogramm/zeitfunktion/donnerstag/state
+      unique_id: heatpump_zeitprogramm_zeitfunktion_donnerstag
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: frequency
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"fan"}'
+      json_attributes_topic: heatpump/betriebsdaten/lueftung/fan/drehzahl-abluftventilator
+      name: Drehzahl Abluftventilator
+      object_id: heatpump_betriebsdaten_lueftung_fan_drehzahl_abluftventilator
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/lueftung/fan/drehzahl-abluftventilator/state
+      unique_id: heatpump_betriebsdaten_lueftung_fan_drehzahl_abluftventilator
+      unit_of_measurement: Hz
+      value_template: '{{ value_json.state / 60 }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: frequency
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"fan"}'
+      json_attributes_topic: heatpump/betriebsdaten/lueftung/fan/drehzahl-zuluftventilator
+      name: Drehzahl Zuluftventilator
+      object_id: heatpump_betriebsdaten_lueftung_fan_drehzahl_zuluftventilator
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/lueftung/fan/drehzahl-zuluftventilator/state
+      unique_id: heatpump_betriebsdaten_lueftung_fan_drehzahl_zuluftventilator
+      unit_of_measurement: Hz
+      value_template: '{{ value_json.state / 60 }}'
+  - number:
+      command_topic: heatpump/zeitprogramm/zeitfunktion/ende-minute-1/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/ende-minute-1
+      max: 59
+      min: 0
+      name: Ende Minute 1
+      object_id: heatpump_zeitprogramm_zeitfunktion_ende_minute_1
+      state_topic: heatpump/zeitprogramm/zeitfunktion/ende-minute-1/state
+      unique_id: heatpump_zeitprogramm_zeitfunktion_ende_minute_1
+      unit_of_measurement: min
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/zeitprogramm/zeitfunktion/ende-minute-2/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/ende-minute-2
+      max: 59
+      min: 0
+      name: Ende Minute 2
+      object_id: heatpump_zeitprogramm_zeitfunktion_ende_minute_2
+      state_topic: heatpump/zeitprogramm/zeitfunktion/ende-minute-2/state
+      unique_id: heatpump_zeitprogramm_zeitfunktion_ende_minute_2
+      unit_of_measurement: min
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/zeitprogramm/zeitfunktion/ende-stunde-1/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/ende-stunde-1
+      max: 23
+      min: 0
+      name: Ende Stunde 1
+      object_id: heatpump_zeitprogramm_zeitfunktion_ende_stunde_1
+      state_topic: heatpump/zeitprogramm/zeitfunktion/ende-stunde-1/state
+      unique_id: heatpump_zeitprogramm_zeitfunktion_ende_stunde_1
+      unit_of_measurement: h
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/zeitprogramm/zeitfunktion/ende-stunde-2/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/ende-stunde-2
+      max: 23
+      min: 0
+      name: Ende Stunde 2
+      object_id: heatpump_zeitprogramm_zeitfunktion_ende_stunde_2
+      state_topic: heatpump/zeitprogramm/zeitfunktion/ende-stunde-2/state
+      unique_id: heatpump_zeitprogramm_zeitfunktion_ende_stunde_2
+      unit_of_measurement: h
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/festwertemperatur/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/festwertemperatur
+      max: 60
+      min: 20
+      name: Festwertemperatur
+      object_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_festwertemperatur
+      state_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/festwertemperatur/state
+      unique_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_festwertemperatur
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/festwertsolltemperatur/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"device":"hk1","domain":"heating"}'
+      json_attributes_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/festwertsolltemperatur
+      max: 60
+      min: 18
+      name: Festwertsolltemperatur
+      object_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_festwertsolltemperatur
+      state_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/festwertsolltemperatur/state
+      unique_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_festwertsolltemperatur
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: duration
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"flange","domain":"tapwater","part":"E9"}'
+      json_attributes_topic: heatpump/laufzeiten/tapwater/flange/e9/flanschheizung
+      name: Flanschheizung
+      object_id: heatpump_laufzeiten_tapwater_flange_e9_flanschheizung
+      state_class: total_increasing
+      state_topic: heatpump/laufzeiten/tapwater/flange/e9/flanschheizung/state
+      unique_id: heatpump_laufzeiten_tapwater_flange_e9_flanschheizung
+      unit_of_measurement: h
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/betriebsdaten/lueftung/fortlufttemperatur
+      name: Fortlufttemperatur
+      object_id: heatpump_betriebsdaten_lueftung_fortlufttemperatur
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/lueftung/fortlufttemperatur/state
+      unique_id: heatpump_betriebsdaten_lueftung_fortlufttemperatur
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - select:
+      command_topic: heatpump/zeitprogramm/zeitfunktion/freitag/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/freitag
+      name: Freitag
+      object_id: heatpump_zeitprogramm_zeitfunktion_freitag
+      options:
+        - Ja
+        - Nein
+        - Zeit 1
+        - Zeit 2
+      state_topic: heatpump/zeitprogramm/zeitfunktion/freitag/state
+      unique_id: heatpump_zeitprogramm_zeitfunktion_freitag
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-2-waermeerzeuger/external-heater/grenztemperatur-parallel/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"device":"external-heater"}'
+      json_attributes_topic: heatpump/einstellungen-2-waermeerzeuger/external-heater/grenztemperatur-parallel
+      max: 35
+      min: -25
+      name: Grenztemperatur parallel
+      object_id: heatpump_einstellungen_2_waermeerzeuger_external_heater_grenztemperatur_parallel
+      state_topic: heatpump/einstellungen-2-waermeerzeuger/external-heater/grenztemperatur-parallel/state
+      unique_id: heatpump_einstellungen_2_waermeerzeuger_external_heater_grenztemperatur_parallel
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/heizkurvenendpunkt/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/heizkurvenendpunkt
+      max: 70
+      min: 20
+      name: Heizkurvenendpunkt
+      object_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_heizkurvenendpunkt
+      state_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/heizkurvenendpunkt/state
+      unique_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_heizkurvenendpunkt
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/heizkurvenendpunkt/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"device":"hk1","domain":"heating"}'
+      json_attributes_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/heizkurvenendpunkt
+      max: 70
+      min: 20
+      name: Heizkurvenendpunkt
+      object_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_heizkurvenendpunkt
+      state_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/heizkurvenendpunkt/state
+      unique_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_heizkurvenendpunkt
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: duration
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"heating","part":"M13"}'
+      json_attributes_topic: heatpump/laufzeiten/heating/m13/heizungspumpe
+      name: Heizungspumpe
+      object_id: heatpump_laufzeiten_heating_m13_heizungspumpe
+      state_class: total_increasing
+      state_topic: heatpump/laufzeiten/heating/m13/heizungspumpe/state
+      unique_id: heatpump_laufzeiten_heating_m13_heizungspumpe
+      unit_of_measurement: h
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/hysterese/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"device":"hk1","domain":"heating"}'
+      json_attributes_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/hysterese
+      max: 5
+      min: 0.5
+      name: Hysterese
+      object_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_hysterese
+      state_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/hysterese/state
+      step: 0.1
+      unique_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_hysterese
+      unit_of_measurement: K
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-schwimmbad/pool/hysterese/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"domain":"pool"}'
+      json_attributes_topic: heatpump/einstellungen-schwimmbad/pool/hysterese
+      max: 20
+      min: 1
+      name: Hysterese
+      object_id: heatpump_einstellungen_schwimmbad_pool_hysterese
+      state_topic: heatpump/einstellungen-schwimmbad/pool/hysterese/state
+      unique_id: heatpump_einstellungen_schwimmbad_pool_hysterese
+      unit_of_measurement: K
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-warmwasser/tapwater/hysterese/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"domain":"tapwater"}'
+      json_attributes_topic: heatpump/einstellungen-warmwasser/tapwater/hysterese
+      max: 15
+      min: 2
+      name: Hysterese
+      object_id: heatpump_einstellungen_warmwasser_tapwater_hysterese
+      state_topic: heatpump/einstellungen-warmwasser/tapwater/hysterese/state
+      unique_id: heatpump_einstellungen_warmwasser_tapwater_hysterese
+      unit_of_measurement: K
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/zeitabgleich/jahr/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitabgleich/jahr
+      max: 99
+      min: 0
+      name: Jahr
+      object_id: heatpump_zeitabgleich_jahr
+      state_topic: heatpump/zeitabgleich/jahr/state
+      unique_id: heatpump_zeitabgleich_jahr
+      unit_of_measurement: year
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"part":"R23"}'
+      json_attributes_topic: heatpump/betriebsdaten/solar/r23/kollektorfuehler
+      name: Kollektorfühler
+      object_id: heatpump_betriebsdaten_solar_r23_kollektorfuehler
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/solar/r23/kollektorfuehler/state
+      unique_id: heatpump_betriebsdaten_solar_r23_kollektorfuehler
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/cooling/kuehlung-raumsolltemperatur/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"domain":"cooling"}'
+      json_attributes_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/cooling/kuehlung-raumsolltemperatur
+      max: 30
+      min: 15
+      name: Kühlung Raumsolltemperatur
+      object_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_cooling_kuehlung_raumsolltemperatur
+      state_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/cooling/kuehlung-raumsolltemperatur/state
+      step: 0.5
+      unique_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_cooling_kuehlung_raumsolltemperatur
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/maximale-temperatur/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/maximale-temperatur
+      max: 70
+      min: 30
+      name: Maximale Temperatur
+      object_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_maximale_temperatur
+      state_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/maximale-temperatur/state
+      unique_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_maximale_temperatur
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/zeitabgleich/minute/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitabgleich/minute
+      max: 59
+      min: 0
+      name: Minute
+      object_id: heatpump_zeitabgleich_minute
+      state_topic: heatpump/zeitabgleich/minute/state
+      unique_id: heatpump_zeitabgleich_minute
+      unit_of_measurement: min
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-2-waermeerzeuger/external-heater/mischer-hysterese/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"device":"external-heater"}'
+      json_attributes_topic: heatpump/einstellungen-2-waermeerzeuger/external-heater/mischer-hysterese
+      max: 2
+      min: 0.5
+      name: Mischer Hysterese
+      object_id: heatpump_einstellungen_2_waermeerzeuger_external_heater_mischer_hysterese
+      state_topic: heatpump/einstellungen-2-waermeerzeuger/external-heater/mischer-hysterese/state
+      step: 0.1
+      unique_id: heatpump_einstellungen_2_waermeerzeuger_external_heater_mischer_hysterese
+      unit_of_measurement: K
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/mischerhysterese/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/mischerhysterese
+      max: 2
+      min: 0.5
+      name: Mischerhysterese
+      object_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_mischerhysterese
+      state_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/mischerhysterese/state
+      step: 0.1
+      unique_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_mischerhysterese
+      unit_of_measurement: K
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-2-waermeerzeuger/external-heater/mischerlaufzeit/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: duration
+      entity_category: config
+      json_attributes_template: '{"device":"external-heater"}'
+      json_attributes_topic: heatpump/einstellungen-2-waermeerzeuger/external-heater/mischerlaufzeit
+      max: 6
+      min: 1
+      name: Mischerlaufzeit
+      object_id: heatpump_einstellungen_2_waermeerzeuger_external_heater_mischerlaufzeit
+      state_topic: heatpump/einstellungen-2-waermeerzeuger/external-heater/mischerlaufzeit/state
+      unique_id: heatpump_einstellungen_2_waermeerzeuger_external_heater_mischerlaufzeit
+      unit_of_measurement: min
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/mischerlaufzeit/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: duration
+      entity_category: config
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/mischerlaufzeit
+      max: 6
+      min: 1
+      name: Mischerlaufzeit
+      object_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_mischerlaufzeit
+      state_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/mischerlaufzeit/state
+      unique_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_mischerlaufzeit
+      unit_of_measurement: min
+      value_template: '{{ value_json.state }}'
+  - select:
+      command_topic: heatpump/zeitprogramm/zeitfunktion/mittwoch/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/mittwoch
+      name: Mittwoch
+      object_id: heatpump_zeitprogramm_zeitfunktion_mittwoch
+      options:
+        - Ja
+        - Nein
+        - Zeit 1
+        - Zeit 2
+      state_topic: heatpump/zeitprogramm/zeitfunktion/mittwoch/state
+      unique_id: heatpump_zeitprogramm_zeitfunktion_mittwoch
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/zeitabgleich/monat/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitabgleich/monat
+      max: 12
+      min: 1
+      name: Monat
+      object_id: heatpump_zeitabgleich_monat
+      state_topic: heatpump/zeitabgleich/monat/state
+      unique_id: heatpump_zeitabgleich_monat
+      unit_of_measurement: month
+      value_template: '{{ value_json.state }}'
+  - select:
+      command_topic: heatpump/zeitprogramm/zeitfunktion/montag/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/montag
+      name: Montag
+      object_id: heatpump_zeitprogramm_zeitfunktion_montag
+      options:
+        - Ja
+        - Nein
+        - Zeit 1
+        - Zeit 2
+      state_topic: heatpump/zeitprogramm/zeitfunktion/montag/state
+      unique_id: heatpump_zeitprogramm_zeitfunktion_montag
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/energiemanagementsysteme/leistungen-und-ueberschuss/pv-ueberschuss-fuer-smart-grid-von-wr-em/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: power
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/energiemanagementsysteme/leistungen-und-ueberschuss/pv-ueberschuss-fuer-smart-grid-von-wr-em
+      max: 32767
+      min: -32768
+      name: PV Überschuss für Smart-Grid von WR/EM
+      object_id: heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_pv_ueberschuss_fuer_smart_grid_von_wr_em
+      state_topic: heatpump/energiemanagementsysteme/leistungen-und-ueberschuss/pv-ueberschuss-fuer-smart-grid-von-wr-em/state
+      step: 10
+      unique_id: heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_pv_ueberschuss_fuer_smart_grid_von_wr_em
+      unit_of_measurement: W
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/parallelverschiebung/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/parallelverschiebung
+      max: 19
+      min: -19
+      name: Parallelverschiebung
+      object_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_parallelverschiebung
+      state_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/parallelverschiebung/state
+      unique_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_parallelverschiebung
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/parallelverschiebung/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"device":"hk1","domain":"heating"}'
+      json_attributes_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/parallelverschiebung
+      max: 19
+      min: -19
+      name: Parallelverschiebung
+      object_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_parallelverschiebung
+      state_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/parallelverschiebung/state
+      unique_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_parallelverschiebung
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: duration
+      entity_category: diagnostic
+      json_attributes_template: '{"part":"M11"}'
+      json_attributes_topic: heatpump/laufzeiten/m11/primaerpumpe-ventilator
+      name: Primärpumpe / Ventilator
+      object_id: heatpump_laufzeiten_m11_primaerpumpe_ventilator
+      state_class: total_increasing
+      state_topic: heatpump/laufzeiten/m11/primaerpumpe-ventilator/state
+      unique_id: heatpump_laufzeiten_m11_primaerpumpe_ventilator
+      unit_of_measurement: h
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/raumtemperaturregelung/heating/raumadressen-1-2-3-heiz-kuehlkreis/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/raumtemperaturregelung/heating/raumadressen-1-2-3-heiz-kuehlkreis
+      max: 79
+      min: 50
+      name: Raumadressen 1./2./3.Heiz/Kühlkreis
+      object_id: heatpump_raumtemperaturregelung_heating_raumadressen_1_2_3_heiz_kuehlkreis
+      state_topic: heatpump/raumtemperaturregelung/heating/raumadressen-1-2-3-heiz-kuehlkreis/state
+      unique_id: heatpump_raumtemperaturregelung_heating_raumadressen_1_2_3_heiz_kuehlkreis
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: humidity
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/betriebsdaten/heating/raumfeuchte-1-rt-rth-econ
+      name: Raumfeuchte 1 / RT-RTH Econ
+      object_id: heatpump_betriebsdaten_heating_raumfeuchte_1_rt_rth_econ
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/heating/raumfeuchte-1-rt-rth-econ/state
+      unique_id: heatpump_betriebsdaten_heating_raumfeuchte_1_rt_rth_econ
+      unit_of_measurement: '%'
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: humidity
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/betriebsdaten/heating/raumfeuchte-2
+      name: Raumfeuchte 2
+      object_id: heatpump_betriebsdaten_heating_raumfeuchte_2
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/heating/raumfeuchte-2/state
+      unique_id: heatpump_betriebsdaten_heating_raumfeuchte_2
+      unit_of_measurement: '%'
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/raumtemperaturregelung/heating/raumfeuchte-50-79-bms/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: humidity
+      entity_category: config
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/raumtemperaturregelung/heating/raumfeuchte-50-79-bms
+      max: 90
+      min: 20
+      name: Raumfeuchte 50-79 BMS
+      object_id: heatpump_raumtemperaturregelung_heating_raumfeuchte_50_79_bms
+      state_topic: heatpump/raumtemperaturregelung/heating/raumfeuchte-50-79-bms/state
+      step: 0.1
+      unique_id: heatpump_raumtemperaturregelung_heating_raumfeuchte_50_79_bms
+      unit_of_measurement: '%'
+      value_template: '{{ value_json.state }}'
+  - select:
+      command_topic: heatpump/raumtemperaturregelung/heating/raumfreigabe-50-79-bms/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/raumtemperaturregelung/heating/raumfreigabe-50-79-bms
+      name: Raumfreigabe 50-79 BMS
+      object_id: heatpump_raumtemperaturregelung_heating_raumfreigabe_50_79_bms
+      options:
+        - Heizen (Kühlen gesperrt)
+        - Heizen und Kühlen
+        - Keine Raumfreigabe
+      state_topic: heatpump/raumtemperaturregelung/heating/raumfreigabe-50-79-bms/state
+      unique_id: heatpump_raumtemperaturregelung_heating_raumfreigabe_50_79_bms
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/raumtemperaturregelung/heating/raumsolltemperatur-50-79-bms/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/raumtemperaturregelung/heating/raumsolltemperatur-50-79-bms
+      max: 30
+      min: 10
+      name: Raumsolltemperatur 50-79 BMS
+      object_id: heatpump_raumtemperaturregelung_heating_raumsolltemperatur_50_79_bms
+      state_topic: heatpump/raumtemperaturregelung/heating/raumsolltemperatur-50-79-bms/state
+      step: 0.1
+      unique_id: heatpump_raumtemperaturregelung_heating_raumsolltemperatur_50_79_bms
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/raumtemperatur/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"device":"hk1","domain":"heating"}'
+      json_attributes_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/raumtemperatur
+      max: 30
+      min: 15
+      name: Raumtemperatur
+      object_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_raumtemperatur
+      state_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/raumtemperatur/state
+      step: 0.1
+      unique_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_raumtemperatur
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/betriebsdaten/heating/raumtemperatur-1-rt-rth-econ
+      name: Raumtemperatur 1 / RT-RTH Econ
+      object_id: heatpump_betriebsdaten_heating_raumtemperatur_1_rt_rth_econ
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/heating/raumtemperatur-1-rt-rth-econ/state
+      unique_id: heatpump_betriebsdaten_heating_raumtemperatur_1_rt_rth_econ
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/betriebsdaten/heating/raumtemperatur-2
+      name: Raumtemperatur 2
+      object_id: heatpump_betriebsdaten_heating_raumtemperatur_2
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/heating/raumtemperatur-2/state
+      unique_id: heatpump_betriebsdaten_heating_raumtemperatur_2
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/raumtemperaturregelung/heating/raumtemperatur-50-79-bms/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/raumtemperaturregelung/heating/raumtemperatur-50-79-bms
+      max: 50
+      min: 10
+      name: Raumtemperatur 50-79 BMS
+      object_id: heatpump_raumtemperaturregelung_heating_raumtemperatur_50_79_bms
+      state_topic: heatpump/raumtemperaturregelung/heating/raumtemperatur-50-79-bms/state
+      step: 0.1
+      unique_id: heatpump_raumtemperaturregelung_heating_raumtemperatur_50_79_bms
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"cooling","part":"R4"}'
+      json_attributes_topic: heatpump/betriebsdaten/passiv-kuehlen/cooling/r4/ruecklauftemperatur
+      name: Rücklauftemperatur
+      object_id: heatpump_betriebsdaten_passiv_kuehlen_cooling_r4_ruecklauftemperatur
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/passiv-kuehlen/cooling/r4/ruecklauftemperatur/state
+      unique_id: heatpump_betriebsdaten_passiv_kuehlen_cooling_r4_ruecklauftemperatur
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"cooling","part":"R24"}'
+      json_attributes_topic: heatpump/betriebsdaten/passiv-aktiv-kuehlen/cooling/r24/ruecklauftemperatur-gemaess-primaerkreis
+      name: Rücklauftemperatur gemäß Primärkreis
+      object_id: heatpump_betriebsdaten_passiv_aktiv_kuehlen_cooling_r24_ruecklauftemperatur_gemaess_primaerkreis
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/passiv-aktiv-kuehlen/cooling/r24/ruecklauftemperatur-gemaess-primaerkreis/state
+      unique_id: heatpump_betriebsdaten_passiv_aktiv_kuehlen_cooling_r24_ruecklauftemperatur_gemaess_primaerkreis
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - select:
+      command_topic: heatpump/zeitprogramm/zeitfunktion/samstag/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/samstag
+      name: Samstag
+      object_id: heatpump_zeitprogramm_zeitfunktion_samstag
+      options:
+        - Ja
+        - Nein
+        - Zeit 1
+        - Zeit 2
+      state_topic: heatpump/zeitprogramm/zeitfunktion/samstag/state
+      unique_id: heatpump_zeitprogramm_zeitfunktion_samstag
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: duration
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"pool","part":"M19"}'
+      json_attributes_topic: heatpump/laufzeiten/pool/m19/schwimmbadpumpe
+      name: Schwimmbadpumpe
+      object_id: heatpump_laufzeiten_pool_m19_schwimmbadpumpe
+      state_class: total_increasing
+      state_topic: heatpump/laufzeiten/pool/m19/schwimmbadpumpe/state
+      unique_id: heatpump_laufzeiten_pool_m19_schwimmbadpumpe
+      unit_of_measurement: h
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: enum
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/systemstatus/sensorfehler
+      name: Sensorfehler
+      object_id: heatpump_systemstatus_sensorfehler
+      options:
+        - 2.Heizkreisfühler
+        - 3.Heizkreisfühler
+        - Anforderungsfühler Heizen
+        - Anforderungsfühler Kühlen
+        - Außenfühler
+        - Codierung
+        - Fühler Frostschutz-Kälte
+        - Fühler Solarspeicher
+        - Fühler Wärmequellenaustritt
+        - Fühler Wärmequelleneintritt
+        - Heißgas
+        - Hochdrucksensor
+        - Kein Fehler
+        - Kollektorfühler
+        - Niederdrucksensor
+        - RTM Econ
+        - Raumfeuchte 1
+        - Raumfeuchte 2
+        - Raumfühler 1
+        - Raumfühler 2
+        - Regenerativfühler
+        - Rücklauffühler
+        - Rücklauffühler Kühlen Passiv
+        - Schwimmbadfühler
+        - Vorlauffühler
+        - Vorlauffühler Kühlen Passiv
+        - Warmwasserfühler
+      state_topic: heatpump/systemstatus/sensorfehler/state
+      unique_id: heatpump_systemstatus_sensorfehler
+      value_template: '{{ value_json.state }}'
+  - select:
+      command_topic: heatpump/energiemanagementsysteme/sg-ready/smart-grid/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/energiemanagementsysteme/sg-ready/smart-grid
+      name: Smart Grid
+      object_id: heatpump_energiemanagementsysteme_sg_ready_smart_grid
+      options:
+        - Hardwareeingang
+        - Zustand dunkelgrün
+        - Zustand gelb
+        - Zustand grün
+        - Zustand rot
+      state_topic: heatpump/energiemanagementsysteme/sg-ready/smart-grid/state
+      unique_id: heatpump_energiemanagementsysteme_sg_ready_smart_grid
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/energiemanagementsysteme/softwarestand/software-index
+      name: Software Index
+      object_id: heatpump_energiemanagementsysteme_softwarestand_software_index
+      state_class: measurement
+      state_topic: heatpump/energiemanagementsysteme/softwarestand/software-index/state
+      unique_id: heatpump_energiemanagementsysteme_softwarestand_software_index
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/energiemanagementsysteme/softwarestand/software-nummer
+      name: Software Nummer
+      object_id: heatpump_energiemanagementsysteme_softwarestand_software_nummer
+      state_class: measurement
+      state_topic: heatpump/energiemanagementsysteme/softwarestand/software-nummer/state
+      unique_id: heatpump_energiemanagementsysteme_softwarestand_software_nummer
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/energiemanagementsysteme/softwarestand/software-version
+      name: Software Version
+      object_id: heatpump_energiemanagementsysteme_softwarestand_software_version
+      state_topic: heatpump/energiemanagementsysteme/softwarestand/software-version/state
+      unique_id: heatpump_energiemanagementsysteme_softwarestand_software_version
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"part":"R22"}'
+      json_attributes_topic: heatpump/betriebsdaten/solar/r22/solarspeicher
+      name: Solarspeicher
+      object_id: heatpump_betriebsdaten_solar_r22_solarspeicher
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/solar/r22/solarspeicher/state
+      unique_id: heatpump_betriebsdaten_solar_r22_solarspeicher
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-schwimmbad/pool/solltemperatur/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"domain":"pool"}'
+      json_attributes_topic: heatpump/einstellungen-schwimmbad/pool/solltemperatur
+      max: 60
+      min: 5
+      name: Solltemperatur
+      object_id: heatpump_einstellungen_schwimmbad_pool_solltemperatur
+      state_topic: heatpump/einstellungen-schwimmbad/pool/solltemperatur/state
+      unique_id: heatpump_einstellungen_schwimmbad_pool_solltemperatur
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"domain":"tapwater"}'
+      json_attributes_topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur
+      name: Solltemperatur
+      object_id: heatpump_einstellungen_warmwasser_tapwater_solltemperatur
+      state_topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur/state
+      unique_id: heatpump_einstellungen_warmwasser_tapwater_solltemperatur
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"hk2","domain":"heating"}'
+      json_attributes_topic: heatpump/betriebsdaten/heating/hk2/solltemperatur-2-heizkreis
+      name: Solltemperatur 2.Heizkreis
+      object_id: heatpump_betriebsdaten_heating_hk2_solltemperatur_2_heizkreis
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/heating/hk2/solltemperatur-2-heizkreis/state
+      unique_id: heatpump_betriebsdaten_heating_hk2_solltemperatur_2_heizkreis
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"hk3","domain":"heating"}'
+      json_attributes_topic: heatpump/betriebsdaten/heating/hk3/solltemperatur-3-heizkreis
+      name: Solltemperatur 3.Heizkreis
+      object_id: heatpump_betriebsdaten_heating_hk3_solltemperatur_3_heizkreis
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/heating/hk3/solltemperatur-3-heizkreis/state
+      unique_id: heatpump_betriebsdaten_heating_hk3_solltemperatur_3_heizkreis
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur-maximal/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"domain":"tapwater"}'
+      json_attributes_topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur-maximal
+      max: 85
+      name: Solltemperatur Maximal
+      object_id: heatpump_einstellungen_warmwasser_tapwater_solltemperatur_maximal
+      state_topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur-maximal/state
+      unique_id: heatpump_einstellungen_warmwasser_tapwater_solltemperatur_maximal
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur-minimal/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"domain":"tapwater"}'
+      json_attributes_topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur-minimal
+      min: 10
+      name: Solltemperatur Minimal
+      object_id: heatpump_einstellungen_warmwasser_tapwater_solltemperatur_minimal
+      state_topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur-minimal/state
+      unique_id: heatpump_einstellungen_warmwasser_tapwater_solltemperatur_minimal
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-1-heiz-kuehlkreis/cooling/hk1/solltemperatur-dynamische-kuehlung/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"device":"hk1","domain":"cooling"}'
+      json_attributes_topic: heatpump/einstellungen-1-heiz-kuehlkreis/cooling/hk1/solltemperatur-dynamische-kuehlung
+      max: 35
+      min: 10
+      name: Solltemperatur dynamische Kühlung
+      object_id: heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung
+      state_topic: heatpump/einstellungen-1-heiz-kuehlkreis/cooling/hk1/solltemperatur-dynamische-kuehlung/state
+      unique_id: heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-1-heiz-kuehlkreis/cooling/hk1/solltemperatur-dynamische-kuehlung-bei-15-c-at/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"device":"hk1","domain":"cooling"}'
+      json_attributes_topic: heatpump/einstellungen-1-heiz-kuehlkreis/cooling/hk1/solltemperatur-dynamische-kuehlung-bei-15-c-at
+      max: 35
+      min: 10
+      name: Solltemperatur dynamische Kühlung bei 15°C AT
+      object_id: heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung_bei_15_c_at
+      state_topic: heatpump/einstellungen-1-heiz-kuehlkreis/cooling/hk1/solltemperatur-dynamische-kuehlung-bei-15-c-at/state
+      unique_id: heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung_bei_15_c_at
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/einstellungen-1-heiz-kuehlkreis/cooling/hk1/solltemperatur-dynamische-kuehlung-bei-35-c-at/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"device":"hk1","domain":"cooling"}'
+      json_attributes_topic: heatpump/einstellungen-1-heiz-kuehlkreis/cooling/hk1/solltemperatur-dynamische-kuehlung-bei-35-c-at
+      max: 35
+      min: 10
+      name: Solltemperatur dynamische Kühlung bei 35°C AT
+      object_id: heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung_bei_35_c_at
+      state_topic: heatpump/einstellungen-1-heiz-kuehlkreis/cooling/hk1/solltemperatur-dynamische-kuehlung-bei-35-c-at/state
+      unique_id: heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung_bei_35_c_at
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - select:
+      command_topic: heatpump/zeitprogramm/zeitfunktion/sonntag/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/sonntag
+      name: Sonntag
+      object_id: heatpump_zeitprogramm_zeitfunktion_sonntag
+      options:
+        - Ja
+        - Nein
+        - Zeit 1
+        - Zeit 2
+      state_topic: heatpump/zeitprogramm/zeitfunktion/sonntag/state
+      unique_id: heatpump_zeitprogramm_zeitfunktion_sonntag
+      value_template: '{{ value_json.state }}'
+  - select:
+      command_topic: heatpump/sperre-extern/sperre-extern/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/sperre-extern/sperre-extern
+      name: Sperre Extern
+      object_id: heatpump_sperre_extern_sperre_extern
+      options:
+        - Hardwareeingang
+        - Sperre aktiv
+        - Sperre nicht aktiv
+      state_topic: heatpump/sperre-extern/sperre-extern/state
+      unique_id: heatpump_sperre_extern_sperre_extern
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: enum
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/systemstatus/sperrmeldungen
+      name: Sperrmeldungen
+      object_id: heatpump_systemstatus_sperrmeldungen
+      options:
+        - 2.Wärmeerzeuger freigegeben
+        - Aufwärmen
+        - Durchfluss
+        - EVU-Sperre
+        - Einsatzgrenze HT
+        - Einsatzgrenze Wärmepumpe
+        - Einsatzgrenze Wärmequelle
+        - EvD Initialisierung
+        - Funktionskontrolle
+        - Hochdruck
+        - Inverter
+        - Keine Sperre
+        - Last Primärkreis
+        - Mindeststandzeit
+        - Netzbelastung
+        - Niederdruck
+        - Pumpenvorlauf
+        - Regenerativ
+        - Sanftanlasser
+        - Schaltspielsperre
+        - Sperre Extern
+        - Störung (siehe Wert für Störmeldungen)
+        - System Grenze
+        - Systemkontrolle
+        - Verzögerung Umschaltung Kühlen
+        - Volumenstrom
+        - Warmwasser Nacherwärmung
+      state_topic: heatpump/systemstatus/sperrmeldungen/state
+      unique_id: heatpump_systemstatus_sperrmeldungen
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/zeitprogramm/zeitfunktion/start-minute-1/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/start-minute-1
+      max: 59
+      min: 0
+      name: Start Minute 1
+      object_id: heatpump_zeitprogramm_zeitfunktion_start_minute_1
+      state_topic: heatpump/zeitprogramm/zeitfunktion/start-minute-1/state
+      unique_id: heatpump_zeitprogramm_zeitfunktion_start_minute_1
+      unit_of_measurement: min
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/zeitprogramm/zeitfunktion/start-minute-2/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/start-minute-2
+      max: 59
+      min: 0
+      name: Start Minute 2
+      object_id: heatpump_zeitprogramm_zeitfunktion_start_minute_2
+      state_topic: heatpump/zeitprogramm/zeitfunktion/start-minute-2/state
+      unique_id: heatpump_zeitprogramm_zeitfunktion_start_minute_2
+      unit_of_measurement: min
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/zeitprogramm/zeitfunktion/start-stunde-1/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/start-stunde-1
+      max: 23
+      min: 0
+      name: Start Stunde 1
+      object_id: heatpump_zeitprogramm_zeitfunktion_start_stunde_1
+      state_topic: heatpump/zeitprogramm/zeitfunktion/start-stunde-1/state
+      unique_id: heatpump_zeitprogramm_zeitfunktion_start_stunde_1
+      unit_of_measurement: h
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/zeitprogramm/zeitfunktion/start-stunde-2/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/start-stunde-2
+      max: 23
+      min: 0
+      name: Start Stunde 2
+      object_id: heatpump_zeitprogramm_zeitfunktion_start_stunde_2
+      state_topic: heatpump/zeitprogramm/zeitfunktion/start-stunde-2/state
+      unique_id: heatpump_zeitprogramm_zeitfunktion_start_stunde_2
+      unit_of_measurement: h
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: enum
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/systemstatus/statusmeldungen
+      name: Statusmeldungen
+      object_id: heatpump_systemstatus_statusmeldungen
+      options:
+        - Abtauen
+        - Aus
+        - Durchflussüberwachung
+        - Heizen
+        - Kein Status
+        - Kühlen
+        - Schwimmbad
+        - Sperre
+        - Verzögerung Betriebsmodusumschaltung
+        - Warmwasser
+      state_topic: heatpump/systemstatus/statusmeldungen/state
+      unique_id: heatpump_systemstatus_statusmeldungen
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/betriebsmodus/lueftung/fan/stufen/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{"device":"fan"}'
+      json_attributes_topic: heatpump/betriebsmodus/lueftung/fan/stufen
+      max: 5
+      min: 0
+      name: Stufen
+      object_id: heatpump_betriebsmodus_lueftung_fan_stufen
+      state_topic: heatpump/betriebsmodus/lueftung/fan/stufen/state
+      unique_id: heatpump_betriebsmodus_lueftung_fan_stufen
+      unit_of_measurement:  
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/zeitabgleich/stunde/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitabgleich/stunde
+      max: 23
+      min: 0
+      name: Stunde
+      object_id: heatpump_zeitabgleich_stunde
+      state_topic: heatpump/zeitabgleich/stunde/state
+      unique_id: heatpump_zeitabgleich_stunde
+      unit_of_measurement: h
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: enum
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/systemstatus/stoermeldungen
+      name: Störmeldungen
+      object_id: heatpump_systemstatus_stoermeldungen
+      options:
+        - '!Abtauen'
+        - '!Aufwärmen'
+        - '!Codierung'
+        - '!Durchfluss'
+        - '!Frostschutz'
+        - '!Heissgasthermostat'
+        - '!Hochdruck'
+        - '!Last Verdichter'
+        - '!Niederdruck'
+        - '!Niederdruck Sole'
+        - '!Primärkreis'
+        - '!Temperatur Differenz'
+        - '!Warmwasser'
+        - Elektronisches Ex.Ventil
+        - Fehler N17.1
+        - Fehler N17.2
+        - Fehler N17.3
+        - Fehler N17.4
+        - Inverter
+        - Niederdruck Sole
+        - Sensorfehler
+        - WPIO
+        - WQIF
+        - kein Fehler
+      state_topic: heatpump/systemstatus/stoermeldungen/state
+      unique_id: heatpump_systemstatus_stoermeldungen
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/zeitabgleich/tag/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitabgleich/tag
+      max: 31
+      min: 1
+      name: Tag
+      object_id: heatpump_zeitabgleich_tag
+      state_topic: heatpump/zeitabgleich/tag/state
+      unique_id: heatpump_zeitabgleich_tag
+      unit_of_measurement: day
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/zeitprogramm/warmwasser-thermische-desinfektion/tapwater/temperatur/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: config
+      json_attributes_template: '{"domain":"tapwater"}'
+      json_attributes_topic: heatpump/zeitprogramm/warmwasser-thermische-desinfektion/tapwater/temperatur
+      max: 85
+      min: 60
+      name: Temperatur
+      object_id: heatpump_zeitprogramm_warmwasser_thermische_desinfektion_tapwater_temperatur
+      state_topic: heatpump/zeitprogramm/warmwasser-thermische-desinfektion/tapwater/temperatur/state
+      unique_id: heatpump_zeitprogramm_warmwasser_thermische_desinfektion_tapwater_temperatur
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"hk2","domain":"heating","part":"R5"}'
+      json_attributes_topic: heatpump/betriebsdaten/heating/hk2/r5/temperatur-2-heizkreis
+      name: Temperatur 2.Heizkreis
+      object_id: heatpump_betriebsdaten_heating_hk2_r5_temperatur_2_heizkreis
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/heating/hk2/r5/temperatur-2-heizkreis/state
+      unique_id: heatpump_betriebsdaten_heating_hk2_r5_temperatur_2_heizkreis
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"hk3","domain":"heating","part":"R13"}'
+      json_attributes_topic: heatpump/betriebsdaten/heating/hk3/r13/temperatur-3-heizkreis
+      name: Temperatur 3.Heizkreis
+      object_id: heatpump_betriebsdaten_heating_hk3_r13_temperatur_3_heizkreis
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/heating/hk3/r13/temperatur-3-heizkreis/state
+      unique_id: heatpump_betriebsdaten_heating_hk3_r13_temperatur_3_heizkreis
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"heating","part":"R2"}'
+      json_attributes_topic: heatpump/betriebsdaten/heating/r2/temperatur-ruecklauf
+      name: Temperatur Rücklauf
+      object_id: heatpump_betriebsdaten_heating_r2_temperatur_ruecklauf
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/heating/r2/temperatur-ruecklauf/state
+      unique_id: heatpump_betriebsdaten_heating_r2_temperatur_ruecklauf
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"device":"hk1","domain":"heating"}'
+      json_attributes_topic: heatpump/betriebsdaten/heating/hk1/temperatur-ruecklaufsoll
+      name: Temperatur Rücklaufsoll
+      object_id: heatpump_betriebsdaten_heating_hk1_temperatur_ruecklaufsoll
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/heating/hk1/temperatur-ruecklaufsoll/state
+      unique_id: heatpump_betriebsdaten_heating_hk1_temperatur_ruecklaufsoll
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"heating","part":"R9"}'
+      json_attributes_topic: heatpump/betriebsdaten/heating/r9/temperatur-vorlauf
+      name: Temperatur Vorlauf
+      object_id: heatpump_betriebsdaten_heating_r9_temperatur_vorlauf
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/heating/r9/temperatur-vorlauf/state
+      unique_id: heatpump_betriebsdaten_heating_r9_temperatur_vorlauf
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"tapwater","part":"R3"}'
+      json_attributes_topic: heatpump/betriebsdaten/tapwater/r3/temperatur-warmwasser
+      name: Temperatur Warmwasser
+      object_id: heatpump_betriebsdaten_tapwater_r3_temperatur_warmwasser
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/tapwater/r3/temperatur-warmwasser/state
+      unique_id: heatpump_betriebsdaten_tapwater_r3_temperatur_warmwasser
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"tapwater"}'
+      json_attributes_topic: heatpump/betriebsdaten/tapwater/temperatur-warmwassersoll
+      name: Temperatur Warmwassersoll
+      object_id: heatpump_betriebsdaten_tapwater_temperatur_warmwassersoll
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/tapwater/temperatur-warmwassersoll/state
+      unique_id: heatpump_betriebsdaten_tapwater_temperatur_warmwassersoll
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"part":"R6"}'
+      json_attributes_topic: heatpump/betriebsdaten/r6/temperatur-waermequellenaustritt
+      name: Temperatur Wärmequellenaustritt
+      object_id: heatpump_betriebsdaten_r6_temperatur_waermequellenaustritt
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/r6/temperatur-waermequellenaustritt/state
+      unique_id: heatpump_betriebsdaten_r6_temperatur_waermequellenaustritt
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"part":"R24"}'
+      json_attributes_topic: heatpump/betriebsdaten/r24/temperatur-waermequelleneintritt
+      name: Temperatur Wärmequelleneintritt
+      object_id: heatpump_betriebsdaten_r24_temperatur_waermequelleneintritt
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/r24/temperatur-waermequelleneintritt/state
+      unique_id: heatpump_betriebsdaten_r24_temperatur_waermequelleneintritt
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: energy
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/waermemengen/umweltenergie-1-4
+      name: Umweltenergie 1-4
+      object_id: heatpump_waermemengen_umweltenergie_1_4
+      state_class: total_increasing
+      state_topic: heatpump/waermemengen/umweltenergie-1-4/state
+      unique_id: heatpump_waermemengen_umweltenergie_1_4
+      unit_of_measurement: kWh
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: energy
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/waermemengen/umweltenergie-5-8
+      name: Umweltenergie 5-8
+      object_id: heatpump_waermemengen_umweltenergie_5_8
+      state_class: total_increasing
+      state_topic: heatpump/waermemengen/umweltenergie-5-8/state
+      unique_id: heatpump_waermemengen_umweltenergie_5_8
+      unit_of_measurement: kWh
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: energy
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/waermemengen/umweltenergie-9-12
+      name: Umweltenergie 9-12
+      object_id: heatpump_waermemengen_umweltenergie_9_12
+      state_class: total_increasing
+      state_topic: heatpump/waermemengen/umweltenergie-9-12/state
+      unique_id: heatpump_waermemengen_umweltenergie_9_12
+      unit_of_measurement: kWh
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: duration
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/laufzeiten/verdichter-1
+      name: Verdichter 1
+      object_id: heatpump_laufzeiten_verdichter_1
+      state_class: total_increasing
+      state_topic: heatpump/laufzeiten/verdichter-1/state
+      unique_id: heatpump_laufzeiten_verdichter_1
+      unit_of_measurement: h
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: duration
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/laufzeiten/verdichter-2
+      name: Verdichter 2
+      object_id: heatpump_laufzeiten_verdichter_2
+      state_class: total_increasing
+      state_topic: heatpump/laufzeiten/verdichter-2/state
+      unique_id: heatpump_laufzeiten_verdichter_2
+      unit_of_measurement: h
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"cooling","part":"R11"}'
+      json_attributes_topic: heatpump/betriebsdaten/passiv-kuehlen/cooling/r11/vorlauftemperatur
+      name: Vorlauftemperatur
+      object_id: heatpump_betriebsdaten_passiv_kuehlen_cooling_r11_vorlauftemperatur
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/passiv-kuehlen/cooling/r11/vorlauftemperatur/state
+      unique_id: heatpump_betriebsdaten_passiv_kuehlen_cooling_r11_vorlauftemperatur
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/zeitprogramm/schwimmbad-vorrang/pool/vorrang/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: duration
+      entity_category: config
+      json_attributes_template: '{"domain":"pool"}'
+      json_attributes_topic: heatpump/zeitprogramm/schwimmbad-vorrang/pool/vorrang
+      max: 10
+      min: 1
+      name: Vorrang
+      object_id: heatpump_zeitprogramm_schwimmbad_vorrang_pool_vorrang
+      state_topic: heatpump/zeitprogramm/schwimmbad-vorrang/pool/vorrang/state
+      unique_id: heatpump_zeitprogramm_schwimmbad_vorrang_pool_vorrang
+      unit_of_measurement: h
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: duration
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"tapwater","part":"M18"}'
+      json_attributes_topic: heatpump/laufzeiten/tapwater/m18/warmwasserpumpe
+      name: Warmwasserpumpe
+      object_id: heatpump_laufzeiten_tapwater_m18_warmwasserpumpe
+      state_class: total_increasing
+      state_topic: heatpump/laufzeiten/tapwater/m18/warmwasserpumpe/state
+      unique_id: heatpump_laufzeiten_tapwater_m18_warmwasserpumpe
+      unit_of_measurement: h
+      value_template: '{{ value_json.state }}'
+  - select:
+      command_topic: heatpump/zeitabgleich/wochentag/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitabgleich/wochentag
+      name: Wochentag
+      object_id: heatpump_zeitabgleich_wochentag
+      options:
+        - Dienstag
+        - Donnerstag
+        - Freitag
+        - Mittwoch
+        - Montag
+        - Samstag
+        - Sonntag
+      state_topic: heatpump/zeitabgleich/wochentag/state
+      unique_id: heatpump_zeitabgleich_wochentag
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: energy
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/waermemengen/heating/waermemenge-heizen-1-4
+      name: Wärmemenge Heizen 1-4
+      object_id: heatpump_waermemengen_heating_waermemenge_heizen_1_4
+      state_class: total_increasing
+      state_topic: heatpump/waermemengen/heating/waermemenge-heizen-1-4/state
+      unique_id: heatpump_waermemengen_heating_waermemenge_heizen_1_4
+      unit_of_measurement: kWh
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: energy
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/waermemengen/heating/waermemenge-heizen-5-8
+      name: Wärmemenge Heizen 5-8
+      object_id: heatpump_waermemengen_heating_waermemenge_heizen_5_8
+      state_class: total_increasing
+      state_topic: heatpump/waermemengen/heating/waermemenge-heizen-5-8/state
+      unique_id: heatpump_waermemengen_heating_waermemenge_heizen_5_8
+      unit_of_measurement: kWh
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: energy
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"heating"}'
+      json_attributes_topic: heatpump/waermemengen/heating/waermemenge-heizen-9-12
+      name: Wärmemenge Heizen 9-12
+      object_id: heatpump_waermemengen_heating_waermemenge_heizen_9_12
+      state_class: total_increasing
+      state_topic: heatpump/waermemengen/heating/waermemenge-heizen-9-12/state
+      unique_id: heatpump_waermemengen_heating_waermemenge_heizen_9_12
+      unit_of_measurement: kWh
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: energy
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"pool"}'
+      json_attributes_topic: heatpump/waermemengen/pool/waermemenge-schwimmbad-1-4
+      name: Wärmemenge Schwimmbad 1-4
+      object_id: heatpump_waermemengen_pool_waermemenge_schwimmbad_1_4
+      state_class: total_increasing
+      state_topic: heatpump/waermemengen/pool/waermemenge-schwimmbad-1-4/state
+      unique_id: heatpump_waermemengen_pool_waermemenge_schwimmbad_1_4
+      unit_of_measurement: kWh
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: energy
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"pool"}'
+      json_attributes_topic: heatpump/waermemengen/pool/waermemenge-schwimmbad-5-8
+      name: Wärmemenge Schwimmbad 5-8
+      object_id: heatpump_waermemengen_pool_waermemenge_schwimmbad_5_8
+      state_class: total_increasing
+      state_topic: heatpump/waermemengen/pool/waermemenge-schwimmbad-5-8/state
+      unique_id: heatpump_waermemengen_pool_waermemenge_schwimmbad_5_8
+      unit_of_measurement: kWh
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: energy
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"pool"}'
+      json_attributes_topic: heatpump/waermemengen/pool/waermemenge-schwimmbad-9-12
+      name: Wärmemenge Schwimmbad 9-12
+      object_id: heatpump_waermemengen_pool_waermemenge_schwimmbad_9_12
+      state_class: total_increasing
+      state_topic: heatpump/waermemengen/pool/waermemenge-schwimmbad-9-12/state
+      unique_id: heatpump_waermemengen_pool_waermemenge_schwimmbad_9_12
+      unit_of_measurement: kWh
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: energy
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"tapwater"}'
+      json_attributes_topic: heatpump/waermemengen/tapwater/waermemenge-warmwasser-1-4
+      name: Wärmemenge Warmwasser 1-4
+      object_id: heatpump_waermemengen_tapwater_waermemenge_warmwasser_1_4
+      state_class: total_increasing
+      state_topic: heatpump/waermemengen/tapwater/waermemenge-warmwasser-1-4/state
+      unique_id: heatpump_waermemengen_tapwater_waermemenge_warmwasser_1_4
+      unit_of_measurement: kWh
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: energy
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"tapwater"}'
+      json_attributes_topic: heatpump/waermemengen/tapwater/waermemenge-warmwasser-5-8
+      name: Wärmemenge Warmwasser 5-8
+      object_id: heatpump_waermemengen_tapwater_waermemenge_warmwasser_5_8
+      state_class: total_increasing
+      state_topic: heatpump/waermemengen/tapwater/waermemenge-warmwasser-5-8/state
+      unique_id: heatpump_waermemengen_tapwater_waermemenge_warmwasser_5_8
+      unit_of_measurement: kWh
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: energy
+      entity_category: diagnostic
+      json_attributes_template: '{"domain":"tapwater"}'
+      json_attributes_topic: heatpump/waermemengen/tapwater/waermemenge-warmwasser-9-12
+      name: Wärmemenge Warmwasser 9-12
+      object_id: heatpump_waermemengen_tapwater_waermemenge_warmwasser_9_12
+      state_class: total_increasing
+      state_topic: heatpump/waermemengen/tapwater/waermemenge-warmwasser-9-12/state
+      unique_id: heatpump_waermemengen_tapwater_waermemenge_warmwasser_9_12
+      unit_of_measurement: kWh
+      value_template: '{{ value_json.state }}'
+  - select:
+      command_topic: heatpump/zeitprogramm/zeitprogramm/set
+      device:
+        identifiers:
+          - law14itr
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/zeitprogramm/zeitprogramm
+      name: Zeitprogramm
+      object_id: heatpump_zeitprogramm_zeitprogramm
+      options:
+        - 1.Heizkreis Absenkung
+        - 1.Heizkreis Anhebung
+        - 2.Heizkreis Absenkung
+        - 2.Heizkreis Anhebung
+        - 3.Heizkreis Absenkung
+        - 3.Heizkreis Anhebung
+        - Kein Zeitprogramm
+        - Schwimmbad Sperre
+        - Schwimmbad Vorrang
+        - Thermische Desinfektion
+        - Warmwasser Sperre
+        - Zirkulationspumpe
+      state_topic: heatpump/zeitprogramm/zeitprogramm/state
+      unique_id: heatpump_zeitprogramm_zeitprogramm
+      value_template: '{{ value_json.state }}'
+  - number:
+      command_topic: heatpump/betriebsmodus/lueftung/zeitwert-stosslueften/set
+      device:
+        identifiers:
+          - law14itr
+      device_class: duration
+      entity_category: config
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/betriebsmodus/lueftung/zeitwert-stosslueften
+      max: 90
+      min: 15
+      name: Zeitwert Stoßlüften
+      object_id: heatpump_betriebsmodus_lueftung_zeitwert_stosslueften
+      state_topic: heatpump/betriebsmodus/lueftung/zeitwert-stosslueften/state
+      unique_id: heatpump_betriebsmodus_lueftung_zeitwert_stosslueften
+      unit_of_measurement: min
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: temperature
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/betriebsdaten/lueftung/zulufttemperatur
+      name: Zulufttemperatur
+      object_id: heatpump_betriebsdaten_lueftung_zulufttemperatur
+      state_class: measurement
+      state_topic: heatpump/betriebsdaten/lueftung/zulufttemperatur/state
+      unique_id: heatpump_betriebsdaten_lueftung_zulufttemperatur
+      unit_of_measurement: °C
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: power
+      entity_category: diagnostic
+      json_attributes_template: '{}'
+      json_attributes_topic: heatpump/energiemanagementsysteme/leistungen-und-ueberschuss/zur-verfuegung-gestellte-waermeleistung
+      name: Zur Verfügung gestellte Wärmeleistung
+      object_id: heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_zur_verfuegung_gestellte_waermeleistung
+      state_class: measurement
+      state_topic: heatpump/energiemanagementsysteme/leistungen-und-ueberschuss/zur-verfuegung-gestellte-waermeleistung/state
+      unique_id: heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_zur_verfuegung_gestellte_waermeleistung
+      unit_of_measurement: W
+      value_template: '{{ value_json.state }}'
+  - sensor:
+      device:
+        identifiers:
+          - law14itr
+      device_class: duration
+      entity_category: diagnostic
+      json_attributes_template: '{"part":"M16"}'
+      json_attributes_topic: heatpump/laufzeiten/m16/zusatzumwaelzpumpe
+      name: Zusatzumwälzpumpe
+      object_id: heatpump_laufzeiten_m16_zusatzumwaelzpumpe
+      state_class: total_increasing
+      state_topic: heatpump/laufzeiten/m16/zusatzumwaelzpumpe/state
+      unique_id: heatpump_laufzeiten_m16_zusatzumwaelzpumpe
+      unit_of_measurement: h
+      value_template: '{{ value_json.state }}'
