@@ -269,7 +269,7 @@ def payload_press:
 def basic($domain; $enums):
   {
     name: .name,
-    object_id: mqtt::topic | mqtt::slug("_"),
+    default_entity_id: mqtt::topic | mqtt::slug("_"),
     unique_id: mqtt::topic | mqtt::slug("_"),
   }
   + entity_category
@@ -340,7 +340,7 @@ def config_for($domain; $enums):
 # containing a `friendly_name` and custom attributes.
 #
 # Input:  A register definition
-# $key:   Key for the customization property (`domain.object_id`)
+# $key:   Key for the customization property (`domain.default_entity_id`)
 # Environment variables:
 #   HA_CUSTOM_ATTRIBUTES:
 #         A comma-separated list of property names for custom attributes.
@@ -374,7 +374,7 @@ def mqttconfig($version; $enumlist):
     .[]
     | domain as $domain
     | config_for($domain; $enums) as $mqtt_config
-    | customize_for($domain + "." + $mqtt_config.object_id) as $customize
+    | customize_for($domain + "." + $mqtt_config.default_entity_id) as $customize
     | { mqtt: {($domain): $mqtt_config}, customize: $customize }
   ] | { mqtt: map(.mqtt), homeassistant: { customize: (map(.customize) | add) }
   }
