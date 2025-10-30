@@ -262,7 +262,7 @@ mqtt:
   - binary_sensor:
       entity_category: 'diagnostic'
       name: 'Flanschheizung'
-      object_id: 'heatpump_ausgaenge_tapwater_flange_e9_flanschheizung'
+      default_entity_id: 'heatpump_ausgaenge_tapwater_flange_e9_flanschheizung'
       unique_id: 'heatpump_ausgaenge_tapwater_flange_e9_flanschheizung'
       device_class: 'running'
       device:
@@ -277,7 +277,7 @@ mqtt:
   - sensor:
       entity_category: 'diagnostic'
       name: 'Aufgenommene elektrische Leistung'
-      object_id: 'heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_aufgenommene_elektrische_leistung'
+      default_entity_id: 'heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_aufgenommene_elektrische_leistung'
       unique_id: 'heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_aufgenommene_elektrische_leistung'
       device_class: 'power'
       device:
@@ -292,7 +292,7 @@ mqtt:
   - select:
       entity_category: 'config'
       name: 'Auswahl Heizkreis'
-      object_id: 'heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_auswahl_heizkreis'
+      default_entity_id: 'heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_auswahl_heizkreis'
       unique_id: 'heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_auswahl_heizkreis'
       device:
         identifiers:

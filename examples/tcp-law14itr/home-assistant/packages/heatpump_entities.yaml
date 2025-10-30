@@ -672,7 +672,7 @@ mqtt:
       json_attributes_template: '{"device":"external-heater","part":"E10"}'
       json_attributes_topic: heatpump/ausgaenge/external-heater/e10/2-waermeerzeuger
       name: 2.Wärmeerzeuger
-      object_id: heatpump_ausgaenge_external_heater_e10_2_waermeerzeuger
+      default_entity_id: heatpump_ausgaenge_external_heater_e10_2_waermeerzeuger
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/external-heater/e10/2-waermeerzeuger/state
@@ -687,7 +687,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/aktiv-zeit-1
       name: Aktiv Zeit 1
-      object_id: heatpump_zeitprogramm_zeitfunktion_aktiv_zeit_1
+      default_entity_id: heatpump_zeitprogramm_zeitfunktion_aktiv_zeit_1
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/zeitprogramm/zeitfunktion/aktiv-zeit-1/state
@@ -702,7 +702,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/aktiv-zeit-2
       name: Aktiv Zeit 2
-      object_id: heatpump_zeitprogramm_zeitfunktion_aktiv_zeit_2
+      default_entity_id: heatpump_zeitprogramm_zeitfunktion_aktiv_zeit_2
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/zeitprogramm/zeitfunktion/aktiv-zeit-2/state
@@ -717,7 +717,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/eingaenge/evu-sperre
       name: EVU-Sperre
-      object_id: heatpump_eingaenge_evu_sperre
+      default_entity_id: heatpump_eingaenge_evu_sperre
       payload_off: 1
       payload_on: 0
       state_topic: heatpump/eingaenge/evu-sperre/state
@@ -732,7 +732,7 @@ mqtt:
       json_attributes_template: '{"device":"flange","domain":"tapwater","part":"E9"}'
       json_attributes_topic: heatpump/ausgaenge/tapwater/flange/e9/flanschheizung
       name: Flanschheizung
-      object_id: heatpump_ausgaenge_tapwater_flange_e9_flanschheizung
+      default_entity_id: heatpump_ausgaenge_tapwater_flange_e9_flanschheizung
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/tapwater/flange/e9/flanschheizung/state
@@ -747,7 +747,7 @@ mqtt:
       json_attributes_template: '{"domain":"tapwater"}'
       json_attributes_topic: heatpump/einstellungen-warmwasser/tapwater/freigabe-zirkulationspumpe
       name: Freigabe Zirkulationspumpe
-      object_id: heatpump_einstellungen_warmwasser_tapwater_freigabe_zirkulationspumpe
+      default_entity_id: heatpump_einstellungen_warmwasser_tapwater_freigabe_zirkulationspumpe
       payload_off: 0
       payload_on: 1
       state_off: 0
@@ -764,7 +764,7 @@ mqtt:
       json_attributes_template: '{"domain":"heating","part":"M13"}'
       json_attributes_topic: heatpump/ausgaenge/heating/m13/heizungspumpe
       name: Heizungspumpe
-      object_id: heatpump_ausgaenge_heating_m13_heizungspumpe
+      default_entity_id: heatpump_ausgaenge_heating_m13_heizungspumpe
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/heating/m13/heizungspumpe/state
@@ -779,7 +779,7 @@ mqtt:
       json_attributes_template: '{"domain":"heating","part":"M14"}'
       json_attributes_topic: heatpump/ausgaenge/heating/m14/heizungspumpe
       name: Heizungspumpe
-      object_id: heatpump_ausgaenge_heating_m14_heizungspumpe
+      default_entity_id: heatpump_ausgaenge_heating_m14_heizungspumpe
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/heating/m14/heizungspumpe/state
@@ -794,7 +794,7 @@ mqtt:
       json_attributes_template: '{"domain":"heating","part":"M15"}'
       json_attributes_topic: heatpump/ausgaenge/heating/m15/heizungspumpe
       name: Heizungspumpe
-      object_id: heatpump_ausgaenge_heating_m15_heizungspumpe
+      default_entity_id: heatpump_ausgaenge_heating_m15_heizungspumpe
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/heating/m15/heizungspumpe/state
@@ -809,7 +809,7 @@ mqtt:
       json_attributes_template: '{"domain":"heating","part":"M20"}'
       json_attributes_topic: heatpump/ausgaenge/heating/m20/heizungspumpe
       name: Heizungspumpe
-      object_id: heatpump_ausgaenge_heating_m20_heizungspumpe
+      default_entity_id: heatpump_ausgaenge_heating_m20_heizungspumpe
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/heating/m20/heizungspumpe/state
@@ -824,7 +824,7 @@ mqtt:
       json_attributes_template: '{"domain":"cooling","part":"M17"}'
       json_attributes_topic: heatpump/ausgaenge/cooling/m17/kuehlpumpe
       name: Kühlpumpe
-      object_id: heatpump_ausgaenge_cooling_m17_kuehlpumpe
+      default_entity_id: heatpump_ausgaenge_cooling_m17_kuehlpumpe
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/cooling/m17/kuehlpumpe/state
@@ -839,7 +839,7 @@ mqtt:
       json_attributes_template: '{"device":"hk2","domain":"heating","part":"M22"}'
       json_attributes_topic: heatpump/ausgaenge/heating/hk2/m22/mischer-auf
       name: Mischer Auf
-      object_id: heatpump_ausgaenge_heating_hk2_m22_mischer_auf
+      default_entity_id: heatpump_ausgaenge_heating_hk2_m22_mischer_auf
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/heating/hk2/m22/mischer-auf/state
@@ -854,7 +854,7 @@ mqtt:
       json_attributes_template: '{"device":"hk3","domain":"heating","part":"M21"}'
       json_attributes_topic: heatpump/ausgaenge/heating/hk3/m21/mischer-auf
       name: Mischer Auf
-      object_id: heatpump_ausgaenge_heating_hk3_m21_mischer_auf
+      default_entity_id: heatpump_ausgaenge_heating_hk3_m21_mischer_auf
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/heating/hk3/m21/mischer-auf/state
@@ -869,7 +869,7 @@ mqtt:
       json_attributes_template: '{"device":"hk2","domain":"heating","part":"M22"}'
       json_attributes_topic: heatpump/ausgaenge/heating/hk2/m22/mischer-zu
       name: Mischer Zu
-      object_id: heatpump_ausgaenge_heating_hk2_m22_mischer_zu
+      default_entity_id: heatpump_ausgaenge_heating_hk2_m22_mischer_zu
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/heating/hk2/m22/mischer-zu/state
@@ -884,7 +884,7 @@ mqtt:
       json_attributes_template: '{"device":"hk3","domain":"heating","part":"M21"}'
       json_attributes_topic: heatpump/ausgaenge/heating/hk3/m21/mischer-zu
       name: Mischer Zu
-      object_id: heatpump_ausgaenge_heating_hk3_m21_mischer_zu
+      default_entity_id: heatpump_ausgaenge_heating_hk3_m21_mischer_zu
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/heating/hk3/m21/mischer-zu/state
@@ -899,7 +899,7 @@ mqtt:
       json_attributes_template: '{"part":"M11"}'
       json_attributes_topic: heatpump/ausgaenge/m11/primaerpumpe
       name: Primärpumpe
-      object_id: heatpump_ausgaenge_m11_primaerpumpe
+      default_entity_id: heatpump_ausgaenge_m11_primaerpumpe
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/m11/primaerpumpe/state
@@ -914,7 +914,7 @@ mqtt:
       json_attributes_template: '{"domain":"cooling","part":"M12"}'
       json_attributes_topic: heatpump/ausgaenge/cooling/m12/primaerpumpe-kuehlen
       name: Primärpumpe Kühlen
-      object_id: heatpump_ausgaenge_cooling_m12_primaerpumpe_kuehlen
+      default_entity_id: heatpump_ausgaenge_cooling_m12_primaerpumpe_kuehlen
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/cooling/m12/primaerpumpe-kuehlen/state
@@ -929,7 +929,7 @@ mqtt:
       json_attributes_template: '{"part":"H5"}'
       json_attributes_topic: heatpump/ausgaenge/h5/sammelstoermeldung
       name: Sammelstörmeldung
-      object_id: heatpump_ausgaenge_h5_sammelstoermeldung
+      default_entity_id: heatpump_ausgaenge_h5_sammelstoermeldung
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/h5/sammelstoermeldung/state
@@ -944,7 +944,7 @@ mqtt:
       json_attributes_template: '{"domain":"pool","part":"M19"}'
       json_attributes_topic: heatpump/ausgaenge/pool/m19/schwimmbadpumpe
       name: Schwimmbadpumpe
-      object_id: heatpump_ausgaenge_pool_m19_schwimmbadpumpe
+      default_entity_id: heatpump_ausgaenge_pool_m19_schwimmbadpumpe
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/pool/m19/schwimmbadpumpe/state
@@ -959,7 +959,7 @@ mqtt:
       json_attributes_template: '{"device":"valve"}'
       json_attributes_topic: heatpump/eingaenge/valve/smart-grid-1
       name: Smart Grid 1
-      object_id: heatpump_eingaenge_valve_smart_grid_1
+      default_entity_id: heatpump_eingaenge_valve_smart_grid_1
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/eingaenge/valve/smart-grid-1/state
@@ -974,7 +974,7 @@ mqtt:
       json_attributes_template: '{"device":"valve"}'
       json_attributes_topic: heatpump/eingaenge/valve/smart-grid-2
       name: Smart Grid 2
-      object_id: heatpump_eingaenge_valve_smart_grid_2
+      default_entity_id: heatpump_eingaenge_valve_smart_grid_2
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/eingaenge/valve/smart-grid-2/state
@@ -989,7 +989,7 @@ mqtt:
       json_attributes_template: '{"part":"M23"}'
       json_attributes_topic: heatpump/ausgaenge/solar/m23/solarpumpe
       name: Solarpumpe
-      object_id: heatpump_ausgaenge_solar_m23_solarpumpe
+      default_entity_id: heatpump_ausgaenge_solar_m23_solarpumpe
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/solar/m23/solarpumpe/state
@@ -1004,7 +1004,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/eingaenge/sperre-extern
       name: Sperre Extern
-      object_id: heatpump_eingaenge_sperre_extern
+      default_entity_id: heatpump_eingaenge_sperre_extern
       payload_off: 1
       payload_on: 0
       state_topic: heatpump/eingaenge/sperre-extern/state
@@ -1018,7 +1018,7 @@ mqtt:
       json_attributes_template: '{"part":"N9"}'
       json_attributes_topic: heatpump/ausgaenge/n9/umschaltung-raumthermostate-heizen-kuehlen
       name: Umschaltung Raumthermostate Heizen/Kühlen
-      object_id: heatpump_ausgaenge_n9_umschaltung_raumthermostate_heizen_kuehlen
+      default_entity_id: heatpump_ausgaenge_n9_umschaltung_raumthermostate_heizen_kuehlen
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/n9/umschaltung-raumthermostate-heizen-kuehlen/state
@@ -1033,7 +1033,7 @@ mqtt:
       json_attributes_template: '{"device":"fan","part":"M2"}'
       json_attributes_topic: heatpump/ausgaenge/fan/m2/ventilator
       name: Ventilator
-      object_id: heatpump_ausgaenge_fan_m2_ventilator
+      default_entity_id: heatpump_ausgaenge_fan_m2_ventilator
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/fan/m2/ventilator/state
@@ -1048,7 +1048,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/ausgaenge/verdichter-1
       name: Verdichter 1
-      object_id: heatpump_ausgaenge_verdichter_1
+      default_entity_id: heatpump_ausgaenge_verdichter_1
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/verdichter-1/state
@@ -1063,7 +1063,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/ausgaenge/verdichter-2
       name: Verdichter 2
-      object_id: heatpump_ausgaenge_verdichter_2
+      default_entity_id: heatpump_ausgaenge_verdichter_2
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/verdichter-2/state
@@ -1078,7 +1078,7 @@ mqtt:
       json_attributes_template: '{"domain":"tapwater","part":"M18"}'
       json_attributes_topic: heatpump/ausgaenge/tapwater/m18/warmwasserpumpe
       name: Warmwasserpumpe
-      object_id: heatpump_ausgaenge_tapwater_m18_warmwasserpumpe
+      default_entity_id: heatpump_ausgaenge_tapwater_m18_warmwasserpumpe
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/tapwater/m18/warmwasserpumpe/state
@@ -1093,7 +1093,7 @@ mqtt:
       json_attributes_template: '{"domain":"tapwater","part":"M24"}'
       json_attributes_topic: heatpump/ausgaenge/tapwater/m24/zirkulationspumpe
       name: Zirkulationspumpe
-      object_id: heatpump_ausgaenge_tapwater_m24_zirkulationspumpe
+      default_entity_id: heatpump_ausgaenge_tapwater_m24_zirkulationspumpe
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/tapwater/m24/zirkulationspumpe/state
@@ -1108,7 +1108,7 @@ mqtt:
       json_attributes_template: '{"part":"M16"}'
       json_attributes_topic: heatpump/ausgaenge/m16/zusatzumwaelzpumpe
       name: Zusatzumwälzpumpe
-      object_id: heatpump_ausgaenge_m16_zusatzumwaelzpumpe
+      default_entity_id: heatpump_ausgaenge_m16_zusatzumwaelzpumpe
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/ausgaenge/m16/zusatzumwaelzpumpe/state
@@ -1123,7 +1123,7 @@ mqtt:
       json_attributes_template: '{"device":"valve","domain":"heating"}'
       json_attributes_topic: heatpump/raumtemperaturregelung/heating/valve/zustand-stellventil
       name: Zustand Stellventil
-      object_id: heatpump_raumtemperaturregelung_heating_valve_zustand_stellventil
+      default_entity_id: heatpump_raumtemperaturregelung_heating_valve_zustand_stellventil
       payload_off: 0
       payload_on: 1
       state_topic: heatpump/raumtemperaturregelung/heating/valve/zustand-stellventil/state
@@ -1138,7 +1138,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/zeitabgleich/set-jahr
       name: set Jahr
-      object_id: heatpump_zeitabgleich_set_jahr
+      default_entity_id: heatpump_zeitabgleich_set_jahr
       payload_press: 1
       unique_id: heatpump_zeitabgleich_set_jahr
   - button:
@@ -1150,7 +1150,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/zeitabgleich/set-minute
       name: set Minute
-      object_id: heatpump_zeitabgleich_set_minute
+      default_entity_id: heatpump_zeitabgleich_set_minute
       payload_press: 1
       unique_id: heatpump_zeitabgleich_set_minute
   - button:
@@ -1162,7 +1162,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/zeitabgleich/set-monat
       name: set Monat
-      object_id: heatpump_zeitabgleich_set_monat
+      default_entity_id: heatpump_zeitabgleich_set_monat
       payload_press: 1
       unique_id: heatpump_zeitabgleich_set_monat
   - button:
@@ -1174,7 +1174,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/zeitabgleich/set-stunde
       name: set Stunde
-      object_id: heatpump_zeitabgleich_set_stunde
+      default_entity_id: heatpump_zeitabgleich_set_stunde
       payload_press: 1
       unique_id: heatpump_zeitabgleich_set_stunde
   - button:
@@ -1186,7 +1186,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/zeitabgleich/set-tag
       name: set Tag
-      object_id: heatpump_zeitabgleich_set_tag
+      default_entity_id: heatpump_zeitabgleich_set_tag
       payload_press: 1
       unique_id: heatpump_zeitabgleich_set_tag
   - button:
@@ -1198,7 +1198,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/zeitabgleich/set-wochentag
       name: set Wochentag
-      object_id: heatpump_zeitabgleich_set_wochentag
+      default_entity_id: heatpump_zeitabgleich_set_wochentag
       payload_press: 1
       unique_id: heatpump_zeitabgleich_set_wochentag
   - sensor:
@@ -1210,7 +1210,7 @@ mqtt:
       json_attributes_template: '{"device":"external-heater","part":"E10"}'
       json_attributes_topic: heatpump/laufzeiten/external-heater/e10/2-waermeerzeuger
       name: 2.Wärmeerzeuger
-      object_id: heatpump_laufzeiten_external_heater_e10_2_waermeerzeuger
+      default_entity_id: heatpump_laufzeiten_external_heater_e10_2_waermeerzeuger
       state_class: total_increasing
       state_topic: heatpump/laufzeiten/external-heater/e10/2-waermeerzeuger/state
       unique_id: heatpump_laufzeiten_external_heater_e10_2_waermeerzeuger
@@ -1225,7 +1225,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/betriebsdaten/lueftung/ablufttemperatur
       name: Ablufttemperatur
-      object_id: heatpump_betriebsdaten_lueftung_ablufttemperatur
+      default_entity_id: heatpump_betriebsdaten_lueftung_ablufttemperatur
       state_class: measurement
       state_topic: heatpump/betriebsdaten/lueftung/ablufttemperatur/state
       unique_id: heatpump_betriebsdaten_lueftung_ablufttemperatur
@@ -1243,7 +1243,7 @@ mqtt:
       max: 19
       min: 0
       name: Absenk- / Anhebwert
-      object_id: heatpump_zeitprogramm_1_2_3_heizkreis_heating_absenk_anhebwert
+      default_entity_id: heatpump_zeitprogramm_1_2_3_heizkreis_heating_absenk_anhebwert
       state_topic: heatpump/zeitprogramm/1-2-3-heizkreis/heating/absenk-anhebwert/state
       unique_id: heatpump_zeitprogramm_1_2_3_heizkreis_heating_absenk_anhebwert
       unit_of_measurement: K
@@ -1260,7 +1260,7 @@ mqtt:
       max: 72
       min: 0
       name: Anzahl Partystunden
-      object_id: heatpump_betriebsmodus_anzahl_partystunden
+      default_entity_id: heatpump_betriebsmodus_anzahl_partystunden
       state_topic: heatpump/betriebsmodus/anzahl-partystunden/state
       unique_id: heatpump_betriebsmodus_anzahl_partystunden
       unit_of_measurement: h
@@ -1277,7 +1277,7 @@ mqtt:
       max: 150
       min: 0
       name: Anzahl Urlaubstage
-      object_id: heatpump_betriebsmodus_anzahl_urlaubstage
+      default_entity_id: heatpump_betriebsmodus_anzahl_urlaubstage
       state_topic: heatpump/betriebsmodus/anzahl-urlaubstage/state
       unique_id: heatpump_betriebsmodus_anzahl_urlaubstage
       unit_of_measurement: day
@@ -1291,7 +1291,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/energiemanagementsysteme/leistungen-und-ueberschuss/aufgenommene-elektrische-leistung
       name: Aufgenommene elektrische Leistung
-      object_id: heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_aufgenommene_elektrische_leistung
+      default_entity_id: heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_aufgenommene_elektrische_leistung
       state_class: measurement
       state_topic: heatpump/energiemanagementsysteme/leistungen-und-ueberschuss/aufgenommene-elektrische-leistung/state
       unique_id: heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_aufgenommene_elektrische_leistung
@@ -1309,7 +1309,7 @@ mqtt:
       max: 999
       min: -999
       name: Aussentemperatur BMS (extern)
-      object_id: heatpump_aussentemperatur_aussentemperatur_bms_extern
+      default_entity_id: heatpump_aussentemperatur_aussentemperatur_bms_extern
       state_topic: heatpump/aussentemperatur/aussentemperatur-bms-extern/state
       unique_id: heatpump_aussentemperatur_aussentemperatur_bms_extern
       unit_of_measurement: °C
@@ -1323,7 +1323,7 @@ mqtt:
       json_attributes_template: '{"domain":"heating"}'
       json_attributes_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/auswahl-heizkreis
       name: Auswahl Heizkreis
-      object_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_auswahl_heizkreis
+      default_entity_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_auswahl_heizkreis
       options:
         - 2.Heizkreis
         - 3.Heizkreis
@@ -1340,7 +1340,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/betriebsdaten/lueftung/aussenlufttemperatur
       name: Außenlufttemperatur
-      object_id: heatpump_betriebsdaten_lueftung_aussenlufttemperatur
+      default_entity_id: heatpump_betriebsdaten_lueftung_aussenlufttemperatur
       state_class: measurement
       state_topic: heatpump/betriebsdaten/lueftung/aussenlufttemperatur/state
       unique_id: heatpump_betriebsdaten_lueftung_aussenlufttemperatur
@@ -1355,7 +1355,7 @@ mqtt:
       json_attributes_template: '{"part":"R1"}'
       json_attributes_topic: heatpump/betriebsdaten/r1/aussentemperatur
       name: Außentemperatur
-      object_id: heatpump_betriebsdaten_r1_aussentemperatur
+      default_entity_id: heatpump_betriebsdaten_r1_aussentemperatur
       state_class: measurement
       state_topic: heatpump/betriebsdaten/r1/aussentemperatur/state
       unique_id: heatpump_betriebsdaten_r1_aussentemperatur
@@ -1370,7 +1370,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/betriebsmodus/betriebsmodus
       name: Betriebsmodus
-      object_id: heatpump_betriebsmodus_betriebsmodus
+      default_entity_id: heatpump_betriebsmodus_betriebsmodus
       options:
         - 2.Wärmeerzeuger
         - Kühlen
@@ -1390,7 +1390,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/dienstag
       name: Dienstag
-      object_id: heatpump_zeitprogramm_zeitfunktion_dienstag
+      default_entity_id: heatpump_zeitprogramm_zeitfunktion_dienstag
       options:
         - Ja
         - Nein
@@ -1408,7 +1408,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/donnerstag
       name: Donnerstag
-      object_id: heatpump_zeitprogramm_zeitfunktion_donnerstag
+      default_entity_id: heatpump_zeitprogramm_zeitfunktion_donnerstag
       options:
         - Ja
         - Nein
@@ -1426,7 +1426,7 @@ mqtt:
       json_attributes_template: '{"device":"fan"}'
       json_attributes_topic: heatpump/betriebsdaten/lueftung/fan/drehzahl-abluftventilator
       name: Drehzahl Abluftventilator
-      object_id: heatpump_betriebsdaten_lueftung_fan_drehzahl_abluftventilator
+      default_entity_id: heatpump_betriebsdaten_lueftung_fan_drehzahl_abluftventilator
       state_class: measurement
       state_topic: heatpump/betriebsdaten/lueftung/fan/drehzahl-abluftventilator/state
       unique_id: heatpump_betriebsdaten_lueftung_fan_drehzahl_abluftventilator
@@ -1441,7 +1441,7 @@ mqtt:
       json_attributes_template: '{"device":"fan"}'
       json_attributes_topic: heatpump/betriebsdaten/lueftung/fan/drehzahl-zuluftventilator
       name: Drehzahl Zuluftventilator
-      object_id: heatpump_betriebsdaten_lueftung_fan_drehzahl_zuluftventilator
+      default_entity_id: heatpump_betriebsdaten_lueftung_fan_drehzahl_zuluftventilator
       state_class: measurement
       state_topic: heatpump/betriebsdaten/lueftung/fan/drehzahl-zuluftventilator/state
       unique_id: heatpump_betriebsdaten_lueftung_fan_drehzahl_zuluftventilator
@@ -1458,7 +1458,7 @@ mqtt:
       max: 59
       min: 0
       name: Ende Minute 1
-      object_id: heatpump_zeitprogramm_zeitfunktion_ende_minute_1
+      default_entity_id: heatpump_zeitprogramm_zeitfunktion_ende_minute_1
       state_topic: heatpump/zeitprogramm/zeitfunktion/ende-minute-1/state
       unique_id: heatpump_zeitprogramm_zeitfunktion_ende_minute_1
       unit_of_measurement: min
@@ -1474,7 +1474,7 @@ mqtt:
       max: 59
       min: 0
       name: Ende Minute 2
-      object_id: heatpump_zeitprogramm_zeitfunktion_ende_minute_2
+      default_entity_id: heatpump_zeitprogramm_zeitfunktion_ende_minute_2
       state_topic: heatpump/zeitprogramm/zeitfunktion/ende-minute-2/state
       unique_id: heatpump_zeitprogramm_zeitfunktion_ende_minute_2
       unit_of_measurement: min
@@ -1490,7 +1490,7 @@ mqtt:
       max: 23
       min: 0
       name: Ende Stunde 1
-      object_id: heatpump_zeitprogramm_zeitfunktion_ende_stunde_1
+      default_entity_id: heatpump_zeitprogramm_zeitfunktion_ende_stunde_1
       state_topic: heatpump/zeitprogramm/zeitfunktion/ende-stunde-1/state
       unique_id: heatpump_zeitprogramm_zeitfunktion_ende_stunde_1
       unit_of_measurement: h
@@ -1506,7 +1506,7 @@ mqtt:
       max: 23
       min: 0
       name: Ende Stunde 2
-      object_id: heatpump_zeitprogramm_zeitfunktion_ende_stunde_2
+      default_entity_id: heatpump_zeitprogramm_zeitfunktion_ende_stunde_2
       state_topic: heatpump/zeitprogramm/zeitfunktion/ende-stunde-2/state
       unique_id: heatpump_zeitprogramm_zeitfunktion_ende_stunde_2
       unit_of_measurement: h
@@ -1523,7 +1523,7 @@ mqtt:
       max: 60
       min: 20
       name: Festwertemperatur
-      object_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_festwertemperatur
+      default_entity_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_festwertemperatur
       state_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/festwertemperatur/state
       unique_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_festwertemperatur
       unit_of_measurement: °C
@@ -1540,7 +1540,7 @@ mqtt:
       max: 60
       min: 18
       name: Festwertsolltemperatur
-      object_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_festwertsolltemperatur
+      default_entity_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_festwertsolltemperatur
       state_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/festwertsolltemperatur/state
       unique_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_festwertsolltemperatur
       unit_of_measurement: °C
@@ -1554,7 +1554,7 @@ mqtt:
       json_attributes_template: '{"device":"flange","domain":"tapwater","part":"E9"}'
       json_attributes_topic: heatpump/laufzeiten/tapwater/flange/e9/flanschheizung
       name: Flanschheizung
-      object_id: heatpump_laufzeiten_tapwater_flange_e9_flanschheizung
+      default_entity_id: heatpump_laufzeiten_tapwater_flange_e9_flanschheizung
       state_class: total_increasing
       state_topic: heatpump/laufzeiten/tapwater/flange/e9/flanschheizung/state
       unique_id: heatpump_laufzeiten_tapwater_flange_e9_flanschheizung
@@ -1569,7 +1569,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/betriebsdaten/lueftung/fortlufttemperatur
       name: Fortlufttemperatur
-      object_id: heatpump_betriebsdaten_lueftung_fortlufttemperatur
+      default_entity_id: heatpump_betriebsdaten_lueftung_fortlufttemperatur
       state_class: measurement
       state_topic: heatpump/betriebsdaten/lueftung/fortlufttemperatur/state
       unique_id: heatpump_betriebsdaten_lueftung_fortlufttemperatur
@@ -1584,7 +1584,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/freitag
       name: Freitag
-      object_id: heatpump_zeitprogramm_zeitfunktion_freitag
+      default_entity_id: heatpump_zeitprogramm_zeitfunktion_freitag
       options:
         - Ja
         - Nein
@@ -1605,7 +1605,7 @@ mqtt:
       max: 35
       min: -25
       name: Grenztemperatur parallel
-      object_id: heatpump_einstellungen_2_waermeerzeuger_external_heater_grenztemperatur_parallel
+      default_entity_id: heatpump_einstellungen_2_waermeerzeuger_external_heater_grenztemperatur_parallel
       state_topic: heatpump/einstellungen-2-waermeerzeuger/external-heater/grenztemperatur-parallel/state
       unique_id: heatpump_einstellungen_2_waermeerzeuger_external_heater_grenztemperatur_parallel
       unit_of_measurement: °C
@@ -1622,7 +1622,7 @@ mqtt:
       max: 70
       min: 20
       name: Heizkurvenendpunkt
-      object_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_heizkurvenendpunkt
+      default_entity_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_heizkurvenendpunkt
       state_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/heizkurvenendpunkt/state
       unique_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_heizkurvenendpunkt
       unit_of_measurement: °C
@@ -1639,7 +1639,7 @@ mqtt:
       max: 70
       min: 20
       name: Heizkurvenendpunkt
-      object_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_heizkurvenendpunkt
+      default_entity_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_heizkurvenendpunkt
       state_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/heizkurvenendpunkt/state
       unique_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_heizkurvenendpunkt
       unit_of_measurement: °C
@@ -1653,7 +1653,7 @@ mqtt:
       json_attributes_template: '{"domain":"heating","part":"M13"}'
       json_attributes_topic: heatpump/laufzeiten/heating/m13/heizungspumpe
       name: Heizungspumpe
-      object_id: heatpump_laufzeiten_heating_m13_heizungspumpe
+      default_entity_id: heatpump_laufzeiten_heating_m13_heizungspumpe
       state_class: total_increasing
       state_topic: heatpump/laufzeiten/heating/m13/heizungspumpe/state
       unique_id: heatpump_laufzeiten_heating_m13_heizungspumpe
@@ -1671,7 +1671,7 @@ mqtt:
       max: 5
       min: 0.5
       name: Hysterese
-      object_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_hysterese
+      default_entity_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_hysterese
       state_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/hysterese/state
       step: 0.1
       unique_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_hysterese
@@ -1689,7 +1689,7 @@ mqtt:
       max: 20
       min: 1
       name: Hysterese
-      object_id: heatpump_einstellungen_schwimmbad_pool_hysterese
+      default_entity_id: heatpump_einstellungen_schwimmbad_pool_hysterese
       state_topic: heatpump/einstellungen-schwimmbad/pool/hysterese/state
       unique_id: heatpump_einstellungen_schwimmbad_pool_hysterese
       unit_of_measurement: K
@@ -1706,7 +1706,7 @@ mqtt:
       max: 15
       min: 2
       name: Hysterese
-      object_id: heatpump_einstellungen_warmwasser_tapwater_hysterese
+      default_entity_id: heatpump_einstellungen_warmwasser_tapwater_hysterese
       state_topic: heatpump/einstellungen-warmwasser/tapwater/hysterese/state
       unique_id: heatpump_einstellungen_warmwasser_tapwater_hysterese
       unit_of_measurement: K
@@ -1722,7 +1722,7 @@ mqtt:
       max: 99
       min: 0
       name: Jahr
-      object_id: heatpump_zeitabgleich_jahr
+      default_entity_id: heatpump_zeitabgleich_jahr
       state_topic: heatpump/zeitabgleich/jahr/state
       unique_id: heatpump_zeitabgleich_jahr
       unit_of_measurement: year
@@ -1736,7 +1736,7 @@ mqtt:
       json_attributes_template: '{"part":"R23"}'
       json_attributes_topic: heatpump/betriebsdaten/solar/r23/kollektorfuehler
       name: Kollektorfühler
-      object_id: heatpump_betriebsdaten_solar_r23_kollektorfuehler
+      default_entity_id: heatpump_betriebsdaten_solar_r23_kollektorfuehler
       state_class: measurement
       state_topic: heatpump/betriebsdaten/solar/r23/kollektorfuehler/state
       unique_id: heatpump_betriebsdaten_solar_r23_kollektorfuehler
@@ -1754,7 +1754,7 @@ mqtt:
       max: 30
       min: 15
       name: Kühlung Raumsolltemperatur
-      object_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_cooling_kuehlung_raumsolltemperatur
+      default_entity_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_cooling_kuehlung_raumsolltemperatur
       state_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/cooling/kuehlung-raumsolltemperatur/state
       step: 0.5
       unique_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_cooling_kuehlung_raumsolltemperatur
@@ -1771,7 +1771,7 @@ mqtt:
       max: 70
       min: 30
       name: Maximale Temperatur
-      object_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_maximale_temperatur
+      default_entity_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_maximale_temperatur
       state_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/maximale-temperatur/state
       unique_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_maximale_temperatur
       unit_of_measurement: °C
@@ -1787,7 +1787,7 @@ mqtt:
       max: 59
       min: 0
       name: Minute
-      object_id: heatpump_zeitabgleich_minute
+      default_entity_id: heatpump_zeitabgleich_minute
       state_topic: heatpump/zeitabgleich/minute/state
       unique_id: heatpump_zeitabgleich_minute
       unit_of_measurement: min
@@ -1804,7 +1804,7 @@ mqtt:
       max: 2
       min: 0.5
       name: Mischer Hysterese
-      object_id: heatpump_einstellungen_2_waermeerzeuger_external_heater_mischer_hysterese
+      default_entity_id: heatpump_einstellungen_2_waermeerzeuger_external_heater_mischer_hysterese
       state_topic: heatpump/einstellungen-2-waermeerzeuger/external-heater/mischer-hysterese/state
       step: 0.1
       unique_id: heatpump_einstellungen_2_waermeerzeuger_external_heater_mischer_hysterese
@@ -1822,7 +1822,7 @@ mqtt:
       max: 2
       min: 0.5
       name: Mischerhysterese
-      object_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_mischerhysterese
+      default_entity_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_mischerhysterese
       state_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/mischerhysterese/state
       step: 0.1
       unique_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_mischerhysterese
@@ -1840,7 +1840,7 @@ mqtt:
       max: 6
       min: 1
       name: Mischerlaufzeit
-      object_id: heatpump_einstellungen_2_waermeerzeuger_external_heater_mischerlaufzeit
+      default_entity_id: heatpump_einstellungen_2_waermeerzeuger_external_heater_mischerlaufzeit
       state_topic: heatpump/einstellungen-2-waermeerzeuger/external-heater/mischerlaufzeit/state
       unique_id: heatpump_einstellungen_2_waermeerzeuger_external_heater_mischerlaufzeit
       unit_of_measurement: min
@@ -1857,7 +1857,7 @@ mqtt:
       max: 6
       min: 1
       name: Mischerlaufzeit
-      object_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_mischerlaufzeit
+      default_entity_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_mischerlaufzeit
       state_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/mischerlaufzeit/state
       unique_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_mischerlaufzeit
       unit_of_measurement: min
@@ -1871,7 +1871,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/mittwoch
       name: Mittwoch
-      object_id: heatpump_zeitprogramm_zeitfunktion_mittwoch
+      default_entity_id: heatpump_zeitprogramm_zeitfunktion_mittwoch
       options:
         - Ja
         - Nein
@@ -1891,7 +1891,7 @@ mqtt:
       max: 12
       min: 1
       name: Monat
-      object_id: heatpump_zeitabgleich_monat
+      default_entity_id: heatpump_zeitabgleich_monat
       state_topic: heatpump/zeitabgleich/monat/state
       unique_id: heatpump_zeitabgleich_monat
       unit_of_measurement: month
@@ -1905,7 +1905,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/montag
       name: Montag
-      object_id: heatpump_zeitprogramm_zeitfunktion_montag
+      default_entity_id: heatpump_zeitprogramm_zeitfunktion_montag
       options:
         - Ja
         - Nein
@@ -1926,7 +1926,7 @@ mqtt:
       max: 32767
       min: -32768
       name: PV Überschuss für Smart-Grid von WR/EM
-      object_id: heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_pv_ueberschuss_fuer_smart_grid_von_wr_em
+      default_entity_id: heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_pv_ueberschuss_fuer_smart_grid_von_wr_em
       state_topic: heatpump/energiemanagementsysteme/leistungen-und-ueberschuss/pv-ueberschuss-fuer-smart-grid-von-wr-em/state
       step: 10
       unique_id: heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_pv_ueberschuss_fuer_smart_grid_von_wr_em
@@ -1944,7 +1944,7 @@ mqtt:
       max: 19
       min: -19
       name: Parallelverschiebung
-      object_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_parallelverschiebung
+      default_entity_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_parallelverschiebung
       state_topic: heatpump/einstellungen-2-3-heiz-kuehlkreis/heating/parallelverschiebung/state
       unique_id: heatpump_einstellungen_2_3_heiz_kuehlkreis_heating_parallelverschiebung
       value_template: '{{ value_json.state }}'
@@ -1960,7 +1960,7 @@ mqtt:
       max: 19
       min: -19
       name: Parallelverschiebung
-      object_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_parallelverschiebung
+      default_entity_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_parallelverschiebung
       state_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/parallelverschiebung/state
       unique_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_parallelverschiebung
       value_template: '{{ value_json.state }}'
@@ -1973,7 +1973,7 @@ mqtt:
       json_attributes_template: '{"part":"M11"}'
       json_attributes_topic: heatpump/laufzeiten/m11/primaerpumpe-ventilator
       name: Primärpumpe / Ventilator
-      object_id: heatpump_laufzeiten_m11_primaerpumpe_ventilator
+      default_entity_id: heatpump_laufzeiten_m11_primaerpumpe_ventilator
       state_class: total_increasing
       state_topic: heatpump/laufzeiten/m11/primaerpumpe-ventilator/state
       unique_id: heatpump_laufzeiten_m11_primaerpumpe_ventilator
@@ -1990,7 +1990,7 @@ mqtt:
       max: 79
       min: 50
       name: Raumadressen 1./2./3.Heiz/Kühlkreis
-      object_id: heatpump_raumtemperaturregelung_heating_raumadressen_1_2_3_heiz_kuehlkreis
+      default_entity_id: heatpump_raumtemperaturregelung_heating_raumadressen_1_2_3_heiz_kuehlkreis
       state_topic: heatpump/raumtemperaturregelung/heating/raumadressen-1-2-3-heiz-kuehlkreis/state
       unique_id: heatpump_raumtemperaturregelung_heating_raumadressen_1_2_3_heiz_kuehlkreis
       value_template: '{{ value_json.state }}'
@@ -2003,7 +2003,7 @@ mqtt:
       json_attributes_template: '{"domain":"heating"}'
       json_attributes_topic: heatpump/betriebsdaten/heating/raumfeuchte-1-rt-rth-econ
       name: Raumfeuchte 1 / RT-RTH Econ
-      object_id: heatpump_betriebsdaten_heating_raumfeuchte_1_rt_rth_econ
+      default_entity_id: heatpump_betriebsdaten_heating_raumfeuchte_1_rt_rth_econ
       state_class: measurement
       state_topic: heatpump/betriebsdaten/heating/raumfeuchte-1-rt-rth-econ/state
       unique_id: heatpump_betriebsdaten_heating_raumfeuchte_1_rt_rth_econ
@@ -2018,7 +2018,7 @@ mqtt:
       json_attributes_template: '{"domain":"heating"}'
       json_attributes_topic: heatpump/betriebsdaten/heating/raumfeuchte-2
       name: Raumfeuchte 2
-      object_id: heatpump_betriebsdaten_heating_raumfeuchte_2
+      default_entity_id: heatpump_betriebsdaten_heating_raumfeuchte_2
       state_class: measurement
       state_topic: heatpump/betriebsdaten/heating/raumfeuchte-2/state
       unique_id: heatpump_betriebsdaten_heating_raumfeuchte_2
@@ -2036,7 +2036,7 @@ mqtt:
       max: 90
       min: 20
       name: Raumfeuchte 50-79 BMS
-      object_id: heatpump_raumtemperaturregelung_heating_raumfeuchte_50_79_bms
+      default_entity_id: heatpump_raumtemperaturregelung_heating_raumfeuchte_50_79_bms
       state_topic: heatpump/raumtemperaturregelung/heating/raumfeuchte-50-79-bms/state
       step: 0.1
       unique_id: heatpump_raumtemperaturregelung_heating_raumfeuchte_50_79_bms
@@ -2051,7 +2051,7 @@ mqtt:
       json_attributes_template: '{"domain":"heating"}'
       json_attributes_topic: heatpump/raumtemperaturregelung/heating/raumfreigabe-50-79-bms
       name: Raumfreigabe 50-79 BMS
-      object_id: heatpump_raumtemperaturregelung_heating_raumfreigabe_50_79_bms
+      default_entity_id: heatpump_raumtemperaturregelung_heating_raumfreigabe_50_79_bms
       options:
         - Heizen (Kühlen gesperrt)
         - Heizen und Kühlen
@@ -2071,7 +2071,7 @@ mqtt:
       max: 30
       min: 10
       name: Raumsolltemperatur 50-79 BMS
-      object_id: heatpump_raumtemperaturregelung_heating_raumsolltemperatur_50_79_bms
+      default_entity_id: heatpump_raumtemperaturregelung_heating_raumsolltemperatur_50_79_bms
       state_topic: heatpump/raumtemperaturregelung/heating/raumsolltemperatur-50-79-bms/state
       step: 0.1
       unique_id: heatpump_raumtemperaturregelung_heating_raumsolltemperatur_50_79_bms
@@ -2089,7 +2089,7 @@ mqtt:
       max: 30
       min: 15
       name: Raumtemperatur
-      object_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_raumtemperatur
+      default_entity_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_raumtemperatur
       state_topic: heatpump/einstellungen-1-heiz-kuehlkreis/heating/hk1/raumtemperatur/state
       step: 0.1
       unique_id: heatpump_einstellungen_1_heiz_kuehlkreis_heating_hk1_raumtemperatur
@@ -2104,7 +2104,7 @@ mqtt:
       json_attributes_template: '{"domain":"heating"}'
       json_attributes_topic: heatpump/betriebsdaten/heating/raumtemperatur-1-rt-rth-econ
       name: Raumtemperatur 1 / RT-RTH Econ
-      object_id: heatpump_betriebsdaten_heating_raumtemperatur_1_rt_rth_econ
+      default_entity_id: heatpump_betriebsdaten_heating_raumtemperatur_1_rt_rth_econ
       state_class: measurement
       state_topic: heatpump/betriebsdaten/heating/raumtemperatur-1-rt-rth-econ/state
       unique_id: heatpump_betriebsdaten_heating_raumtemperatur_1_rt_rth_econ
@@ -2119,7 +2119,7 @@ mqtt:
       json_attributes_template: '{"domain":"heating"}'
       json_attributes_topic: heatpump/betriebsdaten/heating/raumtemperatur-2
       name: Raumtemperatur 2
-      object_id: heatpump_betriebsdaten_heating_raumtemperatur_2
+      default_entity_id: heatpump_betriebsdaten_heating_raumtemperatur_2
       state_class: measurement
       state_topic: heatpump/betriebsdaten/heating/raumtemperatur-2/state
       unique_id: heatpump_betriebsdaten_heating_raumtemperatur_2
@@ -2137,7 +2137,7 @@ mqtt:
       max: 50
       min: 10
       name: Raumtemperatur 50-79 BMS
-      object_id: heatpump_raumtemperaturregelung_heating_raumtemperatur_50_79_bms
+      default_entity_id: heatpump_raumtemperaturregelung_heating_raumtemperatur_50_79_bms
       state_topic: heatpump/raumtemperaturregelung/heating/raumtemperatur-50-79-bms/state
       step: 0.1
       unique_id: heatpump_raumtemperaturregelung_heating_raumtemperatur_50_79_bms
@@ -2152,7 +2152,7 @@ mqtt:
       json_attributes_template: '{"domain":"cooling","part":"R4"}'
       json_attributes_topic: heatpump/betriebsdaten/passiv-kuehlen/cooling/r4/ruecklauftemperatur
       name: Rücklauftemperatur
-      object_id: heatpump_betriebsdaten_passiv_kuehlen_cooling_r4_ruecklauftemperatur
+      default_entity_id: heatpump_betriebsdaten_passiv_kuehlen_cooling_r4_ruecklauftemperatur
       state_class: measurement
       state_topic: heatpump/betriebsdaten/passiv-kuehlen/cooling/r4/ruecklauftemperatur/state
       unique_id: heatpump_betriebsdaten_passiv_kuehlen_cooling_r4_ruecklauftemperatur
@@ -2167,7 +2167,7 @@ mqtt:
       json_attributes_template: '{"domain":"cooling","part":"R24"}'
       json_attributes_topic: heatpump/betriebsdaten/passiv-aktiv-kuehlen/cooling/r24/ruecklauftemperatur-gemaess-primaerkreis
       name: Rücklauftemperatur gemäß Primärkreis
-      object_id: heatpump_betriebsdaten_passiv_aktiv_kuehlen_cooling_r24_ruecklauftemperatur_gemaess_primaerkreis
+      default_entity_id: heatpump_betriebsdaten_passiv_aktiv_kuehlen_cooling_r24_ruecklauftemperatur_gemaess_primaerkreis
       state_class: measurement
       state_topic: heatpump/betriebsdaten/passiv-aktiv-kuehlen/cooling/r24/ruecklauftemperatur-gemaess-primaerkreis/state
       unique_id: heatpump_betriebsdaten_passiv_aktiv_kuehlen_cooling_r24_ruecklauftemperatur_gemaess_primaerkreis
@@ -2182,7 +2182,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/samstag
       name: Samstag
-      object_id: heatpump_zeitprogramm_zeitfunktion_samstag
+      default_entity_id: heatpump_zeitprogramm_zeitfunktion_samstag
       options:
         - Ja
         - Nein
@@ -2200,7 +2200,7 @@ mqtt:
       json_attributes_template: '{"domain":"pool","part":"M19"}'
       json_attributes_topic: heatpump/laufzeiten/pool/m19/schwimmbadpumpe
       name: Schwimmbadpumpe
-      object_id: heatpump_laufzeiten_pool_m19_schwimmbadpumpe
+      default_entity_id: heatpump_laufzeiten_pool_m19_schwimmbadpumpe
       state_class: total_increasing
       state_topic: heatpump/laufzeiten/pool/m19/schwimmbadpumpe/state
       unique_id: heatpump_laufzeiten_pool_m19_schwimmbadpumpe
@@ -2215,7 +2215,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/systemstatus/sensorfehler
       name: Sensorfehler
-      object_id: heatpump_systemstatus_sensorfehler
+      default_entity_id: heatpump_systemstatus_sensorfehler
       options:
         - 2.Heizkreisfühler
         - 3.Heizkreisfühler
@@ -2256,7 +2256,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/energiemanagementsysteme/sg-ready/smart-grid
       name: Smart Grid
-      object_id: heatpump_energiemanagementsysteme_sg_ready_smart_grid
+      default_entity_id: heatpump_energiemanagementsysteme_sg_ready_smart_grid
       options:
         - Hardwareeingang
         - Zustand dunkelgrün
@@ -2274,7 +2274,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/energiemanagementsysteme/softwarestand/software-index
       name: Software Index
-      object_id: heatpump_energiemanagementsysteme_softwarestand_software_index
+      default_entity_id: heatpump_energiemanagementsysteme_softwarestand_software_index
       state_class: measurement
       state_topic: heatpump/energiemanagementsysteme/softwarestand/software-index/state
       unique_id: heatpump_energiemanagementsysteme_softwarestand_software_index
@@ -2287,7 +2287,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/energiemanagementsysteme/softwarestand/software-nummer
       name: Software Nummer
-      object_id: heatpump_energiemanagementsysteme_softwarestand_software_nummer
+      default_entity_id: heatpump_energiemanagementsysteme_softwarestand_software_nummer
       state_class: measurement
       state_topic: heatpump/energiemanagementsysteme/softwarestand/software-nummer/state
       unique_id: heatpump_energiemanagementsysteme_softwarestand_software_nummer
@@ -2300,7 +2300,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/energiemanagementsysteme/softwarestand/software-version
       name: Software Version
-      object_id: heatpump_energiemanagementsysteme_softwarestand_software_version
+      default_entity_id: heatpump_energiemanagementsysteme_softwarestand_software_version
       state_topic: heatpump/energiemanagementsysteme/softwarestand/software-version/state
       unique_id: heatpump_energiemanagementsysteme_softwarestand_software_version
       value_template: '{{ value_json.state }}'
@@ -2313,7 +2313,7 @@ mqtt:
       json_attributes_template: '{"part":"R22"}'
       json_attributes_topic: heatpump/betriebsdaten/solar/r22/solarspeicher
       name: Solarspeicher
-      object_id: heatpump_betriebsdaten_solar_r22_solarspeicher
+      default_entity_id: heatpump_betriebsdaten_solar_r22_solarspeicher
       state_class: measurement
       state_topic: heatpump/betriebsdaten/solar/r22/solarspeicher/state
       unique_id: heatpump_betriebsdaten_solar_r22_solarspeicher
@@ -2331,7 +2331,7 @@ mqtt:
       max: 60
       min: 5
       name: Solltemperatur
-      object_id: heatpump_einstellungen_schwimmbad_pool_solltemperatur
+      default_entity_id: heatpump_einstellungen_schwimmbad_pool_solltemperatur
       state_topic: heatpump/einstellungen-schwimmbad/pool/solltemperatur/state
       unique_id: heatpump_einstellungen_schwimmbad_pool_solltemperatur
       unit_of_measurement: °C
@@ -2346,7 +2346,7 @@ mqtt:
       json_attributes_template: '{"domain":"tapwater"}'
       json_attributes_topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur
       name: Solltemperatur
-      object_id: heatpump_einstellungen_warmwasser_tapwater_solltemperatur
+      default_entity_id: heatpump_einstellungen_warmwasser_tapwater_solltemperatur
       state_topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur/state
       unique_id: heatpump_einstellungen_warmwasser_tapwater_solltemperatur
       unit_of_measurement: °C
@@ -2360,7 +2360,7 @@ mqtt:
       json_attributes_template: '{"device":"hk2","domain":"heating"}'
       json_attributes_topic: heatpump/betriebsdaten/heating/hk2/solltemperatur-2-heizkreis
       name: Solltemperatur 2.Heizkreis
-      object_id: heatpump_betriebsdaten_heating_hk2_solltemperatur_2_heizkreis
+      default_entity_id: heatpump_betriebsdaten_heating_hk2_solltemperatur_2_heizkreis
       state_class: measurement
       state_topic: heatpump/betriebsdaten/heating/hk2/solltemperatur-2-heizkreis/state
       unique_id: heatpump_betriebsdaten_heating_hk2_solltemperatur_2_heizkreis
@@ -2375,7 +2375,7 @@ mqtt:
       json_attributes_template: '{"device":"hk3","domain":"heating"}'
       json_attributes_topic: heatpump/betriebsdaten/heating/hk3/solltemperatur-3-heizkreis
       name: Solltemperatur 3.Heizkreis
-      object_id: heatpump_betriebsdaten_heating_hk3_solltemperatur_3_heizkreis
+      default_entity_id: heatpump_betriebsdaten_heating_hk3_solltemperatur_3_heizkreis
       state_class: measurement
       state_topic: heatpump/betriebsdaten/heating/hk3/solltemperatur-3-heizkreis/state
       unique_id: heatpump_betriebsdaten_heating_hk3_solltemperatur_3_heizkreis
@@ -2392,7 +2392,7 @@ mqtt:
       json_attributes_topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur-maximal
       max: 85
       name: Solltemperatur Maximal
-      object_id: heatpump_einstellungen_warmwasser_tapwater_solltemperatur_maximal
+      default_entity_id: heatpump_einstellungen_warmwasser_tapwater_solltemperatur_maximal
       state_topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur-maximal/state
       unique_id: heatpump_einstellungen_warmwasser_tapwater_solltemperatur_maximal
       unit_of_measurement: °C
@@ -2408,7 +2408,7 @@ mqtt:
       json_attributes_topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur-minimal
       min: 10
       name: Solltemperatur Minimal
-      object_id: heatpump_einstellungen_warmwasser_tapwater_solltemperatur_minimal
+      default_entity_id: heatpump_einstellungen_warmwasser_tapwater_solltemperatur_minimal
       state_topic: heatpump/einstellungen-warmwasser/tapwater/solltemperatur-minimal/state
       unique_id: heatpump_einstellungen_warmwasser_tapwater_solltemperatur_minimal
       unit_of_measurement: °C
@@ -2425,7 +2425,7 @@ mqtt:
       max: 35
       min: 10
       name: Solltemperatur dynamische Kühlung
-      object_id: heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung
+      default_entity_id: heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung
       state_topic: heatpump/einstellungen-1-heiz-kuehlkreis/cooling/hk1/solltemperatur-dynamische-kuehlung/state
       unique_id: heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung
       unit_of_measurement: °C
@@ -2442,7 +2442,7 @@ mqtt:
       max: 35
       min: 10
       name: Solltemperatur dynamische Kühlung bei 15°C AT
-      object_id: heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung_bei_15_c_at
+      default_entity_id: heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung_bei_15_c_at
       state_topic: heatpump/einstellungen-1-heiz-kuehlkreis/cooling/hk1/solltemperatur-dynamische-kuehlung-bei-15-c-at/state
       unique_id: heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung_bei_15_c_at
       unit_of_measurement: °C
@@ -2459,7 +2459,7 @@ mqtt:
       max: 35
       min: 10
       name: Solltemperatur dynamische Kühlung bei 35°C AT
-      object_id: heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung_bei_35_c_at
+      default_entity_id: heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung_bei_35_c_at
       state_topic: heatpump/einstellungen-1-heiz-kuehlkreis/cooling/hk1/solltemperatur-dynamische-kuehlung-bei-35-c-at/state
       unique_id: heatpump_einstellungen_1_heiz_kuehlkreis_cooling_hk1_solltemperatur_dynamische_kuehlung_bei_35_c_at
       unit_of_measurement: °C
@@ -2473,7 +2473,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/zeitprogramm/zeitfunktion/sonntag
       name: Sonntag
-      object_id: heatpump_zeitprogramm_zeitfunktion_sonntag
+      default_entity_id: heatpump_zeitprogramm_zeitfunktion_sonntag
       options:
         - Ja
         - Nein
@@ -2491,7 +2491,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/sperre-extern/sperre-extern
       name: Sperre Extern
-      object_id: heatpump_sperre_extern_sperre_extern
+      default_entity_id: heatpump_sperre_extern_sperre_extern
       options:
         - Hardwareeingang
         - Sperre aktiv
@@ -2508,7 +2508,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/systemstatus/sperrmeldungen
       name: Sperrmeldungen
-      object_id: heatpump_systemstatus_sperrmeldungen
+      default_entity_id: heatpump_systemstatus_sperrmeldungen
       options:
         - 2.Wärmeerzeuger freigegeben
         - Aufwärmen
@@ -2551,7 +2551,7 @@ mqtt:
       max: 59
       min: 0
       name: Start Minute 1
-      object_id: heatpump_zeitprogramm_zeitfunktion_start_minute_1
+      default_entity_id: heatpump_zeitprogramm_zeitfunktion_start_minute_1
       state_topic: heatpump/zeitprogramm/zeitfunktion/start-minute-1/state
       unique_id: heatpump_zeitprogramm_zeitfunktion_start_minute_1
       unit_of_measurement: min
@@ -2567,7 +2567,7 @@ mqtt:
       max: 59
       min: 0
       name: Start Minute 2
-      object_id: heatpump_zeitprogramm_zeitfunktion_start_minute_2
+      default_entity_id: heatpump_zeitprogramm_zeitfunktion_start_minute_2
       state_topic: heatpump/zeitprogramm/zeitfunktion/start-minute-2/state
       unique_id: heatpump_zeitprogramm_zeitfunktion_start_minute_2
       unit_of_measurement: min
@@ -2583,7 +2583,7 @@ mqtt:
       max: 23
       min: 0
       name: Start Stunde 1
-      object_id: heatpump_zeitprogramm_zeitfunktion_start_stunde_1
+      default_entity_id: heatpump_zeitprogramm_zeitfunktion_start_stunde_1
       state_topic: heatpump/zeitprogramm/zeitfunktion/start-stunde-1/state
       unique_id: heatpump_zeitprogramm_zeitfunktion_start_stunde_1
       unit_of_measurement: h
@@ -2599,7 +2599,7 @@ mqtt:
       max: 23
       min: 0
       name: Start Stunde 2
-      object_id: heatpump_zeitprogramm_zeitfunktion_start_stunde_2
+      default_entity_id: heatpump_zeitprogramm_zeitfunktion_start_stunde_2
       state_topic: heatpump/zeitprogramm/zeitfunktion/start-stunde-2/state
       unique_id: heatpump_zeitprogramm_zeitfunktion_start_stunde_2
       unit_of_measurement: h
@@ -2613,7 +2613,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/systemstatus/statusmeldungen
       name: Statusmeldungen
-      object_id: heatpump_systemstatus_statusmeldungen
+      default_entity_id: heatpump_systemstatus_statusmeldungen
       options:
         - Abtauen
         - Aus
@@ -2639,7 +2639,7 @@ mqtt:
       max: 5
       min: 0
       name: Stufen
-      object_id: heatpump_betriebsmodus_lueftung_fan_stufen
+      default_entity_id: heatpump_betriebsmodus_lueftung_fan_stufen
       state_topic: heatpump/betriebsmodus/lueftung/fan/stufen/state
       unique_id: heatpump_betriebsmodus_lueftung_fan_stufen
       unit_of_measurement:  
@@ -2655,7 +2655,7 @@ mqtt:
       max: 23
       min: 0
       name: Stunde
-      object_id: heatpump_zeitabgleich_stunde
+      default_entity_id: heatpump_zeitabgleich_stunde
       state_topic: heatpump/zeitabgleich/stunde/state
       unique_id: heatpump_zeitabgleich_stunde
       unit_of_measurement: h
@@ -2669,7 +2669,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/systemstatus/stoermeldungen
       name: Störmeldungen
-      object_id: heatpump_systemstatus_stoermeldungen
+      default_entity_id: heatpump_systemstatus_stoermeldungen
       options:
         - '!Abtauen'
         - '!Aufwärmen'
@@ -2709,7 +2709,7 @@ mqtt:
       max: 31
       min: 1
       name: Tag
-      object_id: heatpump_zeitabgleich_tag
+      default_entity_id: heatpump_zeitabgleich_tag
       state_topic: heatpump/zeitabgleich/tag/state
       unique_id: heatpump_zeitabgleich_tag
       unit_of_measurement: day
@@ -2726,7 +2726,7 @@ mqtt:
       max: 85
       min: 60
       name: Temperatur
-      object_id: heatpump_zeitprogramm_warmwasser_thermische_desinfektion_tapwater_temperatur
+      default_entity_id: heatpump_zeitprogramm_warmwasser_thermische_desinfektion_tapwater_temperatur
       state_topic: heatpump/zeitprogramm/warmwasser-thermische-desinfektion/tapwater/temperatur/state
       unique_id: heatpump_zeitprogramm_warmwasser_thermische_desinfektion_tapwater_temperatur
       unit_of_measurement: °C
@@ -2740,7 +2740,7 @@ mqtt:
       json_attributes_template: '{"device":"hk2","domain":"heating","part":"R5"}'
       json_attributes_topic: heatpump/betriebsdaten/heating/hk2/r5/temperatur-2-heizkreis
       name: Temperatur 2.Heizkreis
-      object_id: heatpump_betriebsdaten_heating_hk2_r5_temperatur_2_heizkreis
+      default_entity_id: heatpump_betriebsdaten_heating_hk2_r5_temperatur_2_heizkreis
       state_class: measurement
       state_topic: heatpump/betriebsdaten/heating/hk2/r5/temperatur-2-heizkreis/state
       unique_id: heatpump_betriebsdaten_heating_hk2_r5_temperatur_2_heizkreis
@@ -2755,7 +2755,7 @@ mqtt:
       json_attributes_template: '{"device":"hk3","domain":"heating","part":"R13"}'
       json_attributes_topic: heatpump/betriebsdaten/heating/hk3/r13/temperatur-3-heizkreis
       name: Temperatur 3.Heizkreis
-      object_id: heatpump_betriebsdaten_heating_hk3_r13_temperatur_3_heizkreis
+      default_entity_id: heatpump_betriebsdaten_heating_hk3_r13_temperatur_3_heizkreis
       state_class: measurement
       state_topic: heatpump/betriebsdaten/heating/hk3/r13/temperatur-3-heizkreis/state
       unique_id: heatpump_betriebsdaten_heating_hk3_r13_temperatur_3_heizkreis
@@ -2770,7 +2770,7 @@ mqtt:
       json_attributes_template: '{"domain":"heating","part":"R2"}'
       json_attributes_topic: heatpump/betriebsdaten/heating/r2/temperatur-ruecklauf
       name: Temperatur Rücklauf
-      object_id: heatpump_betriebsdaten_heating_r2_temperatur_ruecklauf
+      default_entity_id: heatpump_betriebsdaten_heating_r2_temperatur_ruecklauf
       state_class: measurement
       state_topic: heatpump/betriebsdaten/heating/r2/temperatur-ruecklauf/state
       unique_id: heatpump_betriebsdaten_heating_r2_temperatur_ruecklauf
@@ -2785,7 +2785,7 @@ mqtt:
       json_attributes_template: '{"device":"hk1","domain":"heating"}'
       json_attributes_topic: heatpump/betriebsdaten/heating/hk1/temperatur-ruecklaufsoll
       name: Temperatur Rücklaufsoll
-      object_id: heatpump_betriebsdaten_heating_hk1_temperatur_ruecklaufsoll
+      default_entity_id: heatpump_betriebsdaten_heating_hk1_temperatur_ruecklaufsoll
       state_class: measurement
       state_topic: heatpump/betriebsdaten/heating/hk1/temperatur-ruecklaufsoll/state
       unique_id: heatpump_betriebsdaten_heating_hk1_temperatur_ruecklaufsoll
@@ -2800,7 +2800,7 @@ mqtt:
       json_attributes_template: '{"domain":"heating","part":"R9"}'
       json_attributes_topic: heatpump/betriebsdaten/heating/r9/temperatur-vorlauf
       name: Temperatur Vorlauf
-      object_id: heatpump_betriebsdaten_heating_r9_temperatur_vorlauf
+      default_entity_id: heatpump_betriebsdaten_heating_r9_temperatur_vorlauf
       state_class: measurement
       state_topic: heatpump/betriebsdaten/heating/r9/temperatur-vorlauf/state
       unique_id: heatpump_betriebsdaten_heating_r9_temperatur_vorlauf
@@ -2815,7 +2815,7 @@ mqtt:
       json_attributes_template: '{"domain":"tapwater","part":"R3"}'
       json_attributes_topic: heatpump/betriebsdaten/tapwater/r3/temperatur-warmwasser
       name: Temperatur Warmwasser
-      object_id: heatpump_betriebsdaten_tapwater_r3_temperatur_warmwasser
+      default_entity_id: heatpump_betriebsdaten_tapwater_r3_temperatur_warmwasser
       state_class: measurement
       state_topic: heatpump/betriebsdaten/tapwater/r3/temperatur-warmwasser/state
       unique_id: heatpump_betriebsdaten_tapwater_r3_temperatur_warmwasser
@@ -2830,7 +2830,7 @@ mqtt:
       json_attributes_template: '{"domain":"tapwater"}'
       json_attributes_topic: heatpump/betriebsdaten/tapwater/temperatur-warmwassersoll
       name: Temperatur Warmwassersoll
-      object_id: heatpump_betriebsdaten_tapwater_temperatur_warmwassersoll
+      default_entity_id: heatpump_betriebsdaten_tapwater_temperatur_warmwassersoll
       state_class: measurement
       state_topic: heatpump/betriebsdaten/tapwater/temperatur-warmwassersoll/state
       unique_id: heatpump_betriebsdaten_tapwater_temperatur_warmwassersoll
@@ -2845,7 +2845,7 @@ mqtt:
       json_attributes_template: '{"part":"R6"}'
       json_attributes_topic: heatpump/betriebsdaten/r6/temperatur-waermequellenaustritt
       name: Temperatur Wärmequellenaustritt
-      object_id: heatpump_betriebsdaten_r6_temperatur_waermequellenaustritt
+      default_entity_id: heatpump_betriebsdaten_r6_temperatur_waermequellenaustritt
       state_class: measurement
       state_topic: heatpump/betriebsdaten/r6/temperatur-waermequellenaustritt/state
       unique_id: heatpump_betriebsdaten_r6_temperatur_waermequellenaustritt
@@ -2860,7 +2860,7 @@ mqtt:
       json_attributes_template: '{"part":"R24"}'
       json_attributes_topic: heatpump/betriebsdaten/r24/temperatur-waermequelleneintritt
       name: Temperatur Wärmequelleneintritt
-      object_id: heatpump_betriebsdaten_r24_temperatur_waermequelleneintritt
+      default_entity_id: heatpump_betriebsdaten_r24_temperatur_waermequelleneintritt
       state_class: measurement
       state_topic: heatpump/betriebsdaten/r24/temperatur-waermequelleneintritt/state
       unique_id: heatpump_betriebsdaten_r24_temperatur_waermequelleneintritt
@@ -2875,7 +2875,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/waermemengen/umweltenergie-1-4
       name: Umweltenergie 1-4
-      object_id: heatpump_waermemengen_umweltenergie_1_4
+      default_entity_id: heatpump_waermemengen_umweltenergie_1_4
       state_class: total_increasing
       state_topic: heatpump/waermemengen/umweltenergie-1-4/state
       unique_id: heatpump_waermemengen_umweltenergie_1_4
@@ -2890,7 +2890,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/waermemengen/umweltenergie-5-8
       name: Umweltenergie 5-8
-      object_id: heatpump_waermemengen_umweltenergie_5_8
+      default_entity_id: heatpump_waermemengen_umweltenergie_5_8
       state_class: total_increasing
       state_topic: heatpump/waermemengen/umweltenergie-5-8/state
       unique_id: heatpump_waermemengen_umweltenergie_5_8
@@ -2905,7 +2905,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/waermemengen/umweltenergie-9-12
       name: Umweltenergie 9-12
-      object_id: heatpump_waermemengen_umweltenergie_9_12
+      default_entity_id: heatpump_waermemengen_umweltenergie_9_12
       state_class: total_increasing
       state_topic: heatpump/waermemengen/umweltenergie-9-12/state
       unique_id: heatpump_waermemengen_umweltenergie_9_12
@@ -2920,7 +2920,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/laufzeiten/verdichter-1
       name: Verdichter 1
-      object_id: heatpump_laufzeiten_verdichter_1
+      default_entity_id: heatpump_laufzeiten_verdichter_1
       state_class: total_increasing
       state_topic: heatpump/laufzeiten/verdichter-1/state
       unique_id: heatpump_laufzeiten_verdichter_1
@@ -2935,7 +2935,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/laufzeiten/verdichter-2
       name: Verdichter 2
-      object_id: heatpump_laufzeiten_verdichter_2
+      default_entity_id: heatpump_laufzeiten_verdichter_2
       state_class: total_increasing
       state_topic: heatpump/laufzeiten/verdichter-2/state
       unique_id: heatpump_laufzeiten_verdichter_2
@@ -2950,7 +2950,7 @@ mqtt:
       json_attributes_template: '{"domain":"cooling","part":"R11"}'
       json_attributes_topic: heatpump/betriebsdaten/passiv-kuehlen/cooling/r11/vorlauftemperatur
       name: Vorlauftemperatur
-      object_id: heatpump_betriebsdaten_passiv_kuehlen_cooling_r11_vorlauftemperatur
+      default_entity_id: heatpump_betriebsdaten_passiv_kuehlen_cooling_r11_vorlauftemperatur
       state_class: measurement
       state_topic: heatpump/betriebsdaten/passiv-kuehlen/cooling/r11/vorlauftemperatur/state
       unique_id: heatpump_betriebsdaten_passiv_kuehlen_cooling_r11_vorlauftemperatur
@@ -2968,7 +2968,7 @@ mqtt:
       max: 10
       min: 1
       name: Vorrang
-      object_id: heatpump_zeitprogramm_schwimmbad_vorrang_pool_vorrang
+      default_entity_id: heatpump_zeitprogramm_schwimmbad_vorrang_pool_vorrang
       state_topic: heatpump/zeitprogramm/schwimmbad-vorrang/pool/vorrang/state
       unique_id: heatpump_zeitprogramm_schwimmbad_vorrang_pool_vorrang
       unit_of_measurement: h
@@ -2982,7 +2982,7 @@ mqtt:
       json_attributes_template: '{"domain":"tapwater","part":"M18"}'
       json_attributes_topic: heatpump/laufzeiten/tapwater/m18/warmwasserpumpe
       name: Warmwasserpumpe
-      object_id: heatpump_laufzeiten_tapwater_m18_warmwasserpumpe
+      default_entity_id: heatpump_laufzeiten_tapwater_m18_warmwasserpumpe
       state_class: total_increasing
       state_topic: heatpump/laufzeiten/tapwater/m18/warmwasserpumpe/state
       unique_id: heatpump_laufzeiten_tapwater_m18_warmwasserpumpe
@@ -2997,7 +2997,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/zeitabgleich/wochentag
       name: Wochentag
-      object_id: heatpump_zeitabgleich_wochentag
+      default_entity_id: heatpump_zeitabgleich_wochentag
       options:
         - Dienstag
         - Donnerstag
@@ -3018,7 +3018,7 @@ mqtt:
       json_attributes_template: '{"domain":"heating"}'
       json_attributes_topic: heatpump/waermemengen/heating/waermemenge-heizen-1-4
       name: Wärmemenge Heizen 1-4
-      object_id: heatpump_waermemengen_heating_waermemenge_heizen_1_4
+      default_entity_id: heatpump_waermemengen_heating_waermemenge_heizen_1_4
       state_class: total_increasing
       state_topic: heatpump/waermemengen/heating/waermemenge-heizen-1-4/state
       unique_id: heatpump_waermemengen_heating_waermemenge_heizen_1_4
@@ -3033,7 +3033,7 @@ mqtt:
       json_attributes_template: '{"domain":"heating"}'
       json_attributes_topic: heatpump/waermemengen/heating/waermemenge-heizen-5-8
       name: Wärmemenge Heizen 5-8
-      object_id: heatpump_waermemengen_heating_waermemenge_heizen_5_8
+      default_entity_id: heatpump_waermemengen_heating_waermemenge_heizen_5_8
       state_class: total_increasing
       state_topic: heatpump/waermemengen/heating/waermemenge-heizen-5-8/state
       unique_id: heatpump_waermemengen_heating_waermemenge_heizen_5_8
@@ -3048,7 +3048,7 @@ mqtt:
       json_attributes_template: '{"domain":"heating"}'
       json_attributes_topic: heatpump/waermemengen/heating/waermemenge-heizen-9-12
       name: Wärmemenge Heizen 9-12
-      object_id: heatpump_waermemengen_heating_waermemenge_heizen_9_12
+      default_entity_id: heatpump_waermemengen_heating_waermemenge_heizen_9_12
       state_class: total_increasing
       state_topic: heatpump/waermemengen/heating/waermemenge-heizen-9-12/state
       unique_id: heatpump_waermemengen_heating_waermemenge_heizen_9_12
@@ -3063,7 +3063,7 @@ mqtt:
       json_attributes_template: '{"domain":"pool"}'
       json_attributes_topic: heatpump/waermemengen/pool/waermemenge-schwimmbad-1-4
       name: Wärmemenge Schwimmbad 1-4
-      object_id: heatpump_waermemengen_pool_waermemenge_schwimmbad_1_4
+      default_entity_id: heatpump_waermemengen_pool_waermemenge_schwimmbad_1_4
       state_class: total_increasing
       state_topic: heatpump/waermemengen/pool/waermemenge-schwimmbad-1-4/state
       unique_id: heatpump_waermemengen_pool_waermemenge_schwimmbad_1_4
@@ -3078,7 +3078,7 @@ mqtt:
       json_attributes_template: '{"domain":"pool"}'
       json_attributes_topic: heatpump/waermemengen/pool/waermemenge-schwimmbad-5-8
       name: Wärmemenge Schwimmbad 5-8
-      object_id: heatpump_waermemengen_pool_waermemenge_schwimmbad_5_8
+      default_entity_id: heatpump_waermemengen_pool_waermemenge_schwimmbad_5_8
       state_class: total_increasing
       state_topic: heatpump/waermemengen/pool/waermemenge-schwimmbad-5-8/state
       unique_id: heatpump_waermemengen_pool_waermemenge_schwimmbad_5_8
@@ -3093,7 +3093,7 @@ mqtt:
       json_attributes_template: '{"domain":"pool"}'
       json_attributes_topic: heatpump/waermemengen/pool/waermemenge-schwimmbad-9-12
       name: Wärmemenge Schwimmbad 9-12
-      object_id: heatpump_waermemengen_pool_waermemenge_schwimmbad_9_12
+      default_entity_id: heatpump_waermemengen_pool_waermemenge_schwimmbad_9_12
       state_class: total_increasing
       state_topic: heatpump/waermemengen/pool/waermemenge-schwimmbad-9-12/state
       unique_id: heatpump_waermemengen_pool_waermemenge_schwimmbad_9_12
@@ -3108,7 +3108,7 @@ mqtt:
       json_attributes_template: '{"domain":"tapwater"}'
       json_attributes_topic: heatpump/waermemengen/tapwater/waermemenge-warmwasser-1-4
       name: Wärmemenge Warmwasser 1-4
-      object_id: heatpump_waermemengen_tapwater_waermemenge_warmwasser_1_4
+      default_entity_id: heatpump_waermemengen_tapwater_waermemenge_warmwasser_1_4
       state_class: total_increasing
       state_topic: heatpump/waermemengen/tapwater/waermemenge-warmwasser-1-4/state
       unique_id: heatpump_waermemengen_tapwater_waermemenge_warmwasser_1_4
@@ -3123,7 +3123,7 @@ mqtt:
       json_attributes_template: '{"domain":"tapwater"}'
       json_attributes_topic: heatpump/waermemengen/tapwater/waermemenge-warmwasser-5-8
       name: Wärmemenge Warmwasser 5-8
-      object_id: heatpump_waermemengen_tapwater_waermemenge_warmwasser_5_8
+      default_entity_id: heatpump_waermemengen_tapwater_waermemenge_warmwasser_5_8
       state_class: total_increasing
       state_topic: heatpump/waermemengen/tapwater/waermemenge-warmwasser-5-8/state
       unique_id: heatpump_waermemengen_tapwater_waermemenge_warmwasser_5_8
@@ -3138,7 +3138,7 @@ mqtt:
       json_attributes_template: '{"domain":"tapwater"}'
       json_attributes_topic: heatpump/waermemengen/tapwater/waermemenge-warmwasser-9-12
       name: Wärmemenge Warmwasser 9-12
-      object_id: heatpump_waermemengen_tapwater_waermemenge_warmwasser_9_12
+      default_entity_id: heatpump_waermemengen_tapwater_waermemenge_warmwasser_9_12
       state_class: total_increasing
       state_topic: heatpump/waermemengen/tapwater/waermemenge-warmwasser-9-12/state
       unique_id: heatpump_waermemengen_tapwater_waermemenge_warmwasser_9_12
@@ -3153,7 +3153,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/zeitprogramm/zeitprogramm
       name: Zeitprogramm
-      object_id: heatpump_zeitprogramm_zeitprogramm
+      default_entity_id: heatpump_zeitprogramm_zeitprogramm
       options:
         - 1.Heizkreis Absenkung
         - 1.Heizkreis Anhebung
@@ -3182,7 +3182,7 @@ mqtt:
       max: 90
       min: 15
       name: Zeitwert Stoßlüften
-      object_id: heatpump_betriebsmodus_lueftung_zeitwert_stosslueften
+      default_entity_id: heatpump_betriebsmodus_lueftung_zeitwert_stosslueften
       state_topic: heatpump/betriebsmodus/lueftung/zeitwert-stosslueften/state
       unique_id: heatpump_betriebsmodus_lueftung_zeitwert_stosslueften
       unit_of_measurement: min
@@ -3196,7 +3196,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/betriebsdaten/lueftung/zulufttemperatur
       name: Zulufttemperatur
-      object_id: heatpump_betriebsdaten_lueftung_zulufttemperatur
+      default_entity_id: heatpump_betriebsdaten_lueftung_zulufttemperatur
       state_class: measurement
       state_topic: heatpump/betriebsdaten/lueftung/zulufttemperatur/state
       unique_id: heatpump_betriebsdaten_lueftung_zulufttemperatur
@@ -3211,7 +3211,7 @@ mqtt:
       json_attributes_template: '{}'
       json_attributes_topic: heatpump/energiemanagementsysteme/leistungen-und-ueberschuss/zur-verfuegung-gestellte-waermeleistung
       name: Zur Verfügung gestellte Wärmeleistung
-      object_id: heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_zur_verfuegung_gestellte_waermeleistung
+      default_entity_id: heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_zur_verfuegung_gestellte_waermeleistung
       state_class: measurement
       state_topic: heatpump/energiemanagementsysteme/leistungen-und-ueberschuss/zur-verfuegung-gestellte-waermeleistung/state
       unique_id: heatpump_energiemanagementsysteme_leistungen_und_ueberschuss_zur_verfuegung_gestellte_waermeleistung
@@ -3226,7 +3226,7 @@ mqtt:
       json_attributes_template: '{"part":"M16"}'
       json_attributes_topic: heatpump/laufzeiten/m16/zusatzumwaelzpumpe
       name: Zusatzumwälzpumpe
-      object_id: heatpump_laufzeiten_m16_zusatzumwaelzpumpe
+      default_entity_id: heatpump_laufzeiten_m16_zusatzumwaelzpumpe
       state_class: total_increasing
       state_topic: heatpump/laufzeiten/m16/zusatzumwaelzpumpe/state
       unique_id: heatpump_laufzeiten_m16_zusatzumwaelzpumpe
