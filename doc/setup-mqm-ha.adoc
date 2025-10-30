@@ -119,7 +119,7 @@ mqtt:
   - sensor:
       state_topic: "heatpump/device/wlw286/state"
       value_template: ""
-      object_id: heatpump_device_wlw286
+      default_entity_id: heatpump_device_wlw286
       unique_id: heatpump_device_wlw286
       device:
         identifiers:
