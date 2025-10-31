@@ -148,10 +148,12 @@ template:
         state_class: total_increasing
         unit_of_measurement: kWh
         state: >
+          {% set prefix = 'sensor.heatpump_waermemengen_heating_waermemenge_heizen_' %}
+          {% set states = (prefix + '1_4', prefix + '5_8', prefix + '9_12') | map('states') | list %}
           {{
-             (states('sensor.heatpump_waermemengen_heating_waermemenge_heizen_1_4')  | float)
-           + (states('sensor.heatpump_waermemengen_heating_waermemenge_heizen_5_8')  | float)
-           + (states('sensor.heatpump_waermemengen_heating_waermemenge_heizen_9_12') | float)
+             states | map('float') | sum
+             if (states | length) == (states | select('is_number') | list | length)
+             else none
           }}
       - name: Wärmemenge Warmwasser
         unique_id: heatpump_waermemengen_tapwater_waermemenge_warmwasser
@@ -159,10 +161,12 @@ template:
         state_class: total_increasing
         unit_of_measurement: kWh
         state: >
-          {{
-             (states('sensor.heatpump_waermemengen_tapwater_waermemenge_warmwasser_1_4')  | float)
-           + (states('sensor.heatpump_waermemengen_tapwater_waermemenge_warmwasser_5_8')  | float)
-           + (states('sensor.heatpump_waermemengen_tapwater_waermemenge_warmwasser_9_12') | float)
+          {% set prefix = 'sensor.heatpump_waermemengen_tapwater_waermemenge_warmwasser_' %}
+          {% set states = (prefix + '1_4', prefix + '5_8', prefix + '9_12') | map('states') | list %}
+           {{
+             states | map('float') | sum
+             if (states | length) == (states | select('is_number') | list | length)
+             else none
           }}
 ----
 . Start or restart Home Assistant to load the configurations. Verify that entities exist and are updated from Modbus data.

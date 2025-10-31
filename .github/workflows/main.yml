@@ -8,6 +8,7 @@ on:
       - 'LICENSE'
       - 'README.*'
       - 'data/**'
+      - 'doc/**'
   release:
     types: [published]
   workflow_dispatch:
