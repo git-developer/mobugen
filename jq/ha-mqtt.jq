@@ -3,6 +3,7 @@ module { "name": "ha" };
 # jq module containing a generator for Home Assistant configurations
 ##
 
+import "core" as core { search: "./" };
 import "dimplex" as dimplex { search: "./" };
 import "mqtt" as mqtt { search: "./" };
 
@@ -71,20 +72,6 @@ def domain:
 ;
 
 ##
-# Filters a value and wraps the result in an object.
-#
-# Input:  A value
-# filter: A filter that is applied to the input value
-# $name:  Name of the property containing the filter result 
-# Output: An object containing the single property $name
-#          holding the filter result as value;
-#          `null` if the filter outputs nothing or an error
-##
-def wrap(filter; $name):
-  ({ ($name): (try filter | select(. != null)) }) // null
-;
-
-##
 # Returns constraints for the values of a register
 #
 # Input:  A register definition
@@ -92,9 +79,9 @@ def wrap(filter; $name):
 #          for the register, or `null` if no such constraints exist
 ##
 def constraints:
-  (.min | wrap(tonumber; "min"))
-  + (.max | wrap(tonumber; "max"))
-  + (.scale | wrap(tonumber; "step"))
+  (.min | core::wrap(tonumber; "min"))
+  + (.max | core::wrap(tonumber; "max"))
+  + (.scale | core::wrap(tonumber; "step"))
 ;
 
 ##
@@ -121,7 +108,7 @@ def device:
 # Output: An object containing an `options` property with enum descriptions
 ##
 def options($enums):
-  wrap(dimplex::enum($enums); "options")
+  core::wrap(dimplex::enum($enums); "options")
 ;
 
 ##
@@ -156,7 +143,7 @@ def device_class($domain; $enums):
          and (.offset == "")   then "enum"
     else null end
   else null end
-  | wrap(.; "device_class")
+  | core::wrap(.; "device_class")
   + (if . == "enum" then $item | options($enums) else null end)
 ;
 
@@ -171,7 +158,7 @@ def entity_category:
   then "diagnostic"
   else "config"
   end
-  | wrap(.; "entity_category")
+  | core::wrap(.; "entity_category")
 ;
 
 ##
@@ -277,9 +264,9 @@ def basic($domain; $enums):
   + device
   + {
       json_attributes_template: ({}
-        + wrap(.domain | select(. != ""); "domain")
-        + wrap(.device | select(. != ""); "device")
-        + wrap(.part   | select(. != ""); "part")
+        + core::wrap(.domain | select(. != ""); "domain")
+        + core::wrap(.device | select(. != ""); "device")
+        + core::wrap(.part   | select(. != ""); "part")
       ) | tostring
     }
   + { json_attributes_topic: mqtt::topic }
@@ -294,7 +281,7 @@ def basic($domain; $enums):
 ##
 def command_variables:
   if .access | ascii_downcase | contains("w") | not then null
-  else wrap(mqtt::command_topic; "command_topic") end
+  else core::wrap(mqtt::command_topic; "command_topic") end
 ;
 
 ##
@@ -306,8 +293,8 @@ def command_variables:
 ##
 def state_variables:
   (if .unit == "1/min" then "/ 60 " else "" end) as $operation
-  | wrap(mqtt::state_topic; "state_topic")
-  + wrap("{{ value_json.state \($operation)}}"; "value_template")
+  | core::wrap(mqtt::state_topic; "state_topic")
+  + core::wrap("{{ value_json.state \($operation)}}"; "value_template")
 ;
 
 ##
@@ -350,11 +337,11 @@ def config_for($domain; $enums):
 #           `friendly_name` and custom attributes
 ##
 def customize_for($key):
-  def take($source; $target): wrap(.[($source)] | select(. != ""); $target);
+  def take($source; $target): core::wrap(.[($source)] | select(. != ""); $target);
   def takeall($names): . as $item | $names | [ .[] | . as $name | $item | take($name; $name) ] | add;
   ($ENV.HA_CUSTOM_ATTRIBUTES // "category,subcategory,domain,device,part")
     as $custom_attributes
-  | wrap(
+  | core::wrap(
       take("name"; "friendly_name") + takeall($custom_attributes | split(","));
       $key)
 ;
