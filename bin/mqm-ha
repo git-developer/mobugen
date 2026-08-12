@@ -1,0 +1,79 @@
+#!/bin/sh
+set -eu
+
+MQM_SOURCE_CONFIG="${MQM_SOURCE_CONFIG:-config.yaml}"
+MQM_CONFIG="${MQM_CONFIG:-/run/mobugen/config.yaml}"
+
+log() {
+  echo >&2 "$@"
+}
+
+mqm_validate_config() {
+  if [ ! -r "${MQM_SOURCE_CONFIG}" ]; then
+    log "Missing mqmgateway configuration expected at '${MQM_SOURCE_CONFIG}'."
+    if [ -r /etc/modmqttd/config.yaml ]; then
+      log "Creating a template, please configure it and try again."
+      cp -a /etc/modmqttd/config.yaml "${MQM_SOURCE_CONFIG}"
+    fi
+    return 1
+  fi
+}
+
+mqm_generate_config() {
+  log "Creating configuration for mqmgateway at ${MQM_CONFIG}"
+
+  mqm-gojq-generator "$@" |
+  gojq --yaml-input --yaml-output --slurp '
+      .[0].mqtt.objects as $sourceObjects
+      | .[0] * .[1]
+      | .mqtt.objects = (.mqtt.objects // []) + $sourceObjects
+    ' "${MQM_SOURCE_CONFIG}" /dev/stdin |
+  install -D --mode=644 /dev/stdin "${MQM_CONFIG}"
+  if [ ! -s "${MQM_CONFIG}" ]; then return 1; fi
+}
+
+ha_publish_config() {
+  log "Publishing Home Assistant MQTT device discovery message"
+
+  <"${MQM_CONFIG}" gojq --yaml-input -r '
+      .mqtt
+      | [ .client_id, (.broker | .host, .port, .username, .password, has("tls") // empty, .tls.cafile) ]
+      | join(",")
+  ' | while IFS=, read client_id host port username password tls cafile; do
+
+    if [ "${HA_DISCOVERY_CLEAN:-false}" != "true" ]; then
+      input_arg=--stdin-file
+    else
+      input_arg=--null-message
+    fi
+
+    if [ "${HA_DISCOVERY_CLEAN:-false}" != "true" ]; then
+      JQ_OUTPUT=json ha-mqtt-discovery-gojq-generator "$@"
+    fi | mosquitto_pub \
+      --host "${host}" \
+      ${port:+--port "${port}"} \
+      ${username:+--username "${username}"} \
+      ${password:+--pw "${password}"} \
+      ${tls:+--tls-use-os-certs} \
+      ${cafile:+--cafile "${cafile}"} \
+      --topic "${HA_DISCOVERY_PREFIX:-homeassistant}/device/${HA_DEVICE_ID}/config" \
+      --id "${client_id:-$(basename "$0")}-${HA_DEVICE_ID}-discovery" \
+      --retain \
+      "${input_arg}"
+  done
+}
+
+main() {
+  mqm_validate_config
+  if [ "${MQM_WRITE_CONFIG:-true}" = true ]; then
+    mqm_generate_config "$@"
+  fi
+  if [ "${HA_PUBLISH_DISCOVERY:-true}" = true ]; then
+    ha_publish_config "$@"
+  fi
+  if [ "${MQM_START_SERVICE:-true}" = true ]; then
+    exec modmqttd -c "${MQM_CONFIG}"
+  fi
+}
+
+main "$@"

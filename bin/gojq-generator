@@ -26,13 +26,16 @@ main() {
   version="${1}"
   registers="${2:-registers.csv}"
   enums="${3-enums.csv}"
+  if [ "${JQ_OUTPUT-}" != json ]; then
+    jq_output_arg=--yaml-output
+  fi
 
   gojq \
     -L "${JQ_MODULES_PATH}" \
     --arg version "${version}" \
     ${enums:+--rawfile enums "${enums}"} \
     --raw-input --slurp \
-    --yaml-output \
+    ${jq_output_arg-} \
     "${script}" \
     "${registers}"
 }
