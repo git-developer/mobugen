@@ -72,7 +72,7 @@ def domain:
 ;
 
 ##
-# Returns constraints for the values of a register
+# Returns constraints for the values of a register.
 #
 # Input:  A register definition
 # Output: An object containing the properties `min`, `max` and `step`
