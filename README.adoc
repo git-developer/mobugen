@@ -109,19 +109,67 @@ Each generator implementation may decide on its own which columns are actually u
 ==== Registers
 [%header,format=csv]
 |===
-type,address,name,since,access,data_type,min,max,unit,class,conversion,scale,offset,domain,device,part,variable,category_id,category,subcategory
-...,,,,,,,,,,,,,,,,,,,
-Holding,2,Temperatur Rücklauf,J,R,int16,,,°C,,,0.1,,heating,,R2,E_Rueckl_T,1.3,Betriebsdaten,
-Holding,14,Statusmeldungen,H,R,uint16,0,30,,operation,enum,,,,,,Anz_Status_Wert,1.1,Systemstatus,
-Holding,43,Statusmeldungen,J,R,uint16,0,30,,operation,enum,,,,,,Anz_Status_Wert,1.1,Systemstatus,
-...,,,,,,,,,,,,,,,,,,,
+type,address,name,since,access,data_type,min,max,unit,class,conversion,scale,offset,refresh,write_mode,domain,device,part,variable,category_id,category,subcategory
+...,,,,,,,,,,,,,,,,,,,,,
+Holding,2,Temperatur Rücklauf,J,R,int16,,,°C,,,0.1,,,,heating,,R2,E_Rueckl_T,1.3,Betriebsdaten,
+Holding,14,Statusmeldungen,H,R,uint16,0,30,,operation,enum,,,,,,,,Anz_Status_Wert,1.1,Systemstatus,
+Holding,43,Statusmeldungen,J,R,uint16,0,30,,operation,enum,,,,,,,,Anz_Status_Wert,1.1,Systemstatus,
+...,,,,,,,,,,,,,,,,,,,,,
 |===
 
 Remarks:
 
 - The combination of `type`, `address` and `since` is unique.
-- When the value of `conversion` starts with `enum`, values are taken from the enumeration definitions. By default, the enum name is derived from the register name. A custom enum name may be set using the syntax `enum:custom_name`.
 - `class`, `domain` and `device` have been added to allow a detailed representation of a register in Smart Home systems. `category_id` was added to retain the original order and structure. All other columns have been taken over from the wiki.
+
+===== Conversions
+
+[cols="2,3"]
+|===
+| `conversion` value | Interpretation
+
+|`enum` +
+`enum:`
+_<custom&nbsp;name>_
+| Values are taken from the enumeration definitions. By default, the enum name is derived from the register name. A custom enum name may be set using the syntax `enum:custom_name`.
+
+|`string:`
+_<length>_
+| C-style string in UTF-8 (or ASCII) encoding. _<length>_ is the character count, not register count.
+
+|`uint16` +
+`uint16bs` +
+| Unsigned 16-bit integer +
+`bs`: bytes are swapped
+|`int16` +
+`int16bs` +
+| Signed 16-bit integer +
+`bs`: bytes are swapped
+|`uint32` +
+`uint32bs` +
+`uint32l` +
+`uint32bsl`
+| Unsigned 32-bit integer +
+`bs`: bytes are swapped +
+`l`: first modbus register holds lower byte
+|`int32` +
+`int32bs` +
+`int32l` +
+`int32bsl`
+| Signed 32-bit integer +
+`bs`: bytes are swapped +
+`l`: first modbus register holds lower byte
+|`flt32` +
+`flt32bs` +
+`flt32l` +
+`flt32bsl`
+| Float +
+`bs`: bytes are swapped +
+`l`: first modbus register holds lower byte
+
+|===
+
+See https://github.com/BlackZork/mqmgateway/#standard-converters[Standard converters] for details.
 
 ==== Enumerations
 [%header,format=csv]
@@ -181,6 +229,27 @@ This project provides 2 generators that work together. They may be configured us
 | `MQM_SLAVE_ADDRESS`
 | Modbus slave address the registers belong to
 | `1`
+
+| `MQM_RETAIN`
+| Publish MQTT messages as retained? (`true` or `false`)
+| `false`
+|===
+
+
+.Register columns
+[cols="1,3,1"]
+|===
+| Column
+| Description
+| Default
+
+| `refresh`
+| Refresh frequency (https://github.com/BlackZork/mqmgateway/#configuration-values[timespan])
+| `5s`
+
+| `write_mode`
+| Write mode for single register write operations (See https://github.com/BlackZork/mqmgateway/#a-commands-section[write_mode])
+| `auto`
 |===
 
 ==== Home Assistant
@@ -206,10 +275,10 @@ This project provides 2 generators that work together. They may be configured us
 .Excerpt from a register definition file `registers.csv`
 [%header,format=csv]
 |===
-type,address,name,since,access,data_type,min,max,unit,class,conversion,scale,offset,domain,device,part,variable,category_id,category,subcategory
-Coil,50,Flanschheizung,J,R,boolean,,,,operation,,,,tapwater,flange,E9,A_FH,1.7,Ausgänge,
-Holding,377,Aufgenommene elektrische Leistung,M3.5,R,uint16,-32768,32767,W,electricity,,0.1,,,,,Leist_Elekt,2.2.2,Energiemanagementsysteme,Leistungen und Überschuss
-Holding,289,Auswahl Heizkreis,,RW,uint16,2,3,,option,enum,,,heating,,,HK_Wert,1.9.1,Einstellungen 2./3. Heiz-/Kühlkreis,
+type,address,name,since,access,data_type,min,max,unit,class,conversion,scale,offset,refresh,write_mode,domain,device,part,variable,category_id,category,subcategory
+Coil,50,Flanschheizung,J,R,boolean,,,,operation,,,,,,tapwater,flange,E9,A_FH,1.7,Ausgänge,
+Holding,377,Aufgenommene elektrische Leistung,M3.5,R,uint16,-32768,32767,W,electricity,,0.1,,,,,,,Leist_Elekt,2.2.2,Energiemanagementsysteme,Leistungen und Überschuss
+Holding,289,Auswahl Heizkreis,,RW,uint16,2,3,,option,enum,,,,,heating,,,HK_Wert,1.9.1,Einstellungen 2./3. Heiz-/Kühlkreis,
 |===
 
 .Excerpt from an enum definition file `enums.csv`

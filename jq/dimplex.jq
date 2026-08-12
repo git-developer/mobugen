@@ -102,7 +102,7 @@ def enum($enums):
 # Output: All register definitions whose type is an enum
 ##
 def isenum:
-  .conversion | (type == "string" and length > 0)
+  .conversion | (type == "string" and startswith("enum"))
 ;
 
 ##
